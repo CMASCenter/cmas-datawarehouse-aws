@@ -1,0 +1,74 @@
+ <!DOCTYPE html>
+<html>
+<body>
+
+<h1>2018_12US1 CMAQ Modeling Platform Data</h1>
+
+Description of the data. <br>
+This bucket contains input data to run 2018 12US1 CMAQ for three different emissions scenariors. <br>
+
+<pre>
+cb6r3_ae6_20190604: emis_mole_all_20180701_12US1_nobeis_2018ff_18j_WR401.ncf
+cb6r3_ae6_20200131_MYR: emis_mole_rwc_20171220_12US1_cmaq_cb6_WR413_MYR_2017.nc4 
+WR705_2018gc2_cracmmv1: emis_mole_rwc_20171222_12US1_cmaq_cracmmv1_WR705_2018gc2.ncf
+</pre>
+
+The scripts provided were used to run CMAQv5.4 prior to the run scripts being finalized.<br>
+To do: Provide Benchmark two-day run scripts that have been updated to use CMAQv5.4.<br>
+
+<h1>Downloading data from S3 Bucket</h1>
+
+This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
+
+
+Instructions for downloading the aws command line.<br>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+
+Once you have it installed, you can use it without credentials.<br>
+
+Example commands:<br> 
+
+To query how much data is in a bucket: <br>
+
+<pre>
+aws s3 ls --summarize --human-readable --recursive s3://cmas-cmaq-modeling-platform-2018
+</pre>
+
+Output: <br>
+
+<pre>
+Total Objects: 18579
+   Total Size: 6.1 TiB
+</pre>
+
+Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
+
+<pre>
+aws s3 --no-sign-request cp --recursive aws s3://cmas-cmaq-modeling-platform-2018 /your_local_path/
+</pre>
+
+To obtain just the files you need from the CMAQ input data and avoid downloading the full bucket you can use the --include and --exclude commands and use the --dryrun option to see what would be copied before you begin. <br>
+<a href="https://docs.aws.amazon.com/cli/latest/reference/s3/cp.html">AWS CLI S3 Copy command - latest reference manual</a>
+
+<pre>
+aws s3 ls --summarize --human-readable --recursive s3://cmas-cmaq-modeling-platform-2018/2018_12US1
+</pre>
+
+
+Example, to only copy the README to your local directory "." using use  (remove the --dryrun option): <br>
+
+<pre>
+aws s3 cp --dryrun --exclude "*" --include "CMAQ_Control_DESID.nml" --recursive s3://cmas-cmaq-modeling-platform-2018/CMAQ_12US1 .
+</pre>
+
+You can also use the aws s3 cp command to obtain specific dates using the above method. <br>
+
+
+
+Please submit any questions or difficulties as a new issue on the CMAS User Forum.<br>
+<a href="https://forum.cmascenter.org/">CMAS User Forum</a><br>
+
+</body>
+</html>
