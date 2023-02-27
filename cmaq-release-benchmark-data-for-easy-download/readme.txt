@@ -37,4 +37,4 @@ aws s3 --no-sign-request cp --recursive aws s3://cmaq-release-benchmark-data-for
 
 
 Please submit any questions or difficulties as a new issue on the CMAS User Forum.
-https://forum.cmascenter.org/c/equates/61
+https://forum.cmascenter.org/
