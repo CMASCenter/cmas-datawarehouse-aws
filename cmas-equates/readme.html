@@ -4,15 +4,15 @@
 
 <h1>2017 EQUATES CMAQ Input Data</h1>
 
-Please review the EQUATES_Data_Dictionary_for_CMAS_Data_Warehouses.html for information about the files.
+Please review the <a href="EQUATES_Data_Dictionary_for_CMAS_Data_Warehouses.html">Equates Data Dictionary</a> for information about the files.<br>
 
-Currently, the CMAQ inputs are available for 2017.
+Currently, the CMAQ inputs are available for 2017. <br>
 
-The full 2002-2019 EQUATES data is available on Google Drive:
-<a href="https://drive.google.com/drive/folders/1G2_LBLy7_n91Ur0ulsLZ9zwGs3luTzn2?usp=sharing">2002-2019 EQUATES Data on Google Drive</a>
+The full 2002-2019 EQUATES data is available on Google Drive: <br>
+<a href="https://drive.google.com/drive/folders/1G2_LBLy7_n91Ur0ulsLZ9zwGs3luTzn2?usp=sharing">2002-2019 EQUATES Data on Google Drive</a><br>
 
 
-<h1>Downloading data from S3 Bucket</h1>
+<h1>Downloading data from S3 Bucket</h1> <br>
 
 This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
 
@@ -36,12 +36,14 @@ aws s3 ls --summarize --human-readable --recursive s3://cmas-equates
 Output: <br>
 
 <pre>
+
 Total Objects: 915
    Total Size: 4.3 TiB
-</pre
+
+</pre>
 
 
-Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
+To copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path. </br>
 
 <pre>
 aws s3 --no-sign-request cp --recursive aws s3://cmas-equates/ /your_local_path/
