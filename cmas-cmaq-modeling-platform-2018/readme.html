@@ -8,13 +8,10 @@ Description of the data. <br>
 This bucket contains input data to run 2018 12US1 CMAQ for three different emissions scenariors. <br>
 
 <pre>
-cb6r3_ae6_20190604: emis_mole_all_20180701_12US1_nobeis_2018ff_18j_WR401.ncf
 cb6r3_ae6_20200131_MYR: emis_mole_rwc_20171220_12US1_cmaq_cb6_WR413_MYR_2017.nc4 
 WR705_2018gc2_cracmmv1: emis_mole_rwc_20171222_12US1_cmaq_cracmmv1_WR705_2018gc2.ncf
 </pre>
 
-The scripts provided were used to run CMAQv5.4 prior to the run scripts being finalized.<br>
-To do: Provide Benchmark two-day run scripts that have been updated to use CMAQv5.4.<br>
 
 <h1>Downloading data from S3 Bucket</h1>
 
@@ -46,7 +43,7 @@ Total Objects: 18579
 Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
 
 <pre>
-aws s3 --no-sign-request cp --recursive aws s3://cmas-cmaq-modeling-platform-2018 /your_local_path/
+aws s3 --no-sign-request cp --recursive s3://cmas-cmaq-modeling-platform-2018 /your_local_path/
 </pre>
 
 To obtain just the files you need from the CMAQ input data and avoid downloading the full bucket you can use the --include and --exclude commands and use the --dryrun option to see what would be copied before you begin. <br>
