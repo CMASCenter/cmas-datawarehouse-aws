@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Downloading data from S3 Bucket</h1>
+
+This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
+
+
+Instructions for downloading the aws command line.<br>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+
+Once you have it installed, you can use it without credentials.<br>
+
+Example commands:<br>
+
+To query how much data is in a bucket: <br>
+
+
+<pre>
+aws s3 ls --summarize --human-readable --recursive s3://cmas-smoke-modeling-platform-2016
+</pre>
+
+Tail of Output: <br>
+
+<pre>
+2023-02-06 15:11:44  650.4 MiB 2016_platform/2016v2/2023fj/12US2/cmaq_cb6ae7/merged_withbeis_withrwc/emis_mole_all_20161224_12US2_withbeis_withrwc_2023fj_16j.ncf
+2023-02-06 15:11:44  650.4 MiB 2016_platform/2016v2/2023fj/12US2/cmaq_cb6ae7/merged_withbeis_withrwc/emis_mole_all_20161225_12US2_withbeis_withrwc_2023fj_16j.ncf
+2023-02-06 15:11:44  650.4 MiB 2016_platform/2016v2/2023fj/12US2/cmaq_cb6ae7/merged_withbeis_withrwc/emis_mole_all_20161226_12US2_withbeis_withrwc_2023fj_16j.ncf
+2023-02-06 15:11:44  650.4 MiB 2016_platform/2016v2/2023fj/12US2/cmaq_cb6ae7/merged_withbeis_withrwc/emis_mole_all_20161227_12US2_withbeis_withrwc_2023fj_16j.ncf
+2023-02-06 15:11:44  650.4 MiB 2016_platform/2016v2/2023fj/12US2/cmaq_cb6ae7/merged_withbeis_withrwc/emis_mole_all_20161228_12US2_withbeis_withrwc_2023fj_16j.ncf
+2023-02-06 15:11:44  650.4 MiB 2016_platform/2016v2/2023fj/12US2/cmaq_cb6ae7/merged_withbeis_withrwc/emis_mole_all_20161229_12US2_withbeis_withrwc_2023fj_16j.ncf
+2023-02-06 15:11:44  650.4 MiB 2016_platform/2016v2/2023fj/12US2/cmaq_cb6ae7/merged_withbeis_withrwc/emis_mole_all_20161230_12US2_withbeis_withrwc_2023fj_16j.ncf
+2023-02-06 15:11:44  650.4 MiB 2016_platform/2016v2/2023fj/12US2/cmaq_cb6ae7/merged_withbeis_withrwc/emis_mole_all_20161231_12US2_withbeis_withrwc_2023fj_16j.ncf
+2023-02-06 14:07:19    0 Bytes 2016_platform/2016v2/2023fj_compressed/
+2023-02-06 14:07:19  153.8 GiB 2016_platform/2016v2/2023fj_compressed/2023fj_16j_12US2_cmaq_cb6ae7_merged_withbeis_withrwc.tar.gz
+2022-05-12 10:55:01   30.9 KiB index.html
+
+Total Objects: 385
+   Total Size: 392.6 GiB
+
+</pre>
+
+Please submit any questions or difficulties as a new issue on the CMAS User Forum.<br>
+<a href="https://forum.cmascenter.org/">CMAS User Forum</a><br>
+
+</body>
+</html>
+
