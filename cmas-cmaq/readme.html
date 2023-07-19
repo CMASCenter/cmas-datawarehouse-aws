@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Downloading data from S3 Bucket</h1>
+
+This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
+
+
+Instructions for downloading the aws command line.<br>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+
+Once you have it installed, you can use it without credentials.<br>
+
+Example commands:<br>
+
+To query how much data is in a bucket: <br>
+
+There are three sets of benchmark data available.
+
+1. CMAQv5.4_2018_12US1_Benchmark_2Day_Input
+
+<pre>
+aws s3 ls --summarize --human-readable --recursive s3://cmas-cmaq/CMAQv5.4_2018_12US1_Benchmark_2Day_Input
+</pre>
+
+Output: <br>
+
+<pre>
+2023-06-23 09:47:21    0 Bytes CMAQv5.4_2018_12US1_Benchmark_2Day_Input/
+2023-06-23 10:27:41   39.7 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/CMAQ_v54+_cb6r5_scripts/run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.2x96.ncclassic.csh
+2023-06-23 10:27:41   42.7 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/CMAQ_v54+_cracmm_scripts/run_cctm_2018_12US1_v54+_Base_M3DRY_CRACMM.lustre.csh
+2023-06-23 10:27:41    1.0 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/GRIDDESC
+2023-06-23 10:27:41  366.4 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/emis/cb6r3_ae6_20200131_MYR/cmaq_ready/cmv_c1c2_12/inln_mole_cmv_c1c2_12_20171222_12US1_cmaq_cb6_WR413_MYR_2017.nc
+...
+...
+2023-06-23 10:34:43    2.5 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/emis/emis_dates/smk_merge_dates_201712.txt
+...
+2023-06-23 10:34:51  285.9 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/epic/2017r1_EPIC0509_12US1_soil.nc
+2023-06-23 10:34:52    5.2 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/epic/2017r1_EPIC0509_12US1_soil.nc4
+2023-06-23 10:34:52  901.5 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/epic/2017r1_EPIC0509_12US1_time20171222.nc
+2023-06-23 10:35:12   28.2 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/epic/2017r1_EPIC0509_12US1_time20171222.nc4
+2023-06-23 10:35:17  901.5 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/epic/2017r1_EPIC0509_12US1_time20171223.nc
+2023-06-23 10:35:18   28.2 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/epic/2017r1_EPIC0509_12US1_time20171223.nc4
+2023-06-23 10:35:22  144.6 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/epic/beld4_12US1_2011.nc
+2023-06-23 10:35:37   11.3 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/epic/beld4_12US1_2011.nc4
+2023-06-23 10:35:39   14.2 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/icbc/CCTM_BSOILOUT_v54_cb6r5_ae7_aq_WR413_MYR_M3DRY_2018_12US1_20171221.nc
+2023-06-23 10:35:42    4.0 GiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/icbc/CCTM_CGRID_v54_cb6r5_ae7_aq_WR413_MYR_M3DRY_2018_12US1_20171221.nc
+2023-06-23 10:35:52   12.3 GiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/icbc/CMAQv54_2018_108NHEMI_M3DRY/BCON_CONC_12US1_CMAQv54_2018_108NHEMI_M3DRY_regrid_201712.nc
+2023-06-23 10:35:53  305 Bytes CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/indexer.csh
+2023-06-23 10:35:53   53.9 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/met/WRFv4.3.3_LTNG_MCIP5.3.3_compressed/GRIDBDY2D_20171222.nc
+...
+2023-06-23 10:56:49    1.1 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/misc/12US1_surf.ncf
+2023-06-23 10:56:50    3.7 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/misc/LTNG_AllParms_12US1.ncf
+2023-06-23 10:56:50  393 Bytes CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/misc/Species_Table_TR_EQUATES_12US1.nml
+2023-06-23 10:56:51   40.3 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/misc/b3grd.smoke30_beis361_beld5.12US1.ncf
+2023-06-23 10:56:58   40.3 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/misc/beis4_beld6_norm_emis.12US1.ncf
+2023-06-23 10:57:04  144.6 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/misc/beld4_12US1_2001.nc
+2023-06-23 10:57:06   11.2 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/misc/beld4_12US1_2001.nc4
+2023-06-23 10:57:09  144.6 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/misc/beld4_12US1_2006.nc
+2023-06-23 10:57:21   11.3 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/misc/beld4_12US1_2006.nc4
+2023-06-23 10:57:24  144.6 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/misc/beld4_12US1_2011.nc
+2023-06-23 10:57:25   11.3 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/misc/beld4_12US1_2011.nc4
+2023-06-23 10:57:28    3.0 GiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/misc/bioseason.cmaq.WR413_MYR_2002-2017_12US1.ncf
+2023-06-23 10:57:40  191.6 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/misc/bioseason.cmaq.WR413_MYR_2018_12US1.ncf_full
+2023-06-23 10:57:47  191.6 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/misc/bioseason.cmaq.WR413_MYR_2019_12US1.ncf_full
+2023-06-23 10:57:57    1.1 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/12US1_surf.ncf
+2023-06-23 10:57:58  547.0 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/ARID_CONUS.ncf
+2023-06-23 10:57:59    3.2 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/CT3_CONUS.ncf
+2023-06-23 10:57:59   10.0 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/EFMAPS_CONUS.ncf
+2023-06-23 10:58:02  192.8 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/FERT_CONUS.ncf
+2023-06-23 10:58:03   25.2 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/LAI3_CONUS.ncf
+2023-06-23 10:58:08    1.6 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/LANDTYPE_CONUS.ncf
+2023-06-23 10:58:09    2.1 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/LDF_CONUS.ncf
+2023-06-23 10:58:11    7.3 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/NDEP_CONUS.ncf
+2023-06-23 10:58:10  547.0 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/NONARID_CONUS.ncf
+2023-06-23 10:58:11  350.0 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/OCEAN_01_L3m_MC_CHL_chlor_a_12US1.nc
+2023-06-23 10:58:11  351.8 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/OCEAN_02_L3m_MC_CHL_chlor_a_12US1.nc
+2023-06-23 10:58:12  349.2 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/OCEAN_03_L3m_MC_CHL_chlor_a_12US1.nc
+2023-06-23 10:58:13  354.0 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/OCEAN_04_L3m_MC_CHL_chlor_a_12US1.nc
+2023-06-23 10:58:13  351.8 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/OCEAN_05_L3m_MC_CHL_chlor_a_12US1.nc
+2023-06-23 10:58:14  351.6 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/OCEAN_06_L3m_MC_CHL_chlor_a_12US1.nc
+2023-06-23 10:58:15  351.1 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/OCEAN_07_L3m_MC_CHL_chlor_a_12US1.nc
+2023-06-23 10:58:15  354.8 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/OCEAN_08_L3m_MC_CHL_chlor_a_12US1.nc
+2023-06-23 10:58:16  353.0 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/OCEAN_09_L3m_MC_CHL_chlor_a_12US1.nc
+2023-06-23 10:58:17  355.0 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/OCEAN_10_L3m_MC_CHL_chlor_a_12US1.nc
+2023-06-23 10:58:17  353.4 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/OCEAN_11_L3m_MC_CHL_chlor_a_12US1.nc
+2023-06-23 10:58:18  338.5 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/OCEAN_12_L3m_MC_CHL_chlor_a_12US1.nc
+2023-06-23 10:58:19    2.1 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/OCEAN_12_L3m_MC_CHL_chlor_a_12US1.ncf3
+2023-06-23 10:58:19    1.5 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/README_MEGAN_FILES_12US1.txt
+2023-06-23 10:58:19   62.9 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/beld3_12US1_459X299_output_a.ncf
+2023-06-23 10:58:20  547.0 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/beld3_12US1_459X299_output_tot.ncf
+2023-06-23 10:58:20  382.2 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input/2018_12US1/surface/modis_fpar_lai_12km_10yrAvg_daily_ioapi.ncf
+
+Total Objects: 247
+   Total Size: 84.9 GiB
+
+
+Total Objects: 5
+   Total Size: 24.2 GiB
+
+</pre>
+
+Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
+
+<pre>
+aws s3 --no-sign-request cp --recursive aws s3://cmas-cmaq/CMAQv5.4_2018_12US1_Benchmark_2Day_Input /your_local_path/
+</pre>
+
+
+2. CMAQv5.4_2018_12LISTOS_Benchmark_3Day_Input
+
+
+<pre>
+aws s3 ls --summarize --human-readable --recursive s3://cmas-cmaq/CMAQv5.4_2018_12LISTOS_Benchmark_3Day_Input
+</pre>
+
+
+3. CMAQv5.4_2018_12NE3_Benchmark_2Day_Input/2018_12NE3
+
+<pre>
+aws s3 ls --summarize --human-readable --recursive s3://cmas-cmaq/CMAQv5.4_2018_12NE3_Benchmark_2Day_Input/
+</pre>
+
+Please submit any questions or difficulties as a new issue on the CMAS User Forum.<br>
+<a href="https://forum.cmascenter.org/">CMAS User Forum</a><br>
+
+</body>
+</html>
+
