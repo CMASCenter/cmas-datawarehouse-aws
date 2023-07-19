@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Downloading data from S3 Bucket</h1>
+
+This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
+
+
+Instructions for downloading the aws command line.<br>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+
+Once you have it installed, you can use it without credentials.<br>
+
+Example commands:<br>
+
+To query how much data is in a bucket: <br>
+
+
+<pre>
+aws s3 ls --summarize --human-readable --recursive s3://cmas-cmaq-conus2-benchmark
+</pre>
+
+Tail of Output: <br>
+
+<pre>
+2022-05-05 14:58:51  945.9 MiB data/CMAQ_Modeling_Platform_2016/CONUS/12US2/icbc/BCON_v53_2016fh_regrid_20160130
+2022-05-05 14:58:51  945.9 MiB data/CMAQ_Modeling_Platform_2016/CONUS/12US2/icbc/BCON_v53_2016fh_regrid_20160131
+2022-05-05 14:58:53    2.8 GiB data/CMAQ_Modeling_Platform_2016/CONUS/12US2/icbc/ICON_v53_2016fh_regrid_20151222
+2022-05-05 14:58:54    1.1 MiB data/CMAQ_Modeling_Platform_2016/CONUS/12US2/land/12US1_surf.ncf
+2022-05-05 14:58:55  285.9 MiB data/CMAQ_Modeling_Platform_2016/CONUS/12US2/land/2011_US1_soil.nc
+2022-05-05 14:59:04   62.9 MiB data/CMAQ_Modeling_Platform_2016/CONUS/12US2/land/beld3_12US1_459X299_output_a.ncf
+2022-05-12 10:26:07   30.9 KiB index.html
+
+Total Objects: 718
+   Total Size: 461.8 GiB
+</pre>
+
+Please submit any questions or difficulties as a new issue on the CMAS User Forum.<br>
+<a href="https://forum.cmascenter.org/">CMAS User Forum</a><br>
+
+</body>
+</html>
+
