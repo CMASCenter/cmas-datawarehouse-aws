@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Downloading data from S3 Bucket</h1>
+
+This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
+
+
+Instructions for downloading the aws command line.<br>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+
+Once you have it installed, you can use it without credentials.<br>
+
+Example commands:<br>
+
+To query how much data is in a bucket: <br>
+
+
+<pre>
+aws s3 ls --summarize --human-readable --recursive s3://2019platform
+</pre>
+
+Tail of Output: <br>
+
+<pre>
+2023-06-20 07:53:38    1.1 GiB 2019platform/2019ge_emissions/smoke_out/2019ge_cb6_19k/12US2/cmaq_cb6ae7/merged_nobeis_norwc/emis_mole_all_20191229_12US2_nobeis_norwc_2019ge_cb6_19k.ncf
+2023-06-20 07:53:51    1.1 GiB 2019platform/2019ge_emissions/smoke_out/2019ge_cb6_19k/12US2/cmaq_cb6ae7/merged_nobeis_norwc/emis_mole_all_20191230_12US2_nobeis_norwc_2019ge_cb6_19k.ncf
+2023-06-20 07:53:58    1.1 GiB 2019platform/2019ge_emissions/smoke_out/2019ge_cb6_19k/12US2/cmaq_cb6ae7/merged_nobeis_norwc/emis_mole_all_20191231_12US2_nobeis_norwc_2019ge_cb6_19k.ncf
+2023-07-12 10:18:38   30.9 KiB index.html
+
+Total Objects: 9905
+   Total Size: 2.0 TiB
+
+
+</pre>
+
+Please submit any questions or difficulties as a new issue on the CMAS User Forum.<br>
+<a href="https://forum.cmascenter.org/">CMAS User Forum</a><br>
+
+</body>
+</html>
+
