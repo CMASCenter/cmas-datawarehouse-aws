@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Downloading data from S3 Bucket</h1>
+
+This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
+
+
+Instructions for downloading the aws command line.<br>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+
+Once you have it installed, you can use it without credentials.<br>
+
+Example commands:<br>
+
+To query how much data is in a bucket: <br>
+
+This hourly MCIP data for July 1-31, 2017 was provided for the SMOKE Testcase <a href="https://github.com/CEMPD/SMOKE-TestCase/">SMOKE Test Case</a><br>
+
+
+
+<pre>
+aws s3 ls --summarize --human-readable --recursive is3://cmas-smoke-testcase/2017
+</pre>
+
+Output: <br>
+
+<pre>
+2023-09-26 13:48:42  301.3 KiB 2017/07/GRIDBDY2D_12US1.35L.20170701.nc3
+2023-09-26 13:48:42  301.3 KiB 2017/07/GRIDBDY2D_12US1.35L.20170702.nc3
+2023-09-26 13:48:42  301.3 KiB 2017/07/GRIDBDY2D_12US1.35L.20170703.nc3
+2023-09-26 13:48:42  301.3 KiB 2017/07/GRIDBDY2D_12US1.35L.20170704.nc3
+2023-09-26 13:48:42  301.3 KiB 2017/07/GRIDBDY2D_12US1.35L.20170705.nc3
+...
+...
+2023-09-26 13:48:43   24.6 MiB 2017/07/GRIDCRO2D_12US1.35L.20170701.nc3
+2023-09-26 13:48:43   24.6 MiB 2017/07/GRIDCRO2D_12US1.35L.20170702.nc3
+2023-09-26 13:48:43   24.6 MiB 2017/07/GRIDCRO2D_12US1.35L.20170703.nc3
+2023-09-26 13:48:43   24.6 MiB 2017/07/GRIDCRO2D_12US1.35L.20170704.nc3
+2023-09-26 13:48:43   24.6 MiB 2017/07/GRIDCRO2D_12US1.35L.20170705.nc3
+
+...
+2023-09-26 13:48:43   24.6 MiB 2017/07/GRIDCRO2D_12US1.35L.20170701.nc3
+2023-09-26 13:48:43   24.6 MiB 2017/07/GRIDCRO2D_12US1.35L.20170702.nc3
+2023-09-26 13:48:43   24.6 MiB 2017/07/GRIDCRO2D_12US1.35L.20170703.nc3
+2023-09-26 13:48:43   24.6 MiB 2017/07/GRIDCRO2D_12US1.35L.20170704.nc3
+2023-09-26 13:48:43   24.6 MiB 2017/07/GRIDCRO2D_12US1.35L.20170705.nc3
+...
+
+2023-09-26 13:48:49   86.3 MiB 2017/07/METBDY3D_12US1.35L.20170701.nc3
+2023-09-26 13:48:49   86.3 MiB 2017/07/METBDY3D_12US1.35L.20170702.nc3
+2023-09-26 13:48:49   86.3 MiB 2017/07/METBDY3D_12US1.35L.20170703.nc3
+2023-09-26 13:48:49   86.3 MiB 2017/07/METBDY3D_12US1.35L.20170704.nc3
+2023-09-26 13:48:49   86.3 MiB 2017/07/METBDY3D_12US1.35L.20170705.nc3
+```
+
+2023-09-26 13:49:01  445.0 MiB 2017/07/METCRO2D_12US1.35L.20170701.nc3
+2023-09-26 13:49:01  445.0 MiB 2017/07/METCRO2D_12US1.35L.20170702.nc3
+2023-09-26 13:49:01  445.0 MiB 2017/07/METCRO2D_12US1.35L.20170703.nc3
+2023-09-26 13:49:01  445.0 MiB 2017/07/METCRO2D_12US1.35L.20170704.nc3
+2023-09-26 13:49:03  445.0 MiB 2017/07/METCRO2D_12US1.35L.20170705.nc3
+```
+
+2023-09-26 13:49:59    7.6 GiB 2017/07/METCRO3D_12US1.35L.20170701.nc3
+2023-09-26 13:49:59    7.6 GiB 2017/07/METCRO3D_12US1.35L.20170702.nc3
+2023-09-26 13:50:00    7.6 GiB 2017/07/METCRO3D_12US1.35L.20170703.nc3
+2023-09-26 13:50:02    7.6 GiB 2017/07/METCRO3D_12US1.35L.20170704.nc3
+2023-09-26 13:50:08    7.6 GiB 2017/07/METCRO3D_12US1.35L.20170705.nc3
+```
+
+
+2023-09-26 14:08:53    2.7 GiB 2017/07/METDOT3D_12US1.35L.20170701.nc3
+2023-09-26 14:08:57    2.7 GiB 2017/07/METDOT3D_12US1.35L.20170702.nc3
+2023-09-26 14:08:57    2.7 GiB 2017/07/METDOT3D_12US1.35L.20170703.nc3
+2023-09-26 14:09:03    2.7 GiB 2017/07/METDOT3D_12US1.35L.20170704.nc3
+2023-09-26 14:09:55    2.7 GiB 2017/07/METDOT3D_12US1.35L.20170705.nc3
+```
+
+Total Objects: 217
+   Total Size: 336.4 GiB
+
+
+</pre>
+
+Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
+
+<pre>
+aws s3 --dryrun --no-sign-request cp --recursive s3://s3://cmas-smoke-testcase /your_local_path/cmas-smoke-testcase
+</pre>
+
+If the above commmand is successful, then remove the --dryrun and run the command again.
+
+
+
+Please submit any questions or difficulties as a new issue in the CMAS Data Warehouse Category on the CMAS User Forum.<br>
+<a href="https://forum.cmascenter.org/c/cmas-data-warehouse/96">CMAS User Forum</a><br>
+
+</body>
+</html>
+
