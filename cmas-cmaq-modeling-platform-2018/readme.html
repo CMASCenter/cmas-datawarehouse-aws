@@ -40,7 +40,7 @@ Example commands:<br>
 To query how much data is in a bucket: <br>
 
 <pre>
-aws s3 ls --summarize --human-readable --recursive s3://cmas-cmaq-modeling-platform-2018
+aws s3 ls --summarize --region=us-east-1 --human-readable --recursive s3://cmas-cmaq-modeling-platform-2018
 </pre>
 
 Output: <br>
@@ -53,21 +53,21 @@ Total Objects: 18579
 Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
 
 <pre>
-aws s3 --no-sign-request cp --recursive s3://cmas-cmaq-modeling-platform-2018 /your_local_path/
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmas-cmaq-modeling-platform-2018 /your_local_path/
 </pre>
 
 To obtain just the files you need from the CMAQ input data and avoid downloading the full bucket you can use the --include and --exclude commands and use the --dryrun option to see what would be copied before you begin. <br>
 <a href="https://docs.aws.amazon.com/cli/latest/reference/s3/cp.html">AWS CLI S3 Copy command - latest reference manual</a>
 
 <pre>
-aws s3 ls --summarize --human-readable --recursive s3://cmas-cmaq-modeling-platform-2018/2018_12US1
+aws s3 ls --summarize --region=us-east-1 --human-readable --recursive s3://cmas-cmaq-modeling-platform-2018/2018_12US1
 </pre>
 
 
 Example, to only copy the README to your local directory "." using use  (remove the --dryrun option): <br>
 
 <pre>
-aws s3 cp --dryrun --exclude "*" --include "CMAQ_Control_DESID.nml" --recursive s3://cmas-cmaq-modeling-platform-2018/CMAQ_12US1 .
+aws s3 cp --dryrun --region=us-east-1 --exclude "*" --include "CMAQ_Control_DESID.nml" --recursive s3://cmas-cmaq-modeling-platform-2018/CMAQ_12US1 .
 </pre>
 
 You can also use the aws s3 cp command to obtain specific dates using the above method. <br>
