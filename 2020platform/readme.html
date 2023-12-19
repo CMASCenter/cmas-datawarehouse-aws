@@ -22,7 +22,7 @@ To query how much data is in a bucket: <br>
 
 
 <pre>
-aws s3 ls --summarize --human-readable --recursive s3://2020platform
+aws s3 ls --summarize --human-readable --region=us-east-1 --recursive s3://2020platform
 </pre>
 
 Tail of Output: <br>
@@ -43,7 +43,7 @@ Total Objects: 9185
 To copy or download this data use the following command:
 
 <pre>
-aws s3 --no-sign-request cp --recursive s3://2020platform /your/local/directory/
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://2020platform /your/local/directory/
 </pre>
 
 Please submit any questions or difficulties as a new issue on the CMAS User Forum.<br>
