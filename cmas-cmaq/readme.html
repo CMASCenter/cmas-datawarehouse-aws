@@ -23,7 +23,7 @@ There are three sets of benchmark data available.<br>
 1. CMAQv5.4_2018_12US1_Benchmark_2Day_Input<br>
 
 <pre>
-aws s3 ls --summarize --human-readable --recursive s3://cmas-cmaq/CMAQv5.4_2018_12US1_Benchmark_2Day_Input
+aws s3 ls --summarize --region=us-east-1 --human-readable --recursive s3://cmas-cmaq/CMAQv5.4_2018_12US1_Benchmark_2Day_Input
 </pre>
 
 Output: <br>
@@ -102,7 +102,7 @@ Total Objects: 247
 Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
 
 <pre>
-aws s3 --no-sign-request cp --recursive s3://cmas-cmaq/CMAQv5.4_2018_12US1_Benchmark_2Day_Input /your_local_path/
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmas-cmaq/CMAQv5.4_2018_12US1_Benchmark_2Day_Input /your_local_path/
 </pre>
 
 
@@ -110,7 +110,7 @@ aws s3 --no-sign-request cp --recursive s3://cmas-cmaq/CMAQv5.4_2018_12US1_Bench
 
 
 <pre>
-aws s3 ls --summarize --human-readable --recursive s3://cmas-cmaq/CMAQv5.4_2018_12LISTOS_Benchmark_3Day_Input
+aws s3 ls --summarize --region=us-east-1 --human-readable --recursive s3://cmas-cmaq/CMAQv5.4_2018_12LISTOS_Benchmark_3Day_Input
 </pre>
 
 <pre>
@@ -125,7 +125,7 @@ Total Objects: 134
 3. CMAQv5.4_2018_12NE3_Benchmark_2Day_Input/2018_12NE3
 
 <pre>
-aws s3 ls --summarize --human-readable --recursive s3://cmas-cmaq/CMAQv5.4_2018_12NE3_Benchmark_2Day_Input/
+aws s3 ls --summarize --region=us-east-1 --human-readable --recursive s3://cmas-cmaq/CMAQv5.4_2018_12NE3_Benchmark_2Day_Input/
 </pre>
 
 <pre>
