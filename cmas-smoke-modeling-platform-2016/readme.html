@@ -20,7 +20,7 @@ To query how much data is in a bucket: <br>
 
 
 <pre>
-aws s3 ls --summarize --human-readable --recursive s3://cmas-smoke-modeling-platform-2016
+aws s3 ls --summarize --region=us-east-1 --human-readable --recursive s3://cmas-smoke-modeling-platform-2016
 </pre>
 
 Tail of Output: <br>
@@ -46,7 +46,7 @@ Total Objects: 385
 To download the data:
 
 <pre>
-aws s3 --no-sign-request cp --recursive s3://cmas-smoke-modeling-platform-2016 /your/local/directory
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmas-smoke-modeling-platform-2016 /your/local/directory
 </pre>
 
 Please submit any questions or difficulties as a new issue on the CMAS User Forum.<br>
