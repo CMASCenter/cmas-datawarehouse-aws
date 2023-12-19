@@ -48,7 +48,7 @@ Example commands:<br>
 To query how much data is in a bucket: <br>
 
 <pre>
-aws s3 ls --summarize --human-readable --recursive s3://cmas-equates
+aws s3 ls --summarize --region=us-east-1 --human-readable --recursive s3://cmas-equates
 </pre>
 
 
@@ -72,14 +72,14 @@ To obtain just the files you need from the CMAQ input data and avoid downloading
 <a href="https://docs.aws.amazon.com/cli/latest/reference/s3/cp.html">AWS CLI S3 Copy command - latest reference manual</a>
 
 <pre>
-aws s3 ls --summarize --human-readable --recursive s3://cmas-equates/CMAQ_12US1
+aws s3 ls --summarize --region=us-east-1 --human-readable --recursive s3://cmas-equates/CMAQ_12US1
 </pre>
 
 
 Example, to only copy the README to your local directory "." use: <br>
 
 <pre>
-aws s3 cp --dryrun --exclude "*" --include "README_EQUATES_v1.0_modelready.txt" --recursive s3://cmas-equates/CMAQ_12US1 .
+aws s3 cp --dryrun --region=us-east-1 --exclude "*" --include "README_EQUATES_v1.0_modelready.txt" --recursive s3://cmas-equates/CMAQ_12US1 .
 </pre>
 
 You can also use the aws s3 cp command to obtain specific dates using the above method. <br>
