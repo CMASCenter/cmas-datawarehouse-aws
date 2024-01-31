@@ -90,20 +90,42 @@ Total Objects: 4180
 </pre>
 
 
-To find the size and list the files available in the model ready emissions directory for 2020, use the following command:
+To find the size and list the files available in the merged emis_mole_all model ready emissions directory for 2020, use the following command:
 
 <pre>
- aws s3 ls --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/emis
+ aws s3 ls --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/emis/smoke_out/2020ha2_cb6_20k/12US1/cmaq_cb6ae7/merged_nobeis_norwc/
 </pre>
 
 Tail of the output:
 
 <pre>
-2023-12-20 09:55:51    5.9 GiB 2020platform/emis/smoke_out/2020ha_cb6_20k/12US1/cmaq_cb6ae7/ptnonipm_no-landfills/inln_mole_ptnonipm_no-landfills_20201126_12US1_cmaq_cb6ae7_2020ha_cb6_20k.ncf
-2023-12-20 09:55:51    5.9 GiB 2020platform/emis/smoke_out/2020ha_cb6_20k/12US1/cmaq_cb6ae7/ptnonipm_no-landfills/inln_mole_ptnonipm_no-landfills_20201127_12US1_cmaq_cb6ae7_2020ha_cb6_20k.ncf
-2023-12-20 09:55:51    5.9 GiB 2020platform/emis/smoke_out/2020ha_cb6_20k/12US1/cmaq_cb6ae7/ptnonipm_no-landfills/inln_mole_ptnonipm_no-landfills_20201128_12US1_cmaq_cb6ae7_2020ha_cb6_20k.ncf
-2023-12-20 09:55:51    5.9 GiB 2020platform/emis/smoke_out/2020ha_cb6_20k/12US1/cmaq_cb6ae7/ptnonipm_no-landfills/inln_mole_ptnonipm_no-landfills_20201207_12US1_cmaq_cb6ae7_2020ha_cb6_20k.ncf
-2023-12-20 09:55:51    5.9 GiB 2020platform/emis/smoke_out/2020ha_cb6_20k/12US1/cmaq_cb6ae7/ptnonipm_no-landfills/inln_mole_ptnonipm_no-landfills_20201208_12US1_cmaq_cb6ae7_2020ha_cb6_20k.ncf
+2023-11-10 09:39:00    1.6 GiB 2020platform/emis/smoke_out/2020ha2_cb6_20k/12US1/cmaq_cb6ae7/merged_nobeis_norwc/emis_mole_all_20201221_12US1_nobeis_norwc_2020ha2_cb6_20k.ncf
+2023-11-10 09:54:37    1.6 GiB 2020platform/emis/smoke_out/2020ha2_cb6_20k/12US1/cmaq_cb6ae7/merged_nobeis_norwc/emis_mole_all_20201222_12US1_nobeis_norwc_2020ha2_cb6_20k.ncf
+2023-11-10 09:54:37    1.6 GiB 2020platform/emis/smoke_out/2020ha2_cb6_20k/12US1/cmaq_cb6ae7/merged_nobeis_norwc/emis_mole_all_20201223_12US1_nobeis_norwc_2020ha2_cb6_20k.ncf
+2023-11-10 09:54:38    1.6 GiB 2020platform/emis/smoke_out/2020ha2_cb6_20k/12US1/cmaq_cb6ae7/merged_nobeis_norwc/emis_mole_all_20201224_12US1_nobeis_norwc_2020ha2_cb6_20k.ncf
+2023-11-10 09:54:38    1.6 GiB 2020platform/emis/smoke_out/2020ha2_cb6_20k/12US1/cmaq_cb6ae7/merged_nobeis_norwc/emis_mole_all_20201225_12US1_nobeis_norwc_2020ha2_cb6_20k.ncf
+2023-11-10 09:39:00    1.6 GiB 2020platform/emis/smoke_out/2020ha2_cb6_20k/12US1/cmaq_cb6ae7/merged_nobeis_norwc/emis_mole_all_20201226_12US1_nobeis_norwc_2020ha2_cb6_20k.ncf
+2023-11-10 09:54:37    1.6 GiB 2020platform/emis/smoke_out/2020ha2_cb6_20k/12US1/cmaq_cb6ae7/merged_nobeis_norwc/emis_mole_all_20201227_12US1_nobeis_norwc_2020ha2_cb6_20k.ncf
+2023-11-10 09:54:37    1.6 GiB 2020platform/emis/smoke_out/2020ha2_cb6_20k/12US1/cmaq_cb6ae7/merged_nobeis_norwc/emis_mole_all_20201228_12US1_nobeis_norwc_2020ha2_cb6_20k.ncf
+2023-11-10 09:54:37    1.6 GiB 2020platform/emis/smoke_out/2020ha2_cb6_20k/12US1/cmaq_cb6ae7/merged_nobeis_norwc/emis_mole_all_20201229_12US1_nobeis_norwc_2020ha2_cb6_20k.ncf
+2023-11-10 09:39:00    1.6 GiB 2020platform/emis/smoke_out/2020ha2_cb6_20k/12US1/cmaq_cb6ae7/merged_nobeis_norwc/emis_mole_all_20201230_12US1_nobeis_norwc_2020ha2_cb6_20k.ncf
+2023-11-10 09:54:37    1.6 GiB 2020platform/emis/smoke_out/2020ha2_cb6_20k/12US1/cmaq_cb6ae7/merged_nobeis_norwc/emis_mole_all_20201231_12US1_nobeis_norwc_2020ha2_cb6_20k.ncf
+
+Total Objects: 377
+   Total Size: 610.4 GiB
+</pre>
+
+and
+
+for the point source emissions
+
+<pre>
+ aws s3 ls --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/emis/smoke_out/2020ha_cb6_20k/12US1/cmaq_cb6ae7
+ <pre>
+
+Tail of the output:
+
+<pre>
 2023-12-20 09:55:51    5.9 GiB 2020platform/emis/smoke_out/2020ha_cb6_20k/12US1/cmaq_cb6ae7/ptnonipm_no-landfills/inln_mole_ptnonipm_no-landfills_20201212_12US1_cmaq_cb6ae7_2020ha_cb6_20k.ncf
 2023-12-20 09:55:51    5.9 GiB 2020platform/emis/smoke_out/2020ha_cb6_20k/12US1/cmaq_cb6ae7/ptnonipm_no-landfills/inln_mole_ptnonipm_no-landfills_20201213_12US1_cmaq_cb6ae7_2020ha_cb6_20k.ncf
 2023-12-20 09:55:51    5.9 GiB 2020platform/emis/smoke_out/2020ha_cb6_20k/12US1/cmaq_cb6ae7/ptnonipm_no-landfills/inln_mole_ptnonipm_no-landfills_20201224_12US1_cmaq_cb6ae7_2020ha_cb6_20k.ncf
@@ -111,8 +133,51 @@ Tail of the output:
 2023-12-20 09:55:51    5.9 GiB 2020platform/emis/smoke_out/2020ha_cb6_20k/12US1/cmaq_cb6ae7/ptnonipm_no-landfills/inln_mole_ptnonipm_no-landfills_20201226_12US1_cmaq_cb6ae7_2020ha_cb6_20k.ncf
 2023-12-20 09:55:51   29.4 MiB 2020platform/emis/smoke_out/2020ha_cb6_20k/12US1/cmaq_cb6ae7/ptnonipm_no-landfills/stack_groups_ptnonipm_no-landfills_12US1_2020ha_cb6_20k.ncf
 
-Total Objects: 10049
-   Total Size: 5.0 TiB
+Total Objects: 5187
+   Total Size: 1.6 TiB
+</pre>
+
+To find the size and list the files available in the pre-merged emissions directory for 2020, use the following commands (note two separate directories):
+
+<pre>
+aws s3 ls --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/emis/2020ha_cb6_20k/premerged
+</pre>
+
+Tail of the output:
+
+<pre>
+2023-11-09 15:10:50    1.1 GiB 2020platform/emis/2020ha_cb6_20k/premerged/rwc/emis_mole_rwc_20201222_12US1_cmaq_cb6ae7_2020ha_cb6_20k.ncf
+2023-11-09 15:10:50    1.1 GiB 2020platform/emis/2020ha_cb6_20k/premerged/rwc/emis_mole_rwc_20201223_12US1_cmaq_cb6ae7_2020ha_cb6_20k.ncf
+2023-11-09 15:10:50    1.1 GiB 2020platform/emis/2020ha_cb6_20k/premerged/rwc/emis_mole_rwc_20201224_12US1_cmaq_cb6ae7_2020ha_cb6_20k.ncf
+2023-11-09 15:10:50    1.1 GiB 2020platform/emis/2020ha_cb6_20k/premerged/rwc/emis_mole_rwc_20201225_12US1_cmaq_cb6ae7_2020ha_cb6_20k.ncf
+2023-11-09 15:10:50    1.1 GiB 2020platform/emis/2020ha_cb6_20k/premerged/rwc/emis_mole_rwc_20201226_12US1_cmaq_cb6ae7_2020ha_cb6_20k.ncf
+2023-11-09 15:10:50    1.1 GiB 2020platform/emis/2020ha_cb6_20k/premerged/rwc/emis_mole_rwc_20201227_12US1_cmaq_cb6ae7_2020ha_cb6_20k.ncf
+2023-11-09 15:10:50    1.1 GiB 2020platform/emis/2020ha_cb6_20k/premerged/rwc/emis_mole_rwc_20201228_12US1_cmaq_cb6ae7_2020ha_cb6_20k.ncf
+2023-11-09 15:10:50    1.1 GiB 2020platform/emis/2020ha_cb6_20k/premerged/rwc/emis_mole_rwc_20201229_12US1_cmaq_cb6ae7_2020ha_cb6_20k.ncf
+2023-11-09 15:10:50    1.1 GiB 2020platform/emis/2020ha_cb6_20k/premerged/rwc/emis_mole_rwc_20201230_12US1_cmaq_cb6ae7_2020ha_cb6_20k.ncf
+2023-11-09 15:10:50    1.1 GiB 2020platform/emis/2020ha_cb6_20k/premerged/rwc/emis_mole_rwc_20201231_12US1_cmaq_cb6ae7_2020ha_cb6_20k.ncf
+
+Total Objects: 2030
+   Total Size: 657.6 GiB
+</pre>
+
+<pre>
+aws s3 ls --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/emis/2020ha2_cb6_20k/premerged
+</pre>
+
+Tail of the output:
+
+<pre>
+2023-11-09 15:12:03    1.1 GiB 2020platform/emis/2020ha2_cb6_20k/premerged/onroad_gas/emis_mole_onroad_gas_20201225_12US1_cmaq_cb6ae7_2020ha2_cb6_20k.ncf
+2023-11-09 15:12:03    1.1 GiB 2020platform/emis/2020ha2_cb6_20k/premerged/onroad_gas/emis_mole_onroad_gas_20201226_12US1_cmaq_cb6ae7_2020ha2_cb6_20k.ncf
+2023-11-09 15:12:03    1.1 GiB 2020platform/emis/2020ha2_cb6_20k/premerged/onroad_gas/emis_mole_onroad_gas_20201227_12US1_cmaq_cb6ae7_2020ha2_cb6_20k.ncf
+2023-11-09 15:12:03    1.1 GiB 2020platform/emis/2020ha2_cb6_20k/premerged/onroad_gas/emis_mole_onroad_gas_20201228_12US1_cmaq_cb6ae7_2020ha2_cb6_20k.ncf
+2023-11-09 15:12:03    1.1 GiB 2020platform/emis/2020ha2_cb6_20k/premerged/onroad_gas/emis_mole_onroad_gas_20201229_12US1_cmaq_cb6ae7_2020ha2_cb6_20k.ncf
+2023-11-09 15:12:03    1.1 GiB 2020platform/emis/2020ha2_cb6_20k/premerged/onroad_gas/emis_mole_onroad_gas_20201230_12US1_cmaq_cb6ae7_2020ha2_cb6_20k.ncf
+2023-11-09 15:12:03    1.1 GiB 2020platform/emis/2020ha2_cb6_20k/premerged/onroad_gas/emis_mole_onroad_gas_20201231_12US1_cmaq_cb6ae7_2020ha2_cb6_20k.ncf
+
+Total Objects: 2453
+   Total Size: 2.2 TiB
 </pre>
 
 
