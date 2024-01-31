@@ -26,8 +26,7 @@ Once you have it installed, you can use it without credentials.<br>
 Example commands:<br>
 
 
-<h2>To query how much data is in a bucket:</h2> <br>
-
+<h2>To query how much data is in the full bucket:</h2> <br>
 
 <pre>
 aws s3 ls --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform
@@ -43,7 +42,7 @@ Total Objects: 24772
 <h2>Note, this bucket contains initial and boundry condition files, mcip, and model ready emissions for 2020.</h2> <br>
 
 
-<h2>To find the size and list the files available in the directory containing the initial and boundary condition files, use the following command:</h2> <br>
+<h3>To find the size and list the files available in the directory containing the initial and boundary condition files, use the following command:</h3> <br>
 
 <pre>
 aws s3 ls --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/icbc_2020_tox_addhr
@@ -67,7 +66,7 @@ Total Objects: 381
 </pre>
 
 
-<h2>To find the size and list the files available in the MCIP directory for 2020, use the following command:</h2>
+<h3>To find the size and list the files available in the MCIP directory for 2020, use the following command:</h3>
 
 <pre>
  aws s3 ls --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/mcip/WRFv4.1.1_12US1_2020_35aL_lucor
@@ -99,7 +98,7 @@ Total Objects: 4180
 </pre>
 
 
-<h2>To find the size and list the files available in the merged emis_mole_all model ready emissions directory for 2020, use the following command:</h2>
+<h3>To find the size and list the files available in the merged emis_mole_all model ready emissions directory for 2020, use the following command:</h3>
 
 <pre>
  aws s3 ls --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/emis/smoke_out/2020ha2_cb6_20k/12US1/cmaq_cb6ae7/merged_nobeis_norwc/
@@ -126,7 +125,7 @@ Total Objects: 377
 
 and
 
-<h2> To find the size and list the files available for the point source emissions:</h2>
+<h3> To find the size and list the files available for the point source emissions:</h3>
 
 <pre>
  aws s3 ls --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/emis/smoke_out/2020ha_cb6_20k/12US1/cmaq_cb6ae7
@@ -146,7 +145,7 @@ Total Objects: 5187
    Total Size: 1.6 TiB
 </pre>
 
-<h2>To find the size and list the files available in the pre-merged emissions directory for 2020, use the following commands (note two separate directories):</h2>
+<h3>To find the size and list the files available in the pre-merged emissions directory for 2020, use the following commands (note two separate directories):</h3>
 
 <pre>
 aws s3 ls --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/emis/2020ha_cb6_20k/premerged
