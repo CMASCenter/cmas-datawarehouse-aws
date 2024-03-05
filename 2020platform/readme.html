@@ -29,7 +29,7 @@ Example commands:<br>
 <h2>To query how much data is in the full bucket:</h2> <br>
 
 <pre>
-aws s3 ls --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform
+aws s3 ls --no-sign-request --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform
 </pre>
 
 Tail of Output: <br>
@@ -45,7 +45,7 @@ Total Objects: 24772
 <h3>To find the size and list the files available in the directory containing the initial and boundary condition files, use the following command:</h3> <br>
 
 <pre>
-aws s3 ls --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/icbc_2020_tox_addhr
+aws s3 ls --no-sign-request --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/12US1/icbc_2020_tox_addhr
 </pre>
 
 Tail of output:
@@ -69,7 +69,7 @@ Total Objects: 381
 <h3>To find the size and list the files available in the MCIP directory for 2020, use the following command:</h3>
 
 <pre>
- aws s3 ls --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/mcip/WRFv4.1.1_12US1_2020_35aL_lucor
+ aws s3 ls --no-sign-request --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/12US1/mcip/WRFv4.1.1_12US1_2020_35aL_lucor
 </pre>
 
 Tail of output:
@@ -101,7 +101,7 @@ Total Objects: 4180
 <h3>To find the size and list the files available in the merged emis_mole_all model ready emissions directory for 2020, use the following command:</h3>
 
 <pre>
- aws s3 ls --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/emis/smoke_out/2020ha2_cb6_20k/12US1/cmaq_cb6ae7/merged_nobeis_norwc/
+ aws s3 ls --no-sign-request --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/12US1/emis/smoke_out/2020ha2_cb6_20k/12US1/cmaq_cb6ae7/merged_nobeis_norwc/
 </pre>
 
 Tail of the output:
@@ -128,7 +128,7 @@ and
 <h3> To find the size and list the files available for the point source emissions:</h3>
 
 <pre>
- aws s3 ls --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/emis/smoke_out/2020ha_cb6_20k/12US1/cmaq_cb6ae7
+ aws s3 ls --no-sign-request --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/12US1/emis/smoke_out/2020ha_cb6_20k/12US1/cmaq_cb6ae7
  <pre>
 
 Tail of the output:
@@ -148,7 +148,7 @@ Total Objects: 5187
 <h3>To find the size and list the files available in the pre-merged emissions directory for 2020, use the following commands (note two separate directories):</h3>
 
 <pre>
-aws s3 ls --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/emis/2020ha_cb6_20k/premerged
+aws s3 ls --no-sign-request --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/12US1/emis/2020ha_cb6_20k/premerged
 </pre>
 
 Tail of the output:
@@ -170,7 +170,7 @@ Total Objects: 2030
 </pre>
 
 <pre>
-aws s3 ls --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/emis/2020ha2_cb6_20k/premerged
+aws s3 ls --no-sign-request --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2020platform/2020platform/12US1/emis/2020ha2_cb6_20k/premerged
 </pre>
 
 Tail of the output:
@@ -204,4 +204,3 @@ A script is being developed for downloading 2 days of input data to run a benchm
 
 </body>
 </html>
-
