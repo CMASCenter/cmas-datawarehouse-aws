@@ -69,12 +69,12 @@ Units: All emissions data are in US tons.<br>
               <tr>
                 <th>Data description</th>
 		<th>File type (File size for all years)</th>
-		<th>Location on <a href="https://drive.google.com/drive/folders/1G2_LBLy7_n91Ur0ulsLZ9zwGs3luTzn2">CMAS Data Warehouse</a> (File paths relative to this top level folder</th>
+		<th>Location on CMAS Data Warehouse (File paths relative to this top level folder: <a href="https://drive.google.com/drive/folders/1G2_LBLy7_n91Ur0ulsLZ9zwGs3luTzn2">CMAS Google Drive Link</a>) </th>
 	      </tr>
 	      <tr>
                 <td>Year specific inventory emissions for 2002¿2019</td>
 		<td>tarred and zipped netCDF files (880 GB)</td>
-		<td>EQUATES/SMOKE_INPUT/< year(YYYY)>^1/EQUATES_INV_YYYY_version1.0.tar.gz </tr>
+		<td>EQUATES/SMOKE_INPUT/< year(YYYY)> (1)/EQUATES_INV_YYYY_version1.0.tar.gz </tr>
               <tr>
 		<td>Ancillary files needed for all years</td>
 		<td>tarred and zipped netCDF files (11GB) </td>
@@ -87,7 +87,8 @@ Units: All emissions data are in US tons.<br>
               </tr>
             </table>
 
-^1 Four-digit year
+	    Footnote: <br>
+	    (1) Four-digit year <br>
 
 <h3>EQUATES Model-Ready Inputs for CONUS (12US1 domain)</h3>
 Purpose: For users who want to run CMAQ using EQUATES input data. 2002-2019 data are available on the CMAS Google Drive.  2017 data are also available on CMAS AWS Open Data Storage. <br>
@@ -101,14 +102,14 @@ Units: Units for each variable are included in the meteorology, emissions, and C
                 <th>Data description</td>
                 <th>File type (File size for all years)</td>
 		<th>Data location</td>
-                <th>Location on CMAS Data Warehouse (File paths relative to this top-level folder on the CMAS Data Warehouse on AWS Open Data: https://cmas-equates.s3.amazonaws.com/index.html </td>
+                <th>Location on CMAS Data Warehouse (File paths relative to the top-level Google Drive or AWS link provided.)</td>
               </tr>
 
               <tr>
-                <td>CMAQ-ready meteorology inputs for 2013-2019 ^2</td>
+                <td>CMAQ-ready meteorology inputs for 2013-2019 (2)</td>
 		<td><a href="https://drive.google.com/drive/folders/1G2_LBLy7_n91Ur0ulsLZ9zwGs3luTzn2">CMAS Google Drive</a></td>
 		<td>tarred netCDF files (16.8 TB)</td>
-                <td>EQUATES/CMAQ_12US1/INPUT/< year>/met/mcip_v51_wrf_v411_noltng/< month> ^3</td>
+                <td>EQUATES/CMAQ_12US1/INPUT/< year>/met/mcip_v51_wrf_v411_noltng/< month> (3)</td>
               </tr>
 
               <tr>
@@ -118,7 +119,7 @@ Units: Units for each variable are included in the meteorology, emissions, and C
 		<td> EQUATES/CMAQ_12US1/INPUT/< year>/emis</td>
               </tr>
 	      <tr>
-		<td>CMAQ boundary condition files for 2002-2019 (monthly files of hourly 3D data at all 12US1 boundary grid cells ^4)</td>
+		<td>CMAQ boundary condition files for 2002-2019 (monthly files of hourly 3D data at all 12US1 boundary grid cells (4))</td>
                 <td><a href="https://drive.google.com/drive/folders/1G2_LBLy7_n91Ur0ulsLZ9zwGs3luTzn2">CMAS Google Drive</a></td>
 		<td>netCDF (8.1 TB)</td>
 		<td>EQUATES/CMAQ_12US1/INPUT/< year>/icbc/BCON_CONC_12US1_CMAQv53_TS_108NHEMI_regrid_YYYYMM.nc</td>
@@ -148,10 +149,10 @@ Units: Units for each variable are included in the meteorology, emissions, and C
 		<td>CMAQ_12US1/INPUT/2017/icbc/ BCON_CONC_12US1_CMAQv53_TS_108NHEMI_regrid_< year>< month>.nc</td>
 	      </tr>
 	      <tr>
-		 <td>CMAQ initial condition files for 2017 are based on EQUATES restart files for the 1st and 15th day of each month. If using these restart files for a new modeling application, users are strongly encouraged to use a 2-4 week ¿spin-up¿ period.</td>
+		 <td>CMAQ initial condition files for 2017 are based on EQUATES restart files for the 1st and 15th day of each month. If using these restart files for a new modeling application, users are strongly encouraged to use a 2-4 week spin-up period.</td>
 		 <td><a href="https://cmas-equates.s3.amazonaws.com/index.html">CMAS AWS S3 Bucket</a></td>
 		 <td>netCDF (885 GB)</td>
-		 <td>CMAQ_12US1/INPUT/2017/icbc/CCTM_<file_type>^5 _v532_cb6r3_ae7_aq_WR413_MYR_STAGE_<year>_12US1_<year><month><day>^6 .nc</td>
+		 <td>CMAQ_12US1/INPUT/2017/icbc/CCTM_<file_type>(5)_v532_cb6r3_ae7_aq_WR413_MYR_STAGE_<year>_12US1_<year><month><day>(6) .nc</td>
 	      </tr>
             </table>
 
@@ -159,7 +160,7 @@ Units: Units for each variable are included in the meteorology, emissions, and C
 	    Footnotes: <br>
 	    (2) Only 7 years of MCIP data are being shared due to storage space limitations/cost. <br>
 	    (3) Two-digit month <br>
-	    (4) <a href="https://www.cmascenter.org/ioapi/documentation/all_versions/html/BDY.jpg">https://www.cmascenter.org/ioapi/documentation/all_versions/html/BDY.jpg</a>
+	    (4) <a href="https://www.cmascenter.org/ioapi/documentation/all_versions/html/BDY.jpg">https://www.cmascenter.org/ioapi/documentation/all_versions/html/BDY.jpg</a><br>
 	    (5) Initial condition (restart) file type: CGRID, MEDIA_CONC, SOILOUT <br> 
 	    (6) Two-digit day <br> 
 
@@ -187,7 +188,7 @@ Figure 3: EQUATES 12US1 modeling domain is shown as the bold rectangle. The grey
                 <th>Files are attached to the EQUATES Dataverse repository (https://doi.org/10.15139/S3/F2KJSK)</th>
               </tr>
               <tr>
-		      <td>Annual total emissions for CONUS (not including offshore sources) for NOX, SO2, CO, PM2.5, PM10, VOC_regulatory (6) , NH3_nofert (7) , NH3_fert (8) for 2002-2017 based on the inventory (INV) emissions files</td>
+		      <td>Annual total emissions for CONUS (not including offshore sources) for NOX, SO2, CO, PM2.5, PM10, VOC_regulatory (7) , NH3_nofert (8) , NH3_fert (9) for 2002-2017 based on the inventory (INV) emissions files</td>
 		      <td>Zipped ASCII file (1.5KB)</td>
 		      <td>EQUATESv1.0_INV_emissions_annual_totals_by _pollutant.csv.gz</td>
 	      </tr>
@@ -207,7 +208,7 @@ Figure 3: EQUATES 12US1 modeling domain is shown as the bold rectangle. The grey
 		      <td>EQUATES_CMAQ_12US1_grid_coordinates.csv.gz</td>
 	      </tr>
 	      <tr> 
-		      <td>Annual total gridded emissions for the 12US1 domain for 2002-2017 based on the MR emissions files for <pollutant> = NOX, SO2, CO, PM2.5, POC, PEC, VOC_regulatory, NMOG, NH3 (9) </td>
+		      <td>Annual total gridded emissions for the 12US1 domain for 2002-2017 based on the MR emissions files for <pollutant> = NOX, SO2, CO, PM2.5, POC, PEC, VOC_regulatory, NMOG, NH3 (10) </td>
 		      <td>Zipped ASCII files (17MB per file)</td>
 		      <td>EQUATESv1.0_<pollutant>_12US1_annual_emis sions_2002-2017.csv.gz</td>
              </tr>
@@ -219,10 +220,10 @@ Figure 3: EQUATES 12US1 modeling domain is shown as the bold rectangle. The grey
 	   </table>
 
 	   Footnotes<br>
-	   (6) Regulatory volatile organic compounds defined as in the Code of Federal Regulations, 40 CFR 51.100 <br>
-	   (7) Anthropogenic NH3 emissions excluding emissions from fertilizer which were calculated online in CMAQ <br>
-	   (8) NH3 fertilizer emissions from agriculture, calculated online in CMAQ and post-processed to be included in these summary files <br>
-	   (9) Total anthropogenic NH3 emissions including emissions from fertilizer<br>
+	   (7) Regulatory volatile organic compounds defined as in the Code of Federal Regulations, 40 CFR 51.100 <br>
+	   (8) Anthropogenic NH3 emissions excluding emissions from fertilizer which were calculated online in CMAQ <br>
+	   (9) NH3 fertilizer emissions from agriculture, calculated online in CMAQ and post-processed to be included in these summary files <br>
+	   (10) Total anthropogenic NH3 emissions including emissions from fertilizer<br>
 
 
 
@@ -300,7 +301,7 @@ CMAQ Source Code: The EQUATES 108NHEMI air quality modeling is based on H-CMAQv5
                 <th>Location on CMAS Data Warehouse (File paths relative to this top level folder</th>
               </tr>
               <tr>
-		      <td>CMAQ daily average 3D output for 44 layers for 260 model variables for 2002-2019 ^9</td>
+		      <td>CMAQ daily average 3D output for 44 layers for 260 model variables for 2002-2019 (11)</td>
 		      <td><a href="https://drive.google.com/drive/folders/1G2_LBLy7_n91Ur0ulsLZ9zwGs3luTzn2">CMAS Google Drive</a></td>
 		      <td>netCDF (10.8 TB) </td>
 		      <td>CMAQ_108NHemi/OUTPUT/<year>/CTM_CONC_v532_intel18.0_CMAQv53_TS_108NHEMI_<year><month>_dailyav.nc</td>
@@ -328,7 +329,7 @@ CMAQ Source Code: The EQUATES 108NHEMI air quality modeling is based on H-CMAQv5
 
 
            Footnotes<br>
-	   (9) can be used to created CMAQ BCs <br>
+	   (11) can be used to created CMAQ BCs <br>
 	   <br>
 
 	    <h4>List of Column Names and Descriptions in 12US1 Paired Model/Obs Files</h4>
@@ -835,6 +836,11 @@ Table 10: Hourly 3D concentrations for 27 model variables for 12US1 domain.<br>
 		<td>m</td>
 	</tr>
 	<tr>
+                <td>PV</td>
+                <td>Potential Vorticity</td>
+                <td>m2 s-1K kg-1</td>
+        </tr>
+	<tr>
 		<td>CO</td>
 		<td>Carbon Monoxide</td>
 		<td>ppbv</td>
@@ -850,11 +856,6 @@ Table 10: Hourly 3D concentrations for 27 model variables for 12US1 domain.<br>
 		<td>ppbv</td>
 	</tr>
 	<tr>
-		<td>NO</td>
-		<td>Nitric Oxide</td>
-		<td>ppbv</td>
-	</tr>
-	<tr>
 		<td>NO2</td>
 		<td>Nitrogen Dioxide</td>
 		<td>ppbv</td>
@@ -863,6 +864,11 @@ Table 10: Hourly 3D concentrations for 27 model variables for 12US1 domain.<br>
 		<td>O3</td>
 		<td>Ozone</td>
 		<td>ppbv</td>
+        </tr>
+	<tr>
+                <td>O3PV</td>
+                <td>Ozone Potential Vorticity (15)</td>
+                <td>ppbv</td>
         </tr>
         <tr>
 		<td>SO2</td>
@@ -993,7 +999,7 @@ Table 11: Column totals for 7 model variables for 12US1 or 108NHemi domains.
                  
                  
            Footnotes<br>
-	   (10) <a href="https://www.epa.gov/system/files/documents/2022-08/PM_2021.pdf"> <br>
+	   (12) <a href="https://www.epa.gov/system/files/documents/2022-08/PM_2021.pdf"> <br>
 		
 
 
