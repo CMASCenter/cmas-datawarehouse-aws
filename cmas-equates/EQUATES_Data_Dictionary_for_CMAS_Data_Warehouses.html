@@ -8,7 +8,7 @@ Last Updated 2024-11-24<br>
 <h1>EPA's Air Quality Time Series Project (EQUATES)</h1>
 <h2>Data Dictionary</h2>
 <h3>Summary</h3>
-The EPA's Air Quality Time Series (EQUATES) project datasets include 2002-2019 emissions, meteorology, and air quality modeling of the contiguous US (CONUS) over the "12US1" 12-km domain and Northern Hemisphere over the "108NHEMI" 108-km domain. The datasets are publicly available through the EPA¿s Amazon Web Services (AWS) Open Data Sponsorship Program (ODP) and the CMAS Data Warehouse (consisting of a Google Drive and AWS ODP) to support numerous human health and ecological modeling endpoints, as well as model evaluation and development. The following sections describe the datasets, including the target audience for the data, the file type, data dictionary (when applicable), and the location of the files on the the <a href="https://aws.amazon.com/marketplace/pp/prodview-3uwf3nafznft6?sr=0-1&ref_=beagle&applicationId=AWSMPContessa#overview">EPA AWS Storage</a>,  <a href="https://drive.google.com/drive/folders/1G2_LBLy7_n91Ur0ulsLZ9zwGs3luTzn2">CMAS Google Drive</a>, and <a href="https://registry.opendata.aws/cmas-data-warehouse/">CMAS AWS Storage</a>. 
+The EPA's Air Quality Time Series (EQUATES) project datasets include 2002-2019 emissions, meteorology, and air quality modeling of the contiguous US (CONUS) over the "12US1" 12-km domain and Northern Hemisphere over the "108NHEMI" 108-km domain. The datasets are publicly available through the EPA's Amazon Web Services (AWS) Open Data Sponsorship Program (ODP) and the CMAS Data Warehouse (consisting of a Google Drive and AWS ODP) to support numerous human health and ecological modeling endpoints, as well as model evaluation and development. The following sections describe the datasets, including the target audience for the data, the file type, data dictionary (when applicable), and the location of the files on the the <a href="https://aws.amazon.com/marketplace/pp/prodview-3uwf3nafznft6?sr=0-1&ref_=beagle&applicationId=AWSMPContessa#overview">EPA AWS Storage</a>,  <a href="https://drive.google.com/drive/folders/1G2_LBLy7_n91Ur0ulsLZ9zwGs3luTzn2">CMAS Google Drive</a>, and <a href="https://registry.opendata.aws/cmas-data-warehouse/">CMAS AWS Storage</a>. 
 
 
 <h3>How to Cite EQUATES Data</h3>
@@ -73,7 +73,7 @@ Units: All emissions data are in US tons.<br>
 		<th>Location on CMAS Data Warehouse (File paths relative to this top level folder: <a href="https://drive.google.com/drive/folders/1G2_LBLy7_n91Ur0ulsLZ9zwGs3luTzn2">CMAS Google Drive Link</a>) </th>
 	      </tr>
 	      <tr>
-                <td>Year specific inventory emissions for 2002¿2019</td>
+                <td>Year specific inventory emissions for 2002-2019</td>
 		<td>tarred and zipped netCDF files (880 GB)</td>
 		<td>EQUATES/SMOKE_INPUT/< year(YYYY)> (1)/EQUATES_INV_YYYY_version1.0.tar.gz </tr>
               <tr>
@@ -234,7 +234,7 @@ Figure 3: EQUATES 12US1 modeling domain is shown as the bold rectangle. The grey
 
 
 	   <h3>EQUATES Model Output for CONUS (12US1 domain)</h3>
-	   Purpose: For users who want to use WRF meteorology and/or CMAQ air quality estimates for regulatory or research applications (e.g., epidemiological studies, critical loads analysis), or model evaluation and development applications (e.g., diagnostic evaluation, reference data for sensitivity studies). CMAQ 3D and vertical column air quality data can be used to evaluate the modeling system, create model-observed ¿fused¿ surfaces, and to analyze spatial and temporal changes in air quality in the upper atmosphere, e.g., <a href="https://doi.org/10.1016/j.envint.2019.104909">https://doi.org/10.1016/j.envint.2019.104909</a>; <a href="https://doi.org/10.5194/acp-17-12449-2017">https://doi.org/10.5194/acp-17-12449-2017</a> ; <a href="https://doi.org/10.1029/2006JD008085">https://doi.org/10.1029/2006JD008085</a>; <a href="https://doi.org/10.5194/acp-15-9997-2015">https://doi.org/10.5194/acp-15-9997-2015</a>.<br>
+	   Purpose: For users who want to use WRF meteorology and/or CMAQ air quality estimates for regulatory or research applications (e.g., epidemiological studies, critical loads analysis), or model evaluation and development applications (e.g., diagnostic evaluation, reference data for sensitivity studies). CMAQ 3D and vertical column air quality data can be used to evaluate the modeling system, create model-observed fused surfaces, and to analyze spatial and temporal changes in air quality in the upper atmosphere, e.g., <a href="https://doi.org/10.1016/j.envint.2019.104909">https://doi.org/10.1016/j.envint.2019.104909</a>; <a href="https://doi.org/10.5194/acp-17-12449-2017">https://doi.org/10.5194/acp-17-12449-2017</a> ; <a href="https://doi.org/10.1029/2006JD008085">https://doi.org/10.1029/2006JD008085</a>; <a href="https://doi.org/10.5194/acp-15-9997-2015">https://doi.org/10.5194/acp-15-9997-2015</a>.<br>
 					   Meta Data (including units): See Tables 6-11. See also <a href="https://aws.amazon.com/marketplace/pp/prodview-3uwf3nafznft6?sr=0-1&ref_=beagle&applicationId=AWSMPContessa#overview">meta data on AWS</a>.<br>
 CMAQ Source Code: The EQUATES 12US1 air quality modeling is based on CMAQv5.3.2.1 (CMAQv5.3.2 with some<br>
 bugfixes later released in v5.3.3). The build directory for the 12US1 CMAQ simulations is available from the EQUATES Dataverse DOI</span><span class="ft0">: <A href="https://doi.org/10.15139/S3/F2KJSK">https://doi.org/10.15139/S3/F2KJSK</a><br>
@@ -288,7 +288,7 @@ bugfixes later released in v5.3.3). The build directory for the 12US1 CMAQ simul
 
 
 	    <h3>EQUATES Model Output for Northern Hemisphere (108NHemi domain)</h3>
-	    Purpose: Daily average 3D data for all species is suitable for users who want to examine continental-scale air quality trends or who want to create boundary conditions for any subset domain in the Northern Hemisphere.  Hourly CMAQ 3D and vertical column air quality data for a subset of species can be used to evaluate the modeling system, create model-observed ¿fused¿ surfaces, and to analyze spatial and temporal changes in air quality in the upper atmosphere, e.g., <a href="https://doi.org/10.1016/j.envint.2019.104909">; <a href=https://doi.org/10.5194/acp-17-12449-2017">; <a href="https://doi.org/10.1029/2006JD008085">; <a href="https://doi.org/10.5194/acp-15-9997-2015">.   
+	    Purpose: Daily average 3D data for all species is suitable for users who want to examine continental-scale air quality trends or who want to create boundary conditions for any subset domain in the Northern Hemisphere.  Hourly CMAQ 3D and vertical column air quality data for a subset of species can be used to evaluate the modeling system, create model-observed fused surfaces, and to analyze spatial and temporal changes in air quality in the upper atmosphere, e.g., <a href="https://doi.org/10.1016/j.envint.2019.104909">; <a href=https://doi.org/10.5194/acp-17-12449-2017">; <a href="https://doi.org/10.1029/2006JD008085">; <a href="https://doi.org/10.5194/acp-15-9997-2015">.   
 Data are available on the CMAS Google Drive and the CMAS AWS Open Data Storage, as indicated in the table. 
 <br> 
 	    Location of Meta Data: See the CMAQ IC/BC Tutorial on GitHub:<br>
@@ -313,7 +313,7 @@ CMAQ Source Code: The EQUATES 108NHEMI air quality modeling is based on H-CMAQv5
 		      <td>CMAQ_108NHemi/OUTPUT/<year>/CTM_CONC_v532_intel18.0_CMAQv53_TS_108NHEMI_<year><month>_dailyav.nc</td>
 		</tr>
 	     <tr>
-		     <td>CMAQ daily average 3D output for 44 layers for 260 model variables for 2018¿2019 ^12</td>
+		     <td>CMAQ daily average 3D output for 44 layers for 260 model variables for 2018-2019 ^12</td>
 		     <td><a href="https://cmas-equates.s3.amazonaws.com/index.html">CMAS AWS S3 Bucket</a></td>
 		     <td>netCDF (1.2 TB)</td>
 		     <td>CMAQ_108NHemi/<year>/ CTM_CONC_v532_intel18.0_CMAQv53_TS_108NHEMI_<year><month>_dailyav.nc</td>
