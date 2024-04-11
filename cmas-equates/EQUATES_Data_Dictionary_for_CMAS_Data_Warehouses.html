@@ -8,16 +8,13 @@ Last Updated 2023-02-24<br>
 <h1>EPA's Air Quality Time Series Project (EQUATES)</h1>
 <h2>Data Dictionary</h2>
 <h3>Summary</h3>
-The EPA's Air Quality Time Series (EQUATES) project datasets include 2002-2019 emissions, meteorology, and air quality modeling of the contiguous US (CONUS) over the "12US1" 12-km domain and Northern Hemisphere over the "108NHEMI" 108-km domain. The datasets are publicly available through the CMAS Data Warehouse to support numerous human health and ecological modeling endpoints, as well as model evaluation and development. The following sections describe the datasets, including the target audience for the data, the file type, data dictionary (when applicable), and the location of the files on the CMAS Data Warehouse. Unless otherwise noted, the file location information is relative to the top-level EQUATES folder on the CMAS Data Warehouse S3 Bucket or Google Drive:<br>
-CMAS Data Warehouse on AWS Open Data Program:<br>
-<A href="https://cmas-equates.s3.amazonaws.com/index.html">https://cmas-equates.s3.amazonaws.com/index.html</a><br>
+The EPA's Air Quality Time Series (EQUATES) project datasets include 2002-2019 emissions, meteorology, and air quality modeling of the contiguous US (CONUS) over the "12US1" 12-km domain and Northern Hemisphere over the "108NHEMI" 108-km domain. The datasets are publicly available through the CMAS Data Warehouse (consisting of a Google Drive and AWS ODP) to support numerous human health and ecological modeling endpoints, as well as model evaluation and development. The following sections describe the datasets, including the target audience for the data, the file type, data dictionary (when applicable), and the location of the files on the the <a href="https://aws.amazon.com/marketplace/pp/prodview-3uwf3nafznft6?sr=0-1&ref_=beagle&applicationId=AWSMPContessa#overview">EPA AWS Storage</a>,  <a href="https://drive.google.com/drive/folders/1G2_LBLy7_n91Ur0ulsLZ9zwGs3luTzn2">CMAS Google Drive</a>, and <a href="https://registry.opendata.aws/cmas-data-warehouse/">CMAS AWS Storage</a>. 
 
-CMAS Data Warehouse on Google Drive: <br>
-<A href="https://drive.google.com/drive/folders/1G2_LBLy7_n91Ur0ulsLZ9zwGs3luTzn2">https://drive.google.com/drive/folders/1G2_LBLy7_n91Ur0ulsLZ9zwGs3luTzn2</a><br>
 
 <h3>How to Cite EQUATES Data</h3>
 DOI: <A href="https://doi.org/10.15139/S3/F2KJSK">https://doi.org/10.15139/S3/F2KJSK</a><br>
 Website: <A href="https://www.epa.gov/cmaq/EQUATES">https://www.epa.gov/cmaq/EQUATES</a><br>
+Reference for EQUATES emissions: <a href="https://doi.org/10.1016/j.dib.2023.109022">Reference for EQUATES emissions: https://doi.org/10.1016/j.dib.2023.109022 </a><br>
 
 <h3>EQUATES Modeling Domains</h3>
 <div>
@@ -71,7 +68,7 @@ Units: All emissions data are in US tons.<br>
               <tr>
                 <th>Data description</th>
 		<th>File type (File size for all years)</th>
-                <th>Location on CMAS Data Warehouse (File paths relative to this top level folder</th>
+		<th>Location on <a href="https://drive.google.com/drive/folders/1G2_LBLy7_n91Ur0ulsLZ9zwGs3luTzn2">CMAS Data Warehouse</a> (File paths relative to this top level folder</th>
 	      </tr>
 	      <tr>
                 <td>Year specific inventory emissions for tarred and zipped</td>
@@ -82,11 +79,16 @@ Units: All emissions data are in US tons.<br>
 		<td>tarred and zipped netCDF files (11GB) </td>
 		<td>EQUATES/SMOKE_INPUT/ancillary_data.tar.gz</td>
               </tr>
+	      <tr>
+		      <td>Files and scripts for applying the  Community Regional Atmospheric Chemistry Multiphase Mechanism (CRACMM) speciation to EQUATES onroad emissions </td>
+		      <td>zipped .txt and .csh files (486K) </td>
+		      <td>SMOKE_INPUT/EQUATES_2018_onroad_inv_CRACMM_addendum.zip Meta data: SMOKE_INPUT/README_ EQUATES_2018_onroad_inv_CRACMM_addendum.tx</td>
+              </tr>
             </table>
 
 
 <h3>EQUATES Model-Ready Inputs for CONUS (12US1 domain)</h3>
-Purpose: For users who want to run CMAQ using EQUATES input data.<br>
+Purpose: For users who want to run CMAQ using EQUATES input data. 2002-2019 data are available on the CMAS Google Drive.  2017 data are also available on CMAS AWS Open Data Storage. <br>
 Location of Meta Data: EQUATES/CMAQ_12US1/INPUT/README_EQUATES_v1.0_modelready.txt<br>
 Units: Units for each variable are included in the meteorology, emissions, and CMAQ netCDF files.<br>
 
