@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h1>2018v2 Emissions Modeling Platform on CMAS Open Data Warehouse</h1>
+
+This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
+(Need to update) Metadata for this dataset is available on the <a href="https://dataverse.unc.edu/dataset.xhtml?persistentId=doi:10.15139/S3/W4HCMV">CMAS Dataverse Entry for the 2018v2 Emissions Modeling Platform</a><br>
+
+<h2>2018v2 Emissions Modeling Platform</h2>
+
+This s3 bucket contains emissions for 2018v2 platform cases.<br> 
+This platform was used to support the development of the National Ambient Air Quality Standards for Particulate Matter (PM NAAQS) issued by the U.S. EPA on February 7, 2024 <br>
+<a href="https://www.epa.gov/pm-pollution/national-ambient-air-quality-standards-naaqs-pm">National Ambient Air Quality Standards (NAAQS) for Particulate Matter</a><br>
+The  BEIS and fertilizer were not used as inputs to the CMAQ model but are provided as these inputs are required for CAMx.<br>
+
+
+<h2>Instructions for downloading the aws command line.</h2>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+
+Once you have it installed, you can use it without credentials.<br>
+
+Example commands:<br>
+
+
+<h2>To query how much data is in the full bucket:</h2> <br>
+
+<pre>
+aws s3 ls --no-sign-request --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2018v2platform
+</pre>
+
+Tail of Output: <br>
+
+<pre>
+Total Objects: 25689
+   Total Size: 3.9 TiB
+</pre>
+
+<h2>Note, this bucket contains emissions for 2018gg and 2032gg_18j.</h2> <br>
+
+
+<h3>To find the size and list the files available in the directory containing afdust pre-merged emissions , use the following command:</h3> <br>
+
+<pre>
+aws s3 ls --no-sign-request --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2018v2platform/2018v2platform/2018gg/premerged/afdust_adj
+</pre>
+
+Tail of output:
+
+<pre>
+2024-05-08 13:33:34    5.1 MiB 2018v2platform/2018gg/premerged/afdust_adj/emis_mole_afdust_adj_20181230_36US3_cmaq_cb6ae7_2018gc_cb6_18j.ncf.gz
+2024-05-08 13:33:36   21.7 MiB 2018v2platform/2018gg/premerged/afdust_adj/emis_mole_afdust_adj_20181231_12US1_cmaq_cb6ae7_2018gc_cb6_18j.ncf.gz
+2024-05-08 13:33:36    4.4 MiB 2018v2platform/2018gg/premerged/afdust_adj/emis_mole_afdust_adj_20181231_36US3_cmaq_cb6ae7_2018gc_cb6_18j.ncf.gz
+
+Total Objects: 730
+   Total Size: 22.3 GiB
+</pre>
+
+
+<h3>To find the size and list the files available for 2018gg use the following command:</h3>
+
+<pre>
+ aws s3 ls --no-sign-request --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2018v2platform/2018v2platform/2018gg/premerged/afdust_ak_adj
+</pre>
+
+Tail of output:
+
+<pre>
+2024-05-08 13:33:47  143.2 KiB 2018v2platform/2018gg/premerged/afdust_ak_adj/emis_mole_afdust_ak_adj_20181229_36US3_cmaq_cb6ae7_2018gg_18j.ncf.gz
+2024-05-08 13:33:47  143.1 KiB 2018v2platform/2018gg/premerged/afdust_ak_adj/emis_mole_afdust_ak_adj_20181230_36US3_cmaq_cb6ae7_2018gg_18j.ncf.gz
+2024-05-08 13:33:47  143.1 KiB 2018v2platform/2018gg/premerged/afdust_ak_adj/emis_mole_afdust_ak_adj_20181231_36US3_cmaq_cb6ae7_2018gg_18j.ncf.gz
+
+Total Objects: 365
+   Total Size: 54.8 MiB
+
+</pre>
+
+<h3>To find the size and list the files available for 2018gg use the following command:</h3>
+
+<pre>
+ aws s3 ls --no-sign-request --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2018v2platform/2018v2platform/2018gg/premerged/airports
+</pre>
+
+Tail of output:
+
+<pre>
+
+2024-05-08 13:36:46   56.7 MiB 2018v2platform/2018gg/premerged/airports/emis_mole_airports_20181225_12US1_cmaq_cb6ae7_2018gg_18j.ncf.gz
+2024-05-08 13:36:12   19.7 MiB 2018v2platform/2018gg/premerged/airports/emis_mole_airports_20181225_36US3_cmaq_cb6ae7_2018gg_18j.ncf.gz
+2024-05-08 13:36:12   56.7 MiB 2018v2platform/2018gg/premerged/airports/emis_mole_airports_20181226_12US1_cmaq_cb6ae7_2018gg_18j.ncf.gz
+2024-05-08 13:36:13   19.7 MiB 2018v2platform/2018gg/premerged/airports/emis_mole_airports_20181226_36US3_cmaq_cb6ae7_2018gg_18j.ncf.gz
+
+Total Objects: 200
+   Total Size: 7.5 GiB
+</pre>
+
+<h3>To find the size and list the files available for 2032gg2 use the following command:</h3>
+
+<pre>
+ aws s3 ls --no-sign-request --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2018v2platform/2018v2platform/2032gg_18j
+</pre>
+
+Tail of the output:
+
+<pre>
+Total Objects: 4017
+   Total Size: 435.5 GiB
+</pre>
+
+and
+
+<h3> To find the size and list the files available for the point source emissions:</h3>
+
+<pre>
+ aws s3 ls --no-sign-request --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2018v2platform/2018v2platform/2018gg/smoke_out/
+ <pre>
+
+Tail of the output:
+
+<pre>
+2024-05-09 03:56:02    2.9 GiB 2018v2platform/2018gg/smoke_out/36US3/cmaq_cb6ae7/ptnonipm/inln_mole_ptnonipm_20181209_36US3_cmaq_cb6ae7_2018gg_18j.ncf
+2024-05-09 03:56:55    2.9 GiB 2018v2platform/2018gg/smoke_out/36US3/cmaq_cb6ae7/ptnonipm/inln_mole_ptnonipm_20181224_36US3_cmaq_cb6ae7_2018gg_18j.ncf
+2024-05-09 03:57:09    2.9 GiB 2018v2platform/2018gg/smoke_out/36US3/cmaq_cb6ae7/ptnonipm/inln_mole_ptnonipm_20181225_36US3_cmaq_cb6ae7_2018gg_18j.ncf
+2024-05-09 03:57:50    2.9 GiB 2018v2platform/2018gg/smoke_out/36US3/cmaq_cb6ae7/ptnonipm/inln_mole_ptnonipm_20181226_36US3_cmaq_cb6ae7_2018gg_18j.ncf
+2024-05-09 03:57:57   30.0 MiB 2018v2platform/2018gg/smoke_out/36US3/cmaq_cb6ae7/ptnonipm/stack_groups_ptnonipm_36US3_2018gg_18j.ncf
+
+Total Objects: 9740
+   Total Size: 1.8 TiB
+
+
+</pre>
+
+
+<h2>To copy or download all of this data, if you have 3.9 TiB of local disk space, use the following command:</h2>
+
+<pre>
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://2018v2platform /your/local/directory/
+</pre>
+
+A script is being developed for downloading 2 days of input data to run a benchmark using this case. That script can be modified to obtain files required to model for a user specified time period.
+
+
+<h2>Please submit any questions or difficulties as a new issue on the CMAS User Forum.</h2><br>
+<a href="https://forum.cmascenter.org/">CMAS User Forum</a><br>
+
+
+</body>
+</html>
