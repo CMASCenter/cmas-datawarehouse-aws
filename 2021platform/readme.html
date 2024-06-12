@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h1>2021 Modeling Platform on CMAS Open Data Warehouse</h1>
+
+This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
+Metadata for this dataset is available on the <a href="https://dataverse.unc.edu/dataset.xhtml?persistentId=doi:10.15139/S3/W4HCMV">CMAS Dataverse Entry for the 2021 Platform</a><br>
+
+<h2>2021 Modeling Platform</h2>
+
+
+The meteorological inputs (mcip) for CMAQ are available for the 2021 Modeling Platform.<br>
+
+
+<h2>Instructions for downloading the aws command line.</h2>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+
+Once you have it installed, you can use it without credentials.<br>
+
+Example commands:<br>
+
+
+<h2>To query how much data is in the full bucket:</h2> <br>
+
+<pre>
+aws s3 ls --no-sign-request --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2021platform
+</pre>
+
+Tail of Output: <br>
+
+<pre>
+Total Objects: 4136
+   Total Size: 4.7 TiB
+</pre>
+
+
+<h3>To find the size and list the files available in the MCIP directory for 2021, use the following command:</h3>
+
+<pre>
+ aws s3 ls --no-sign-request --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://2021platform/2021platform/12US1/mcip/WRFv4.1.1_12US1_2021_35aL
+</pre>
+
+Tail of output:
+
+<pre>
+2024-06-08 14:10:07  818 Bytes 2021platform/mcip/WRFv4.1.1_12US1_2021_35aL/v5.3.3/namelist.12US1.211219
+2024-06-08 14:10:07  818 Bytes 2021platform/mcip/WRFv4.1.1_12US1_2021_35aL/v5.3.3/namelist.12US1.211220
+2024-06-08 14:10:07  818 Bytes 2021platform/mcip/WRFv4.1.1_12US1_2021_35aL/v5.3.3/namelist.12US1.211221
+2024-06-08 14:10:07  818 Bytes 2021platform/mcip/WRFv4.1.1_12US1_2021_35aL/v5.3.3/namelist.12US1.211222
+2024-06-08 14:10:07  818 Bytes 2021platform/mcip/WRFv4.1.1_12US1_2021_35aL/v5.3.3/namelist.12US1.211223
+2024-06-08 14:10:07  818 Bytes 2021platform/mcip/WRFv4.1.1_12US1_2021_35aL/v5.3.3/namelist.12US1.211224
+2024-06-08 14:10:07  818 Bytes 2021platform/mcip/WRFv4.1.1_12US1_2021_35aL/v5.3.3/namelist.12US1.211225
+2024-06-08 14:10:07  818 Bytes 2021platform/mcip/WRFv4.1.1_12US1_2021_35aL/v5.3.3/namelist.12US1.211226
+2024-06-08 14:10:07  818 Bytes 2021platform/mcip/WRFv4.1.1_12US1_2021_35aL/v5.3.3/namelist.12US1.211227
+2024-06-08 14:10:07  818 Bytes 2021platform/mcip/WRFv4.1.1_12US1_2021_35aL/v5.3.3/namelist.12US1.211228
+2024-06-08 14:10:07  818 Bytes 2021platform/mcip/WRFv4.1.1_12US1_2021_35aL/v5.3.3/namelist.12US1.211229
+2024-06-08 14:10:07  818 Bytes 2021platform/mcip/WRFv4.1.1_12US1_2021_35aL/v5.3.3/namelist.12US1.211230
+2024-06-08 14:10:07  818 Bytes 2021platform/mcip/WRFv4.1.1_12US1_2021_35aL/v5.3.3/namelist.12US1.211231
+
+Total Objects: 4135
+   Total Size: 4.7 TiB
+
+</pre>
+
+
+<h2>To copy or download all of this data, if you have 4.7 TiB of local disk space, use the following command:</h2>
+
+<pre>
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://2021platform /your/local/directory/
+</pre>
+
+A script is being developed for downloading 2 days of input data to run a benchmark using this case. That script can be modified to obtain files required to model for a user specified time period.
+
+
+<h2>Please submit any questions or difficulties as a new issue on the CMAS User Forum.</h2><br>
+<a href="https://forum.cmascenter.org/">CMAS User Forum</a><br>
+
+
+</body>
+</html>
