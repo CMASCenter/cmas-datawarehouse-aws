@@ -12,7 +12,8 @@ Please review the <a href="EQUATES_Data_Dictionary_for_CMAS_Data_Warehouses.html
 
 <br>
 
-CMAQ inputs are available for 2017 <br>
+Full CMAQ inputs are available for 2017 <br>
+MCIP outputs are available for 2002-2019<br>
 HCMAQ (Hemispheric CMAQ) 3D CONC outputs are available for 2018/2019 . <br>
 
 See report table here for full list of what is available in this bucket.
@@ -56,13 +57,13 @@ Output: <br>
 
 <pre>
 
-Total Objects: 915
-   Total Size: 4.3 TiB
+Total Objects: 13463
+   Total Size: 44.3 TiB
 
 </pre>
 
 
-To copy all the files from the bucket (2017 inputs and 2018/2019 HCMAQ 3D Conc outputs) to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path. <br>
+To copy all the files from the bucket (2002-2019 MCIP outputs, 2017 CMAQ inputs and 2018/2019 HCMAQ 3D Conc outputs) to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path. <br>
 
 <pre>
 aws s3 --no-sign-request cp --recursive s3://cmas-equates/ /your_local_path/
