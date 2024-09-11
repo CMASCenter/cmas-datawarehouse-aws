@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Downloading data from S3 Bucket</h1>
+
+This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
+
+
+Instructions for downloading the aws command line.<br>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+
+Once you have it installed, you can use it without credentials.<br>
+
+Example commands:<br>
+
+To query how much data is in a bucket: <br>
+
+
+<pre>
+aws s3 ls --summarize --region=us-east-1 --human-readable --recursive s3://2017v1platform
+</pre>
+
+Output: <br>
+
+<pre>
+2024-07-23 16:34:52  175.3 GiB 2017gb_17j/merged2D_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar
+2024-07-23 16:34:52   48.9 KiB 2017gb_17j/merged2D_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar.list
+2024-07-23 16:34:52   64.1 GiB 2017gb_17j/premerged/beis_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar
+2024-07-23 16:34:53   15.4 KiB 2017gb_17j/premerged/beis_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar.list.docx
+2024-07-23 16:34:53   47.5 KiB 2017gb_17j/premerged/beis_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar.list.txt
+2024-07-23 16:34:53   15.5 GiB 2017gb_17j/premerged/cmv_c1c2_12_cmv_c3_12_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar
+2024-07-23 16:34:53  103.4 KiB 2017gb_17j/premerged/cmv_c1c2_12_cmv_c3_12_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar.list
+2024-07-23 16:34:54   42.5 GiB 2017gb_17j/premerged/nonroad_2017_12US1_cmaq_cb6ae7_2017gb.tar
+2024-07-23 16:49:59    6.7 KiB 2017gb_17j/premerged/nonroad_2017_12US1_cmaq_cb6ae7_2017gb.tar.list.txt
+2024-07-23 16:49:59   21.2 GiB 2017gb_17j/premerged/othpt_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar
+2024-07-23 17:10:14    6.4 KiB 2017gb_17j/premerged/othpt_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar.list
+2024-07-23 17:10:15    8.0 KiB 2017gb_17j/premerged/othpt_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar.list.docx
+2024-07-23 17:37:34   21.2 GiB 2017gb_17j/premerged/premerged2D/afdust_adj_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar
+2024-07-23 17:58:24   52.6 KiB 2017gb_17j/premerged/premerged2D/afdust_adj_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar.list
+2024-07-23 17:58:24   35.4 GiB 2017gb_17j/premerged/premerged2D/ag_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar
+2024-07-23 18:09:32   44.6 KiB 2017gb_17j/premerged/premerged2D/ag_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar.list
+2024-07-23 18:09:37   26.6 GiB 2017gb_17j/premerged/premerged2D/nonpt_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar
+2024-07-23 18:17:20   13.0 KiB 2017gb_17j/premerged/premerged2D/nonpt_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar.list
+2024-07-23 18:17:21    7.7 GiB 2017gb_17j/premerged/premerged2D/np_oilgas_rail_airports_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar
+2024-07-23 18:24:47   17.1 KiB 2017gb_17j/premerged/premerged2D/np_oilgas_rail_airports_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar.list
+2024-07-23 18:24:48   92.0 GiB 2017gb_17j/premerged/premerged2D/onroad_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar
+2024-07-23 18:33:16   47.6 KiB 2017gb_17j/premerged/premerged2D/onroad_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar.list
+2024-07-23 18:33:17    5.9 GiB 2017gb_17j/premerged/premerged2D/onroad_ca_adj_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar
+2024-07-23 18:35:58   65.2 KiB 2017gb_17j/premerged/premerged2D/onroad_ca_adj_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar.list
+2024-07-23 18:35:58    7.4 GiB 2017gb_17j/premerged/premerged2D/onroad_can_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar
+2024-07-23 18:39:34   11.7 KiB 2017gb_17j/premerged/premerged2D/onroad_can_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar.list
+2024-07-23 18:39:37   54.4 GiB 2017gb_17j/premerged/premerged2D/onroad_mex_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar
+2024-07-23 18:43:21   11.6 KiB 2017gb_17j/premerged/premerged2D/onroad_mex_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar.list
+2024-07-23 18:43:22    6.9 GiB 2017gb_17j/premerged/premerged2D/othafdust_adj_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar
+2024-07-23 18:49:55   52.6 KiB 2017gb_17j/premerged/premerged2D/othafdust_adj_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar.list
+2024-07-23 18:49:55   13.6 GiB 2017gb_17j/premerged/premerged2D/othar_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar
+2024-07-23 18:55:52   10.9 KiB 2017gb_17j/premerged/premerged2D/othar_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar.list
+2024-07-23 18:55:52    2.5 GiB 2017gb_17j/premerged/premerged2D/othptdust_adj_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar
+2024-07-23 18:58:05   52.6 KiB 2017gb_17j/premerged/premerged2D/othptdust_adj_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar.list
+2024-07-23 17:10:15    7.9 GiB 2017gb_17j/premerged/pt_oilgas_2017_12US1_cmaq_cb6ae7_2017gb.tar
+2024-07-23 17:15:35    6.8 KiB 2017gb_17j/premerged/pt_oilgas_2017_12US1_cmaq_cb6ae7_2017gb.tar.list.txt
+2024-07-23 17:15:38   14.3 GiB 2017gb_17j/premerged/ptagfire_ptfire_othna_ptfire_pt_oilgas_ptegu_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar
+2024-07-23 17:17:49  244.6 KiB 2017gb_17j/premerged/ptagfire_ptfire_othna_ptfire_pt_oilgas_ptegu_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar.list
+2024-07-23 17:17:50   22.1 GiB 2017gb_17j/premerged/ptegu_2017_12US1_cmaq_cb6ae7_2017gb.tar
+2024-07-23 17:28:59   35.7 KiB 2017gb_17j/premerged/ptegu_2017_12US1_cmaq_cb6ae7_2017gb.tar.list.txt
+2024-07-23 17:28:59   42.1 GiB 2017gb_17j/premerged/ptnonipm_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar
+2024-07-23 17:30:21    9.0 KiB 2017gb_17j/premerged/ptnonipm_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar.list
+2024-07-23 17:30:38   49.8 GiB 2017gb_17j/premerged/rwc_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar
+2024-07-23 17:37:33   45.5 KiB 2017gb_17j/premerged/rwc_2017_12US1_cmaq_cb6ae7_2017gb_17j.tar.list
+
+Total Objects: 44
+   Total Size: 728.3 GiB
+
+</pre>
+
+To copy or download the data:<br>
+
+<pre>
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://2017v1platform /your/local/directory
+</pre>
+
+Please submit any questions or difficulties as a new issue on the CMAS User Forum.<br>
+<a href="https://forum.cmascenter.org/">CMAS User Forum</a><br>
+
+</body>
+</html>
+
