@@ -26,6 +26,18 @@ aws s3 ls --summarize --region=us-east-1 --human-readable --recursive s3://2016v
 Tail of Output: <br>
 
 <pre>
+2023-05-15 08:52:52  212.7 MiB 2016v3platform/SMOKE_Inputs/2026gf_emission_inventories/2026_emissions/moves_eftables/2026gf_16j_eftables_cb6r3ae7_st78.zip
+2023-05-15 08:52:52    1.7 GiB 2016v3platform/SMOKE_Inputs/2026gf_emission_inventories/2026_emissions/moves_eftables/2026gf_16j_eftables_cb6r3ae7_st8.zip
+2023-05-15 08:52:52  342.2 MiB 2016v3platform/SMOKE_Inputs/2026gf_emission_inventories/2026_emissions/moves_eftables/2026gf_16j_eftables_cb6r3ae7_st9.zip
+2023-05-12 17:11:57  166.7 KiB 2016v3platform/SMOKE_Inputs/smoke_2016v3_platform_core_20feb2023_contents.txt
+2023-05-15 08:52:50   17.0 MiB 2016v3platform/SMOKE_Inputs/spatial_surrogates/CONUS12_2015CAN_2010MEX_surrogates_03dec2018.zip
+2023-05-15 08:52:50   11.4 KiB 2016v3platform/SMOKE_Inputs/spatial_surrogates/CONUS12_2015CAN_2010MEX_surrogates_03dec2018_contents.txt
+2023-05-15 08:52:50  132.7 MiB 2016v3platform/SMOKE_Inputs/spatial_surrogates/CONUS12_np_oilgas_2016_surrogates_18mar2020.zip
+2023-05-15 08:52:50   21.2 KiB 2016v3platform/SMOKE_Inputs/spatial_surrogates/CONUS12_np_oilgas_2016_surrogates_18mar2020_contents.txt
+2023-05-15 08:52:50  131.9 MiB 2016v3platform/SMOKE_Inputs/spatial_surrogates/CONUS12_surrogates_04mar2021.zip
+2023-05-15 08:52:50   19.7 KiB 2016v3platform/SMOKE_Inputs/spatial_surrogates/CONUS12_surrogates_04mar2021_contents.txt
+2023-05-15 08:52:50    8.9 MiB 2016v3platform/SMOKE_Inputs/spatial_surrogates/CONUS36_2015CAN_2010MEX_surrogates_30apr2019.zip
+2023-05-15 08:52:50   12.7 KiB 2016v3platform/SMOKE_Inputs/spatial_surrogates/CONUS36_2015CAN_2010MEX_surrogates_30apr2019_contents.txt
 2023-05-15 08:52:50   37.3 MiB 2016v3platform/SMOKE_Inputs/spatial_surrogates/CONUS36_np_oilgas_2016_surrogates_04mar2021.zip
 2023-05-15 08:52:50   21.2 KiB 2016v3platform/SMOKE_Inputs/spatial_surrogates/CONUS36_np_oilgas_2016_surrogates_04mar2021_contents.txt
 2023-05-15 08:52:50   37.2 MiB 2016v3platform/SMOKE_Inputs/spatial_surrogates/CONUS36_surrogates_04mar2021.zip
@@ -35,15 +47,23 @@ Tail of Output: <br>
 2023-05-15 08:52:50  744.3 MiB 2016v3platform/SMOKE_Inputs/spatial_surrogates/CONUS4_surrogates_US_04mar2021.zip
 2023-05-15 08:52:50   22.3 KiB 2016v3platform/SMOKE_Inputs/spatial_surrogates/CONUS4_surrogates_US_04mar2021_contents.txt
 2023-02-20 16:13:26   30.9 KiB index.html
+2023-12-19 14:54:50    2.1 KiB readme.html
 
-Total Objects: 67830
-   Total Size: 35.2 TiB
+Total Objects: 73462
+   Total Size: 44.2 TiB
+
 </pre>
 
 To copy or download the data:<br>
 
 <pre>
 aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://2016v3platform /your/local/directory
+</pre>
+
+To list and/or download a subset of the data use the --include and --exclude options use the following command (remove the --dryrun option after you have confirmed that the files exist.)
+
+<pre>
+aws s3 --no-sign-request cp --dryrun --region=us-east-1 --exclude "*" --include "*METDOT3D*" --recursive s3://mpas-cmaq .
 </pre>
 
 Please submit any questions or difficulties as a new issue on the CMAS User Forum.<br>
