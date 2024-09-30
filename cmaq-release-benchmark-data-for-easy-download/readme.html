@@ -25,14 +25,54 @@ aws s3 ls --summarize --region=us-east-1 --human-readable --recursive s3://cmaq-
 Output: <br>
 
 <pre>
+2023-02-27 13:53:02   30.9 KiB index.html
+2023-12-19 14:54:27    1.6 KiB readme.html
 2023-02-27 12:53:51    0 Bytes v5_4/
 2023-02-27 12:55:42   10.3 GiB v5_4/CMAQv5.4_2018_12NE3_Benchmark_2Day_Input.tar.gz
 2023-02-27 12:55:43   10.6 KiB v5_4/CMAQv5.4_2018_12NE3_Benchmark_2Day_Input.tar.log
 2023-02-27 12:55:39   13.9 GiB v5_4/CMAQv5.4_2018_12NE3_Benchmark_2Day_Output.tar.gz
 2023-02-27 12:55:42   86.8 KiB v5_4/CMAQv5.4_2018_12NE3_Benchmark_2Day_Output.tar.log
+2024-09-04 13:35:29    0 Bytes v5_5/
+2024-09-10 11:06:17   10.3 GiB v5_5/CMAQv5.4_2018_12NE3_Benchmark_2Day_Input.tar.gz
+2024-09-10 11:06:17   10.6 KiB v5_5/CMAQv5.4_2018_12NE3_Benchmark_2Day_Input.tar.log
+2024-09-04 14:27:03    6.1 GiB v5_5/CMAQv5.5_2018_12NE3_Benchmark_cracmm2_stage_2Day_Input.tar.gz
+2024-09-04 14:27:52   12.8 KiB v5_5/CMAQv5.5_2018_12NE3_Benchmark_cracmm2_stage_2Day_Input.tar.log
+2024-09-26 15:47:03    0 Bytes v5_5/ISAM_Benchmark/
+2024-09-27 14:59:27    0 Bytes v5_5/ISAM_Benchmark/CCTM/
+2024-09-27 14:59:35    0 Bytes v5_5/ISAM_Benchmark/CCTM/scripts/
+2024-09-27 17:21:14   13.7 KiB v5_5/ISAM_Benchmark/CCTM/scripts/CMAQ_Control_DESID.nml
+2024-09-27 17:22:07   12.9 KiB v5_5/ISAM_Benchmark/CCTM/scripts/CMAQ_Control_DESID_cb6r5_ae7_aq.nml
+2024-09-27 17:18:23    2.3 KiB v5_5/ISAM_Benchmark/CCTM/scripts/isam_control.2018_12NE3.txt
+2024-09-27 15:00:29   38.9 KiB v5_5/ISAM_Benchmark/CCTM/scripts/run_cctm_Bench_2018_12NE3_cb6r5_m3dry_ISAM.csh
+2024-09-26 15:47:37    0 Bytes v5_5/ISAM_Benchmark/POST/
+2024-09-26 15:47:37    0 Bytes v5_5/ISAM_Benchmark/POST/calc_tmetric/
+2024-09-26 15:47:37    0 Bytes v5_5/ISAM_Benchmark/POST/calc_tmetric/scripts/
+2024-09-27 14:54:02    3.2 KiB v5_5/ISAM_Benchmark/POST/calc_tmetric/scripts/run_calc_tmetric_ISAM_aconc.csh
+2024-09-27 14:54:19    3.2 KiB v5_5/ISAM_Benchmark/POST/calc_tmetric/scripts/run_calc_tmetric_ISAM_sa_aconc.csh
+2024-09-26 15:47:37    0 Bytes v5_5/ISAM_Benchmark/POST/combine/
+2024-09-26 15:47:37    0 Bytes v5_5/ISAM_Benchmark/POST/combine/scripts/
+2024-09-26 15:47:37   17.4 KiB v5_5/ISAM_Benchmark/POST/combine/scripts/SpecDef_ISAM_Conc_benchmark_cb6r5_ae7_aq.txt
+2024-09-26 15:47:37   21.9 KiB v5_5/ISAM_Benchmark/POST/combine/scripts/SpecDef_ISAM_Dep_benchmark_cb6r5_ae7_aq.txt
+2024-09-27 14:52:07    7.2 KiB v5_5/ISAM_Benchmark/POST/combine/scripts/run_combine_ISAM_aconc+dep_example_cb6r5_ae7_aq_12ne3_benchmark.csh
+2024-09-27 14:52:44    7.3 KiB v5_5/ISAM_Benchmark/POST/combine/scripts/run_combine_ISAM_sa_aconc+sa_dep_example_cb6r5_ae7_aq_12ne3_benchmark.csh
+2024-09-26 15:47:37    0 Bytes v5_5/ISAM_Benchmark/POST/hr2day/
+2024-09-26 15:47:37    0 Bytes v5_5/ISAM_Benchmark/POST/hr2day/scripts/
+2024-09-27 14:55:10    4.2 KiB v5_5/ISAM_Benchmark/POST/hr2day/scripts/run_hr2day_ISAM_aconc.csh
+2024-09-27 14:55:23    4.7 KiB v5_5/ISAM_Benchmark/POST/hr2day/scripts/run_hr2day_ISAM_sa_aconc.csh
+2024-09-10 09:39:33   16.2 GiB v5_5/output_CCTM_v55_DDM3D_gcc_Bench_2018_12NE3_cb6r5_ae7_aq_m3dry.tar.gz
+2024-09-25 14:21:27   12.7 KiB v5_5/output_CCTM_v55_DDM3D_gcc_Bench_2018_12NE3_cb6r5_ae7_aq_m3dry.tar.log
+2024-09-27 15:27:06   18.0 GiB v5_5/output_CCTM_v55_ISAM_gcc_Bench_2018_12NE3_cb6r5_ae7_aq_m3dry.tar.gz
+2024-09-27 15:39:26   20.4 KiB v5_5/output_CCTM_v55_ISAM_gcc_Bench_2018_12NE3_cb6r5_ae7_aq_m3dry.tar.gz.log
+2024-09-30 16:20:24   52.0 GiB v5_5/output_CCTM_v55_ISAM_gcc_Bench_2018_12NE3_cracmm2_stage.tar.gz
+2024-09-30 16:37:56   17.8 KiB v5_5/output_CCTM_v55_ISAM_gcc_Bench_2018_12NE3_cracmm2_stage.tar.gz.log
+2024-09-30 15:11:01   15.0 GiB v5_5/output_CCTM_v55_gcc_Bench_2018_12NE3_cb6r5_ae7_aq_m3dry.tar.gz
+2024-09-30 16:39:08   15.8 KiB v5_5/output_CCTM_v55_gcc_Bench_2018_12NE3_cb6r5_ae7_aq_m3dry.tar.gz.log
+2024-09-04 14:03:53   15.0 GiB v5_5/output_CCTM_v55_gcc_Bench_2018_12NE3_cb6r5_ae7_aq_stage.tar.gz
+2024-09-04 14:03:39   16.0 KiB v5_5/output_CCTM_v55_gcc_Bench_2018_12NE3_cb6r5_ae7_aq_stage.tar.log
 
-Total Objects: 5
-   Total Size: 24.2 GiB
+Total Objects: 44
+   Total Size: 156.7 GiB
+
 
 </pre>
 
