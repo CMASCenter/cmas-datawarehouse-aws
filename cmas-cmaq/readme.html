@@ -18,7 +18,7 @@ Example commands:<br>
 
 To query how much data is in a bucket: <br>
 
-There are three sets of benchmark data available.<br>
+There are five sets of benchmark data available.<br>
 
 1. CMAQv5.4_2018_12US1_Benchmark_2Day_Input<br>
 
@@ -105,8 +105,22 @@ Command to copy files from the bucket to your local filesystem (the system where
 aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmas-cmaq/CMAQv5.4_2018_12US1_Benchmark_2Day_Input /your_local_path/
 </pre>
 
+2.     CMAQv5.4_2018_12US1_Benchmark_2Day_Input_uncompressed
 
-2. CMAQv5.4_2018_12LISTOS_Benchmark_3Day_Input
+</pre>
+
+Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
+
+<pre>
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmas-cmaq/CMAQv5.4_2018_12US1_Benchmark_2Day_Input_uncompressed /your_local_path/
+</pre>
+
+<pre>
+Total Objects: 153
+   Total Size: 65.3 GiB
+</pre>
+
+3. CMAQv5.4_2018_12LISTOS_Benchmark_3Day_Input
 
 
 <pre>
@@ -122,7 +136,7 @@ Total Objects: 134
 </pre>
 
 
-3. CMAQv5.4_2018_12NE3_Benchmark_2Day_Input/2018_12NE3
+4. CMAQv5.4_2018_12NE3_Benchmark_2Day_Input/2018_12NE3
 
 <pre>
 aws s3 ls --summarize --region=us-east-1 --human-readable --recursive s3://cmas-cmaq/CMAQv5.4_2018_12NE3_Benchmark_2Day_Input/
@@ -136,6 +150,22 @@ aws s3 ls --summarize --region=us-east-1 --human-readable --recursive s3://cmas-
 Total Objects: 95
    Total Size: 55.4 GiB
 </pre>
+
+5. CMAQv5.5_2018_12NE3 Cracmm2 Stage 2Day Input Benchmark
+
+<pre>
+aws s3 ls --summarize --region=us-east-1 --human-readable --recursive s3://cmas-cmaq/CMAQv5.5_2018_12NE3_Benchmark_cracmm2_stage_2Day_Input
+</pre
+
+<pre>
+2024-09-04 14:33:07  588.4 KiB CMAQv5.5_2018_12NE3_Benchmark_cracmm2_stage_2Day_Input/2018_12NE3/surface/megan3.2/NDEP_nebench.ncf
+2024-09-04 14:33:07   52.0 KiB CMAQv5.5_2018_12NE3_Benchmark_cracmm2_stage_2Day_Input/2018_12NE3/surface/megan3.2/NONARID_nebench.ncf
+
+Total Objects: 93
+   Total Size: 21.0 GiB
+</pre>
+
+
 
 
 Please submit any questions or difficulties as a new issue in the CMAS Data Warehouse Category on the CMAS User Forum.<br>
