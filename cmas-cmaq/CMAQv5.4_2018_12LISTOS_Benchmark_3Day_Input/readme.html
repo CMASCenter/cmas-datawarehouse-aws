@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Downloading data from S3 Bucket</h1>
+
+This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
+
+
+Instructions for downloading the aws command line.<br>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+
+Once you have it installed, you can use it without credentials.<br>
+
+Example commands:<br>
+
+
+To list the contents of the CMAQv5.4 2018 12LISTOS Benchmark 3Day Input Bucket
+
+<pre>
+aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://cmas-cmaq/CMAQv5.4_2018_12LISTOS_Benchmark_3Day_Input
+</pre>
+
+<pre>
+2023-06-23 13:20:28  142.4 KiB CMAQv5.4_2018_12LISTOS_Benchmark_3Day_Input/12LISTOS_Training/surface/GRIDMASK_STATES_12US1_m3clple_12listos.ncf
+2023-06-23 13:20:28  354.8 KiB CMAQv5.4_2018_12LISTOS_Benchmark_3Day_Input/12LISTOS_Training/surface/OCEAN_08_L3m_MC_CHL_chlor_a_12US1.nc
+2023-06-23 13:20:28    2.1 MiB CMAQv5.4_2018_12LISTOS_Benchmark_3Day_Input/12LISTOS_Training/surface/OCEAN_08_L3m_MC_CHL_chlor_a_12US1_Listos.nc3
+
+Total Objects: 134
+   Total Size: 1.9 GiB
+</pre>
+
+<br>
+<br>
+<br>
+To recursively copy this data to a local directory use the command<br>
+
+<pre>
+aws s3 --no-sign-request cp --region=us-east-1 --recursive s3://cmas-cmaq/CMAQv5.4_2018_12LISTOS_Benchmark_3Day_Input .
+</pre>
+
+
+<br>
+<br>
+Please submit any questions or difficulties as a new issue in the CMAS Data Warehouse Category on the CMAS User Forum.<br>
+<a href="https://forum.cmascenter.org/c/cmas-data-warehouse/96">CMAS User Forum</a><br>
+
+</body>
+</html>
+
