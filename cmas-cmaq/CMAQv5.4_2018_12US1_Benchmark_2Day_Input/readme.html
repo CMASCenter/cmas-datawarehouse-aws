@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Downloading data from S3 Bucket</h1>
+
+This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
+
+
+Instructions for downloading the aws command line.<br>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+
+Once you have it installed, you can use it without credentials.<br>
+
+Example commands:<br>
+
+
+To list the contents of the CMAQv5.4 2018 12NE3 Benchmark 2Day Input Bucket
+
+<pre>
+aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://cmas-cmaq/CMAQv5.4_2018_12US1_Benchmark_2Day_Input
+</pre>
+
+<pre>
+2024-03-07 16:09:03    1.5 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input_uncompressed/2018_12US1/surface/README_MEGAN_FILES_12US1.txt
+2024-03-07 16:09:04   62.9 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input_uncompressed/2018_12US1/surface/beld3_12US1_459X299_output_a.ncf
+2024-03-07 16:09:07  547.0 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input_uncompressed/2018_12US1/surface/beld3_12US1_459X299_output_tot.ncf
+2024-03-07 16:09:07  382.2 MiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input_uncompressed/2018_12US1/surface/modis_fpar_lai_12km_10yrAvg_daily_ioapi.ncf
+2024-09-30 12:44:55    2.0 KiB CMAQv5.4_2018_12US1_Benchmark_2Day_Input_uncompressed/readme.html
+
+Total Objects: 402
+   Total Size: 150.1 GiB
+
+</pre>
+
+<br>
+<br>
+<br>
+To recursively copy this data to a local directory use the command<br>
+
+<pre>
+aws s3 --no-sign-request cp --region=us-east-1 --recursive s3://cmas-cmaq/CMAQv5.4_2018_12US1_Benchmark_2Day_Input .
+</pre>
+
+
+<br>
+<br>
+Please submit any questions or difficulties as a new issue in the CMAS Data Warehouse Category on the CMAS User Forum.<br>
+<a href="https://forum.cmascenter.org/c/cmas-data-warehouse/96">CMAS User Forum</a><br>
+
+</body>
+</html>
+
