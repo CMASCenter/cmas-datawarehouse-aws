@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Downloading data from S3 Bucket</h1>
+
+This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
+
+
+Instructions for downloading the aws command line.<br>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+
+Once you have it installed, you can use it without credentials.<br>
+
+Example commands:<br>
+
+To query how much data is in a bucket: <br>
+<br>
+<br>
+
+1. CMAQv5.4_2018_12US1_Benchmark_2Day_Input<br>
+
+<pre>
+aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://cmaq-transfer/
+</pre>
+
+Output: <br>
+
+<pre>
+2024-10-08 09:58:49  195.9 MiB CB6R5M/BCON_RUN_D_ARIZONA_2017/BCON_v54_MCIP_36km_regrid_no_ANO3_PHOT_20170401.nc
+2024-10-08 09:59:52  195.9 MiB CB6R5M/BCON_RUN_D_ARIZONA_2017/BCON_v54_MCIP_36km_regrid_no_ANO3_PHOT_20170402.nc
+2024-10-08 10:00:09  195.9 MiB CB6R5M/BCON_RUN_D_ARIZONA_2017/BCON_v54_MCIP_36km_regrid_no_ANO3_PHOT_20170403.nc
+2024-10-08 09:59:15  195.9 MiB CB6R5M/BCON_RUN_D_ARIZONA_2017/BCON_v54_MCIP_36km_regrid_no_ANO3_PHOT_20170404.nc
+2024-10-08 09:59:32  195.9 MiB CB6R5M/BCON_RUN_D_ARIZONA_2017/BCON_v54_MCIP_36km_regrid_no_ANO3_PHOT_20170405.nc
+...
+2024-10-08 10:10:43  195.9 MiB CB6R5M/BCON_RUN_D_ARIZONA_2017/BCON_v54_MCIP_36km_regrid_no_ANO3_PHOT_20170926.nc
+2024-10-08 10:10:49  195.9 MiB CB6R5M/BCON_RUN_D_ARIZONA_2017/BCON_v54_MCIP_36km_regrid_no_ANO3_PHOT_20170927.nc
+2024-10-08 10:10:25  195.9 MiB CB6R5M/BCON_RUN_D_ARIZONA_2017/BCON_v54_MCIP_36km_regrid_no_ANO3_PHOT_20170928.nc
+2024-10-08 10:10:30  195.9 MiB CB6R5M/BCON_RUN_D_ARIZONA_2017/BCON_v54_MCIP_36km_regrid_no_ANO3_PHOT_20170929.nc
+2024-10-08 10:10:34  195.9 MiB CB6R5M/BCON_RUN_D_ARIZONA_2017/BCON_v54_MCIP_36km_regrid_no_ANO3_PHOT_20170930.nc
+2024-10-08 10:10:34  164.6 MiB CB6R5M/BCON_RUN_D_ARIZONA_2017/ICON_v54_MCIP_36km_regrid_ANO3_PHOT_20170401.nc
+
+Total Objects: 184
+   Total Size: 35.2 GiB
+
+</pre>
+
+Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
+
+<pre>
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmaq-transfer/CB6R5M/BCON_RUN_D_ARIZONA_2017 /your_local_path/
+</pre>
+
+
+<br>
+<br>
+Please send an email with any questions or difficulties to Liz Adams 
+
+</body>
+</html>
+
