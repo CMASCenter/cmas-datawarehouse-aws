@@ -76,6 +76,13 @@ To obtain the meterology files:
 aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmas-equates/CMAQ_12US1/INPUT/2019 /your_local_path/
 </pre>
 
+To obtain all input data and run scripts for a two day run use the s3 download script available here.
+Note, you need to edit the script to specify the local directory on your machine.
+
+<pre>
+./s3_copy_nosign_2019_cracmm_opendata_to_local_2019.csh
+</pre>
+
 <br>
 <br>
 Please submit any questions or difficulties as a new issue in the CMAS Data Warehouse Category on the CMAS User Forum.<br>
