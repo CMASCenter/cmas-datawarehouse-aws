@@ -79,7 +79,7 @@ echo 'Start Model Run At ' `date`
 #> Define RUNID as any combination of parameters above or others. By default,
 #> this information will be collected into this one string, $RUNID, for easy
 #> referencing in output binaries and log files as well as in other scripts.
- setenv RUNID  ${VRSN}_${compilerString}_${APPL}
+ setenv RUNID  ${VRSN}_${compilerString}_${APPL}_${MECH}_stage
 
 #> Set the build directory (this is where the CMAQ executable
 #> is located by default).
