@@ -13,12 +13,16 @@ Neighborhood Emission Mapping Operation (NEMO): A 1-km anthropogenic emission da
 The dataverse entry, is available here:<br>
 <a href="https://dataverse.unc.edu/dataset.xhtml?persistentId=doi:10.15139/S3/XPMIMJ">Dataverse for NEMO 1km Emissions Data for CONUS 2017</a> <br>
 
+Note, there is a user agreement form that you need to sign prior to downloading and using this data.
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSd3s8_9-yxpATYwN-wumQer2_PI9shbA9MLeG-_-bvOyaWi3g/viewform?usp=sf_link">User Agreement form for NEMO</a><br>
+
+
 Instructions for downloading the aws command line.<br>
 <br>
 
 <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
 
-Once you have it installed, you can use it without credentials.<br>
+Once you have the aws command line installed, you can use it without credentials.<br>
 
 Example commands:<br> 
 
@@ -52,9 +56,14 @@ Total Objects: 15
 </pre>
 
 
-The files are zipped and the resolution of the files is the average emissions over a month for the sector.
+The files are zipped and the resolution of the files is the average emissions over a month for the sector.<br>
 
-The contents of the zipped files are as follows:
+
+The contents of the zipped files are as follows: <br>
+
+Output: <br>
+
+<pre>
 unzip emis_mole_afdust_2017.zip
 Archive:  emis_mole_afdust_2017.zip
    creating: afdust/
@@ -70,12 +79,8 @@ Archive:  emis_mole_afdust_2017.zip
   inflating: afdust/emis_mole_afdust_201709_US01_cmaq_cb6ae7_2017gb_17j_mean.ncf
   inflating: afdust/emis_mole_afdust_201704_US01_cmaq_cb6ae7_2017gb_17j_mean.ncf
   inflating: afdust/emis_mole_afdust_201705_US01_cmaq_cb6ae7_2017gb_17j_mean.ncf
-
-Output: <br>
-
-<pre>
-
 </pre>
+
 
 Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
 
