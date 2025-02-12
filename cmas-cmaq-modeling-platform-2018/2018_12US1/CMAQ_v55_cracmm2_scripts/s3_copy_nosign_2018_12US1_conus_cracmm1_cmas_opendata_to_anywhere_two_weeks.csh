@@ -26,4 +26,5 @@ aws --no-sign-request s3 cp --recursive --exclude "*" --include "*20181208*" --i
 aws --no-sign-request s3 cp --recursive --exclude "*" --include "*2017*" --include "*201812*" --include "*20180101*" --include "*20180102*" s3://cmas-cmaq-modeling-platform-2018/2018_12US1/emis/WR705_2018gc2_cracmmv1/ /$DISK/data/CMAQ_Modeling_Platform_2018/2018_12US1/emis/WR705_2018gc2_cracmmv1/
 aws  --no-sign-request s3 cp --recursive --exclude "*" --include "*201712*" --include "*201801*" s3://cmas-cmaq-modeling-platform-2018/2018_12US1/icbc/CMAQv55_2018_12US1_CRACMM2_STAGE_FROM_108NHEMI_CB6R5M_STAGE/ /$DISK/data/CMAQ_Modeling_Platform_2018/2018_12US1/icbc/
 aws --no-sign-request s3 cp s3://cmas-cmaq-modeling-platform-2018/2018_12US1/epic/2017r1_EPIC0509_12US1_soil.nc4 /$DISK/data/CMAQ_Modeling_Platform_2018/2018_12US1/epic/
+aws --no-sign-request s3 cp s3://cmas-cmaq-modeling-platform-2018/2018_12US1/epic/2018r1_EPIC0509_12US1_soil.nc4 /$DISK/data/CMAQ_Modeling_Platform_2018/2018_12US1/epic/
 
