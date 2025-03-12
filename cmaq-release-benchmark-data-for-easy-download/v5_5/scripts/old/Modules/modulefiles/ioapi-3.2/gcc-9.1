@@ -1,0 +1,11 @@
+#%Module
+  
+proc ModulesHelp { } {
+   puts stderr "This module adds ioapi-3.2/gcc-9.1 to your path"
+}
+
+module-whatis "This module adds ioapi-3.2/gcc-9.1 to your path\n"
+
+set basedir "/proj/ie/proj/CMAS/CMAQ/WRF-CMAQv5.5/build/LIBRARIES_gcc/ioapi-3.2"
+prepend-path PATH "${basedir}/Linux2_x86_64gfort"
+prepend-path LD_LIBRARY_PATH "${basedir}/ioapi/fixed_src"

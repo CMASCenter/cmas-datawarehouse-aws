@@ -1,0 +1,13 @@
+#%Module
+  
+proc ModulesHelp { } {
+   puts stderr "This module adds netcdf-4.5.3-for_nc4/ifort-18.0.2 to your path"
+}
+
+module-whatis "This module adds netcdf-4.5.3-for_nc4/ifort-18.0.2 to your path\n"
+
+set basedir "/proj/ie/proj/CMAS/CMAQ/WRF-CMAQv5.5/build/LIBRARIES_intel"
+prepend-path PATH "${basedir}/bin"
+prepend-path LD_LIBRARY_PATH "${basedir}/lib"
+module load openmpi_3.1.4/intel_18.2
+

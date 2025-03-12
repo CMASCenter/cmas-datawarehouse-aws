@@ -1,0 +1,11 @@
+#%Module
+proc ModulesHelp { } {
+   puts stderr "This module adds netcdf-4.5.3-for_nc4/ifort-2024.2.1 to your path"
+}
+
+module-whatis "This module adds netcdf-4.5.3-for_nc4/ifort-2024.2.1 to your path\n"
+
+set basedir "/proj/ie/proj/CMAS/CMAQ/CMAQv5.5/build_sycamore/LIBRARIES_intel/"
+prepend-path PATH "${basedir}/bin"
+prepend-path LD_LIBRARY_PATH "${basedir}/lib"
+module load intel/2024.2.1

@@ -1,0 +1,9 @@
+These modulefiles need to be edited to specify the local path to these files on your system.
+
+Example:
+
+set basedir "/proj/ie/proj/CMAS/CMAQ/WRF-CMAQv5.5/build/LIBRARIES_gcc"
+
+must be changed to 
+
+set basedir "/your/local/install/path/CMAQ/WRF-CMAQv5.5/build/LIBRARIES_gcc"

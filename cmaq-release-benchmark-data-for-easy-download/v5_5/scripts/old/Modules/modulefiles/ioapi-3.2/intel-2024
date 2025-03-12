@@ -1,0 +1,11 @@
+#%Module
+  
+proc ModulesHelp { } {
+   puts stderr "This module adds ioapi-3.2/intel-2024 to your path"
+}
+
+module-whatis "This module adds ioapi-3.2/intel-2024 to your path\n"
+
+set basedir "/proj/ie/proj/CMAS/CMAQ/CMAQv5.5/build_sycamore/LIBRARIES_intel/ioapi-3.2"
+prepend-path PATH "${basedir}/Linux2_x86_64ifx"
+prepend-path LD_LIBRARY_PATH "${basedir}/ioapi/fixed_src"
