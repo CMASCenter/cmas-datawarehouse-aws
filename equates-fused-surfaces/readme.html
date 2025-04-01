@@ -2,10 +2,10 @@
 <html>
 <body>
 
-This readme refers to the data within the following dataset on AWS, uploaded for Heather Simon by the CMAS Center
-last updated March 14, 2025
+This readme refers to the data within the following dataset on AWS
+last updated April 1, 2025
 <br>
-<a href="https://ozone-data-fusion-transfer.s3.amazonaws.com/index.html">Ozone Data Fusion for O3MAT</a>
+<a href="https://equates-fused-surfaces.s3.amazonaws.com/index.html">EQUATES Fused Surfaces</a>
 
 <h1>Downloading data from S3 Bucket</h1>
 
@@ -26,19 +26,20 @@ To query how much data is in a bucket: <br>
 
 
 <pre>
-aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://ozone-data-fusion-transfer/
+aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://equates-fused-surfaces
 </pre>
 
 Tail of Output: <br>
 
 <pre>
 
+
 </pre>
 
 Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
 
 <pre>
-aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://ozone-data-fusion-transfer/ /your_local_path/
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://equates-fused-surfaces/ /your_local_path/
 </pre>
 
 

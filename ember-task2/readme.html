@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h1>Data transfer for Manish Soni</h1>
+
+    Request to post 7 days of CMAQ inputs for ember task02:
+
+
+<h2>Instructions for downloading the aws command line.</h2>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+
+Once you have it installed, you can use it without credentials.<br>
+
+Example commands:<br>
+
+
+<h2>To query how much data is in the full bucket:</h2> <br>
+
+<pre>
+aws s3 ls --no-sign-request --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://ember-task02
+</pre>
+
+Tail of Output: <br>
+
+<pre>
+2025-01-15 11:33:41   18.7 MiB mcip/aqm.t12z.soicro_20230401.ncf
+2025-01-15 11:35:10   18.7 MiB mcip/aqm.t12z.soicro_20230402.ncf
+2025-01-15 11:36:35   18.7 MiB mcip/aqm.t12z.soicro_20230403.ncf
+2025-01-15 11:38:01   18.7 MiB mcip/aqm.t12z.soicro_20230404.ncf
+2025-01-15 11:39:27   18.7 MiB mcip/aqm.t12z.soicro_20230405.ncf
+2025-01-15 11:24:03    4.7 KiB mergedates.2023to2018_clean.txt
+
+Total Objects: 61
+   Total Size: 11.6 GiB
+</pre>
+
+<h2>To copy or download all of this data to your local directory , use the following command:</h2>
+
+<pre>
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://ember-task02 /your/local/directory/
+</pre>
+
+
+<h2>Please submit any questions or difficulties as a new issue on the CMAS User Forum.</h2><br>
+<a href="https://forum.cmascenter.org/">CMAS User Forum</a><br>
+
+
+</body>
+</html>

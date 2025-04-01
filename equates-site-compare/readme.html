@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+This readme refers to the data within the following dataset on AWS
+last updated April 1, 2025
+<br>
+<a href="https://equates-site-compare.s3.amazonaws.com/index.html">EQUATES site-compare files - all sites</a>
+
+<h1>Downloading data from S3 Bucket</h1>
+
+This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
+
+
+Instructions for downloading the aws command line.<br>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+
+Once you have it installed, you can use it without credentials.<br>
+
+Example commands:<br>
+
+To query how much data is in a bucket: <br>
+<br>
+
+
+<pre>
+aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://equates-site-compare/
+</pre>
+
+Tail of Output: <br>
+
+<pre>
+2025-04-01 14:40:05  504.1 KiB EQUATES/aq_obs/2019/06/CASTNET_Daily_CMAQv532_12US1_2019.csv
+2025-04-01 14:40:06   55.0 MiB EQUATES/aq_obs/2019/07/AQS_Daily_CMAQv532_12US1_2019.csv
+2025-04-01 14:40:05    8.0 MiB EQUATES/aq_obs/2019/07/AQS_Daily_O3_CMAQv532_12US1_2019.csv
+2025-04-01 14:40:05    1.0 GiB EQUATES/aq_obs/2019/07/AQS_Hourly_CMAQv532_12US1_2019.csv
+2025-04-01 14:40:26  520.8 KiB EQUATES/aq_obs/2019/07/CASTNET_Daily_CMAQv532_12US1_2019.csv
+2025-04-01 14:40:27   56.6 MiB EQUATES/aq_obs/2019/08/AQS_Daily_CMAQv532_12US1_2019.csv
+2025-04-01 14:40:26    8.0 MiB EQUATES/aq_obs/2019/08/AQS_Daily_O3_CMAQv532_12US1_2019.csv
+2025-04-01 14:40:26    1.0 GiB EQUATES/aq_obs/2019/08/AQS_Hourly_CMAQv532_12US1_2019.csv
+2025-04-01 14:40:48  523.6 KiB EQUATES/aq_obs/2019/08/CASTNET_Daily_CMAQv532_12US1_2019.csv
+2025-04-01 14:40:49   53.4 MiB EQUATES/aq_obs/2019/09/AQS_Daily_CMAQv532_12US1_2019.csv
+2025-04-01 14:40:48    7.7 MiB EQUATES/aq_obs/2019/09/AQS_Daily_O3_CMAQv532_12US1_2019.csv
+2025-04-01 14:40:48 1010.2 MiB EQUATES/aq_obs/2019/09/AQS_Hourly_CMAQv532_12US1_2019.csv
+2025-04-01 14:41:09  509.6 KiB EQUATES/aq_obs/2019/09/CASTNET_Daily_CMAQv532_12US1_2019.csv
+2025-04-01 14:41:09   54.4 MiB EQUATES/aq_obs/2019/10/AQS_Daily_CMAQv532_12US1_2019.csv
+2025-04-01 14:41:09    7.7 MiB EQUATES/aq_obs/2019/10/AQS_Daily_O3_CMAQv532_12US1_2019.csv
+2025-04-01 14:41:10    1.0 GiB EQUATES/aq_obs/2019/10/AQS_Hourly_CMAQv532_12US1_2019.csv
+2025-04-01 14:41:30  521.5 KiB EQUATES/aq_obs/2019/10/CASTNET_Daily_CMAQv532_12US1_2019.csv
+2025-04-01 14:41:31   53.2 MiB EQUATES/aq_obs/2019/11/AQS_Daily_CMAQv532_12US1_2019.csv
+2025-04-01 14:41:30    5.1 MiB EQUATES/aq_obs/2019/11/AQS_Daily_O3_CMAQv532_12US1_2019.csv
+2025-04-01 14:41:31  911.2 MiB EQUATES/aq_obs/2019/11/AQS_Hourly_CMAQv532_12US1_2019.csv
+2025-04-01 14:41:49  514.9 KiB EQUATES/aq_obs/2019/11/CASTNET_Daily_CMAQv532_12US1_2019.csv
+2025-04-01 14:41:50   52.9 MiB EQUATES/aq_obs/2019/12/AQS_Daily_CMAQv532_12US1_2019.csv
+2025-04-01 14:41:50    5.0 MiB EQUATES/aq_obs/2019/12/AQS_Daily_O3_CMAQv532_12US1_2019.csv
+2025-04-01 14:41:50  936.5 MiB EQUATES/aq_obs/2019/12/AQS_Hourly_CMAQv532_12US1_2019.csv
+2025-04-01 14:42:08  534.3 KiB EQUATES/aq_obs/2019/12/CASTNET_Daily_CMAQv532_12US1_2019.csv
+
+Total Objects: 864
+   Total Size: 188.9 GiB
+
+
+</pre>
+
+Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
+
+<pre>
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://equates-site-compare/ /your_local_path/
+</pre>
+
+
+<br>
+Please send an email with any questions or difficulties to Liz Adams lizadams@email.unc.edu
+
+</body>
+</html>
+

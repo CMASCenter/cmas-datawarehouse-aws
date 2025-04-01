@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h1>Data transfer for Ted Russell's group</h1>
+
+S3 Bucket 1: Request from me to post EQUATES ozone and PM2.5 fused surfaces (18 netcdf files for 2002-2019) to be shared with Ted Russell’s group:
+
+    /work/MOD3EVAL/css/CMAQv53_TS/data/downscaler/PostProcess/CMAQv532_DSFusion_12US1_*.nc
+
+<h2>Instructions for downloading the aws command line.</h2>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+
+Once you have it installed, you can use it without credentials.<br>
+
+Example commands:<br>
+
+
+<h2>To query how much data is in the full bucket:</h2> <br>
+
+<pre>
+aws s3 ls --no-sign-request --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://cmas-transfer-data-equates
+</pre>
+
+Tail of Output: <br>
+
+<pre>
+2024-12-16 15:25:51  764.4 MiB CMAQv532_DSFusion_12US1_2002.nc
+2024-12-16 15:27:43  764.4 MiB CMAQv532_DSFusion_12US1_2003.nc
+2024-12-16 15:27:13  766.5 MiB CMAQv532_DSFusion_12US1_2004.nc
+2024-12-16 15:26:19  764.4 MiB CMAQv532_DSFusion_12US1_2005.nc
+2024-12-16 15:26:52  764.4 MiB CMAQv532_DSFusion_12US1_2006.nc
+2024-12-16 15:26:06  764.4 MiB CMAQv532_DSFusion_12US1_2007.nc
+2024-12-16 15:26:38  766.5 MiB CMAQv532_DSFusion_12US1_2008.nc
+2024-12-16 15:28:57  764.4 MiB CMAQv532_DSFusion_12US1_2009.nc
+2024-12-16 15:27:08  764.4 MiB CMAQv532_DSFusion_12US1_2010.nc
+2024-12-16 15:27:29  764.4 MiB CMAQv532_DSFusion_12US1_2011.nc
+2024-12-16 15:28:41  766.5 MiB CMAQv532_DSFusion_12US1_2012.nc
+2024-12-16 15:28:00  764.4 MiB CMAQv532_DSFusion_12US1_2013.nc
+2024-12-16 15:29:27  764.4 MiB CMAQv532_DSFusion_12US1_2014.nc
+2024-12-16 15:29:11  764.4 MiB CMAQv532_DSFusion_12US1_2015.nc
+2024-12-16 15:28:26  766.5 MiB CMAQv532_DSFusion_12US1_2016.nc
+2024-12-16 15:29:58  764.4 MiB CMAQv532_DSFusion_12US1_2017.nc
+2024-12-16 15:29:42  764.4 MiB CMAQv532_DSFusion_12US1_2018.nc
+2024-12-16 15:30:14  764.4 MiB CMAQv532_DSFusion_12US1_2019.nc
+2024-12-16 15:04:01   30.9 KiB index.html
+
+Total Objects: 19
+   Total Size: 13.4 GiB
+
+
+</pre>
+
+<h2>To copy or download all of this data to your local directory , use the following command:</h2>
+
+<pre>
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmas-transfer-data-equates /your/local/directory/
+</pre>
+
+
+<h2>Please submit any questions or difficulties as a new issue on the CMAS User Forum.</h2><br>
+<a href="https://forum.cmascenter.org/">CMAS User Forum</a><br>
+
+
+</body>
+</html>
