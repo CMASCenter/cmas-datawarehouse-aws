@@ -54,6 +54,29 @@ Total Objects: 3765
 
 </pre>
 
+To list the subdirectories in the bucket:<br>
+<br>
+
+<pre>
+aws s3 ls --recursive s3://cmaqv54-cracmm1-utah-4km-modeling-platform | awk '{ sub( /\/.[^\/]*$/,"/",$4 ); print $4}' | sort -u
+2017/4km_UTAH/emis/merged_nobeis_norwc/
+2017/4km_UTAH/emis/on_road_diesel/
+2017/4km_UTAH/emis/on_road_gas/
+2017/4km_UTAH/emis/premerged/rwc/
+2017/4km_UTAH/emis/smoke_out/pt_oilgas/
+2017/4km_UTAH/emis/smoke_out/pt_us_magnesium/
+2017/4km_UTAH/emis/smoke_out/ptagfire/
+2017/4km_UTAH/emis/smoke_out/ptegu/
+2017/4km_UTAH/emis/smoke_out/ptfire/
+2017/4km_UTAH/emis/smoke_out/ptfire_grass/
+2017/4km_UTAH/emis/smoke_out/ptnonipm/
+2017/4km_UTAH/icbc/
+2017/4km_UTAH/icbc/CRACMM1_CB6R5_PNO3/
+2017/4km_UTAH/met/
+2017/4km_UTAH/scripts/
+2017/4km_UTAH/surface/
+</pre>
+
 Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
 
 <pre>
