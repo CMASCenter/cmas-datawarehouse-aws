@@ -50,7 +50,7 @@ Total Objects: 214
    Total Size: 306.8 GiB
 </pre>
 
-List of the subdirectories in a bucket:<br>
+List of the subdirectories in the bucket:<br>
 
 <pre>
 aws s3 ls --recursive s3://equates-fused-surfaces | awk '{ sub( /\/.[^\/]*$/,"/",$4 ); print $4}' | sort -u
@@ -86,6 +86,7 @@ POC: Kristen Foley
     Census tract averages (146 GB): /work/MOD3EVAL/fib/EQUATES/downscaler/TLuben_GDIT_Tasks/census
     Zip code averages (67 GB): /work/MOD3EVAL/fib/EQUATES/downscaler/TLuben_GDIT_Tasks/zipcode
     County averages (4.1 GB): /work/MOD3EVAL/fib/EQUATES/downscaler/TLuben_GDIT_Tasks/county   (2018-2019 data is currently missing; I’m trying to track it down)
+    Total: 339.1 GB
 </pre>
 
 </body>
