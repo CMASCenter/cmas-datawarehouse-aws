@@ -32,9 +32,38 @@ aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --re
 Tail of Output: <br>
 
 <pre>
+2025-04-01 15:21:14    1.6 GiB EQUATES/aq_obs/site_cmp_screened/obsmod_nomiss_aqs_hourly_no2_2002_2019_pcnm70_jandec_bycell_final_crit4.csv
+2025-04-01 15:22:03    1.3 GiB EQUATES/aq_obs/site_cmp_screened/obsmod_nomiss_aqs_hourly_no_2002_2019_pcnm70_jandec_bycell_final_crit4.csv
+2025-04-01 15:21:38    1.2 GiB EQUATES/aq_obs/site_cmp_screened/obsmod_nomiss_aqs_hourly_nox_2002_2019_pcnm70_jandec_bycell_final_crit4.csv
+2025-04-01 15:22:50   32.7 MiB EQUATES/aq_obs/site_cmp_screened/obsmod_nomiss_aqs_hourly_noy_2002_2019_pcnm70_jandec_bycell_final_crit4.csv
+2025-04-01 15:23:19    3.2 GiB EQUATES/aq_obs/site_cmp_screened/obsmod_nomiss_aqs_hourly_o3_2002_2019_pcnm70_jandec_bycell_final_crit4.csv
+2025-04-01 15:23:55  538.5 MiB EQUATES/aq_obs/site_cmp_screened/obsmod_nomiss_aqs_hourly_pm10_2002_2019_pcnm70_jandec_bycell_final_crit4.csv
+2025-04-01 15:22:50    1.0 GiB EQUATES/aq_obs/site_cmp_screened/obsmod_nomiss_aqs_hourly_pm25_2002_2019_pcnm70_jandec_bycell_final_crit4.csv
+2025-04-01 15:24:07    1.7 GiB EQUATES/aq_obs/site_cmp_screened/obsmod_nomiss_aqs_hourly_so2_2002_2019_pcnm70_jandec_bycell_final_crit4.csv
+2025-04-01 15:23:44   34.5 MiB EQUATES/aq_obs/site_cmp_screened/obsmod_nomiss_aqs_hourly_tolu_2002_2019_pcnm70_jandec_bycell_final_crit4.csv
+2025-04-01 15:23:55   20.1 MiB EQUATES/aq_obs/site_cmp_screened/obsmod_nomiss_castnet_daily_o3_2002_2019_pcnm70_jandec_bycell_final_crit4.csv
+2025-04-01 15:24:06    8.5 MiB EQUATES/aq_obs/site_cmp_screened/obsmod_nomiss_castnet_daily_o3_2002_2019_pcnm70_maysep_bycell_final_crit4.csv
+2025-04-01 16:14:08   30.9 KiB index.html
+2025-04-01 16:14:08    1.3 KiB readme.html
 
-
+Total Objects: 187
+   Total Size: 26.9 GiB
 </pre>
+
+List the subdirectories in the bucket<br>
+
+<pre>
+aws s3 ls --recursive s3://equates-site-compare-trends-only | awk '{ sub( /\/.[^\/]*$/,"/",$4 ); print $4}' | sort -u
+</pre>
+
+Output: <br>
+
+<pre>
+EQUATES/aq_obs/site_cmp_screened/
+</pre>
+
+
+
 
 Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
 
