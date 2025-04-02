@@ -18,12 +18,12 @@ Instructions for downloading the aws command line.<br>
 <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
 
 Once you have it installed, you can use it without credentials.<br>
-
+<br>
 Example commands:<br>
-
+<br>
 To query how much data is in a bucket: <br>
 <br>
-
+<br>
 
 <pre>
 aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://equates-site-compare/
@@ -60,8 +60,35 @@ Tail of Output: <br>
 
 Total Objects: 864
    Total Size: 188.9 GiB
+</pre>
 
+List of subdirectories<br>
 
+<pre>
+aws s3 ls --recursive s3://equates-site-compare | awk '{ sub( /\/.[^\/]*$/,"/",$4 ); print $4}' | sort -u
+</pre>
+
+Output:
+
+<pre>
+EQUATES/aq_obs/2002/
+EQUATES/aq_obs/2003/
+EQUATES/aq_obs/2004/
+EQUATES/aq_obs/2005/
+EQUATES/aq_obs/2006/
+EQUATES/aq_obs/2007/
+EQUATES/aq_obs/2008/
+EQUATES/aq_obs/2009/
+EQUATES/aq_obs/2010/
+EQUATES/aq_obs/2011/
+EQUATES/aq_obs/2012/
+EQUATES/aq_obs/2013/
+EQUATES/aq_obs/2014/
+EQUATES/aq_obs/2015/
+EQUATES/aq_obs/2016/
+EQUATES/aq_obs/2017/
+EQUATES/aq_obs/2018/
+EQUATES/aq_obs/2019/
 </pre>
 
 Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
