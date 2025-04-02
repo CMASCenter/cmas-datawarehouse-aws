@@ -54,6 +54,11 @@ List of the subdirectories in a bucket:<br>
 
 <pre>
 aws s3 ls --recursive s3://equates-fused-surfaces | awk '{ sub( /\/.[^\/]*$/,"/",$4 ); print $4}' | sort -u
+</pre>
+
+Output:<br>
+
+<pre>
 EQUATES/downscaler/FAQSD_files/
 EQUATES/downscaler/averages/census/
 EQUATES/downscaler/averages/county/
