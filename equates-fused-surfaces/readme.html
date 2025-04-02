@@ -32,9 +32,34 @@ aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --re
 Tail of Output: <br>
 
 <pre>
+2025-04-01 14:42:23   11.3 MiB EQUATES/downscaler/averages/zipcode/monthly_average_temperature_by_zip_code_2009.csv
+2025-04-01 14:42:23   11.3 MiB EQUATES/downscaler/averages/zipcode/monthly_average_temperature_by_zip_code_2010.csv
+2025-04-01 14:42:23   11.3 MiB EQUATES/downscaler/averages/zipcode/monthly_average_temperature_by_zip_code_2011.csv
+2025-04-01 14:42:23   11.3 MiB EQUATES/downscaler/averages/zipcode/monthly_average_temperature_by_zip_code_2012.csv
+2025-04-01 14:42:23   11.3 MiB EQUATES/downscaler/averages/zipcode/monthly_average_temperature_by_zip_code_2013.csv
+2025-04-01 14:42:25   11.3 MiB EQUATES/downscaler/averages/zipcode/monthly_average_temperature_by_zip_code_2014.csv
+2025-04-01 14:42:24   11.3 MiB EQUATES/downscaler/averages/zipcode/monthly_average_temperature_by_zip_code_2015.csv
+2025-04-01 14:42:25   11.3 MiB EQUATES/downscaler/averages/zipcode/monthly_average_temperature_by_zip_code_2016.csv
+2025-04-01 14:42:23   11.3 MiB EQUATES/downscaler/averages/zipcode/monthly_average_temperature_by_zip_code_2017.csv
+2025-04-01 14:42:25   11.3 MiB EQUATES/downscaler/averages/zipcode/monthly_average_temperature_by_zip_code_2018.csv
+2025-04-01 14:42:26   11.3 MiB EQUATES/downscaler/averages/zipcode/monthly_average_temperature_by_zip_code_2019.csv
+2025-04-01 16:13:05   30.9 KiB index.html
+2025-04-01 16:13:05    1.3 KiB readme.html
 
-
+Total Objects: 214
+   Total Size: 306.8 GiB
 </pre>
+
+List of the subdirectories in a bucket:<br>
+
+<pre>
+aws s3 ls --recursive s3://equates-fused-surfaces | awk '{ sub( /\/.[^\/]*$/,"/",$4 ); print $4}' | sort -u
+EQUATES/downscaler/FAQSD_files/
+EQUATES/downscaler/averages/census/
+EQUATES/downscaler/averages/county/
+EQUATES/downscaler/averages/zipcode/
+</pre
+
 
 Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
 
