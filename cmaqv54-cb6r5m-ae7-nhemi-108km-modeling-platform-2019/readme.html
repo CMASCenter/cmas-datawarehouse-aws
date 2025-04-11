@@ -46,6 +46,62 @@ Command to copy files from the bucket to your local filesystem (the system where
 aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmaqv54-cb6r5m-ae7-nhemi-108km-modeling-platform-2019/ /your_local_path/
 </pre>
 
+Metadata<br>
+
+<br>
+Description: Data Summary CMAQv5.4 input data for the CB6R5M_AE7_AQ chemical mechanism  for a 10/01/2018 - 12/31/2019 simulation over Northern Hemisphere<br>
+<br>
+Model-ready emissions files:<br>
+
+#merged_nobeis_norwc (3.3 TB):<br>
+/asm/gsarwar/hemisphere/emission/2019/108km/zindia/* <br>
+<br>
+# fires without ag fires over India (3.6 TB):<br>
+/asm/gsarwar/hemisphere/emission/2019/108km/all_fires_minus_agfire_india/* <br>
+<br>
+# Cl2 emissions (3.4 MB):<br>
+/work/MOD3APP/css/CMAQv53_TS/inputs/emis/ocean_cl2/cl2_HEMI_108k.ncf <br>
+
+# SMOG emissions inventory over India (44 GB): <br>
+/work/MOD3DEV/sgq/hemisphere/emission/arushi_ceds_india/ioapi/IIT/2015-*/SMoG-India_v1_*_2015-*_v0.4_speciated_zoutside_ind.nc <br>
+<br>
+# brick-kiln emissions over Bangladesh (fixed) <br>
+/asm1/MOD3DATA/CMAQv53_TS/2019_108NHEMI/emis/cb6r3_ae6_20240405_P113/premerged/pt_brickkilns/emis_mole_pt_brickkilns_*_HEMI_108k_cmaq_cb6_P113_HTAPv3_supplement_2019.ncf <br>
+<br>
+# lightning NOx emissions (2.4 GB) <br>
+/work/MOD3EVAL/dkj/LTNG/WWLLNs_Hemi/2018/WWLLNs_Hemi_60min_2018*.ioapi <br>
+/work/MOD3EVAL/dkj/LTNG/WWLLNs_Hemi/2019/WWLLNs_Hemi_60min_2019*.ioapi <br>
+/work/MOD3EVAL/dkj/LTNG/WWLLN_Hemi/2016/LTNG_Parms_hemisphere.ioapi <br>
+<br>
+# met files – 2018 (October-December) (388 GB): <br>
+/asm/MOD3DATA/CMAQv53_TS/2018_108NHEMI/met/mcip_v51_wrf_v411_noltng/* <br>
+# met files – 2019 (1.5 TB):<br>
+/asm/MOD3DATA/CMAQv53_TS/2019_108NHEMI/met/mcip_v51_wrf_v411_noltng/*<br>
+<br>
+# ISAM MASK file (29 MB):<br>
+/work/MOD3DEV/sgq/hemisphere/emission/MASK/ne_10m_admin_0_countries.ADM0_A3.108NHEMI2_no_time.nc<br>
+<br>
+# MEGAN files (63 MB)<br>
+/work/MOD3DEV/jwilliso/megan_files/hemi/megan32_GF3/* <br>
+<br>
+#GRIDDESC file:<br>
+/work/MOD3APP/css/CMAQv53_TS/inputs/GRIDDESC <br>
+
+#IC file (1.5 GB):<br>
+/work/MOD3DEV/sgq/hemisphere/cmaq54/FINE_SCALE_HEMI/icbc/CCTM_CGRID_v54_intel21.4_CMAQv54_2018_108NHEMI_STAGE_20180930.nc<br>
+<br>
+#BC file (5.9 MB): <br>
+/work/MOD3APP/css/CMAQv53_TS/inputs/icbc/hemisphere_bc_cb05mp_cleano3_44L.ncf <br>
+<br>
+
+#ocean files (.7 MB): <br>j
+/work/MOD3DEV/sgq/hemisphere/ocean_file/108km/OCEAN_*_L3m_MC_CHL_chlor_a_108NHEMI_CROSS.ncf <br>
+
+#  runscript: <br>
+/work/MOD3DEV/sgq/cctm/hemisphere/cmaqv54/FINE_SCALE_HEMI/RUN_E/run_cctm_CMAQv54_108NHEMI_2018_stage_IIT_brick_kiln.csh <br>
+<br>
+/work/MOD3DEV/sgq/cctm/hemisphere/cmaqv54/FINE_SCALE_HEMI/RUN_E/run_cctm_CMAQv54_108NHEMI_2019_stage_IIT_brick_kiln.txt <br>
+<br>
 
 <br>
 Please send an email with any questions or difficulties to Liz Adams lizadams@email.unc.edu
