@@ -47,7 +47,7 @@ Tail of Output: <br>
 2025-04-11 15:32:03   30.9 KiB index.html
 2025-04-11 15:37:04    4.1 KiB readme.html
 
-Total Objects: 5923
+Total Objects: 5924
    Total Size: 8.1 TiB
 </pre>
 
@@ -243,6 +243,11 @@ aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable  --r
 # ISAM MASK file (29 MB):<br>
 /work/MOD3DEV/sgq/hemisphere/emission/MASK/ne_10m_admin_0_countries.ADM0_A3.108NHEMI2_no_time.nc<br>
 <br>
+<pre>
+aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://cmaqv54-cb6r5m-ae7-nhemi-108km-modeling-platform-2019/2019_108NHEMI/misc | grep ne_10
+2025-04-12 15:07:18   28.5 MiB 2019_108NHEMI/misc/ne_10m_admin_0_countries.ADM0_A3.108NHEMI2_no_time.nc
+</pre>
+
 # MEGAN files (63 MB)<br>
 /work/MOD3DEV/jwilliso/megan_files/hemi/megan32_GF3/* <br>
 <br>
@@ -263,6 +268,10 @@ Total Objects: 9
 </pre>
 #GRIDDESC file:<br>
 /work/MOD3APP/css/CMAQv53_TS/inputs/GRIDDESC <br>
+<pre>
+aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://cmaqv54-cb6r5m-ae7-nhemi-108km-modeling-platform-2019/2019_108NHEMI/ | grep GRIDDESC
+2025-04-12 15:07:32  360 Bytes 2019_108NHEMI/GRIDDESC
+<pre>
 
 #IC file (1.5 GB):<br>
 /work/MOD3DEV/sgq/hemisphere/cmaq54/FINE_SCALE_HEMI/icbc/CCTM_CGRID_v54_intel21.4_CMAQv54_2018_108NHEMI_STAGE_20180930.nc<br>
@@ -309,6 +318,14 @@ Total Objects: 14
 <br>
 /work/MOD3DEV/sgq/cctm/hemisphere/cmaqv54/FINE_SCALE_HEMI/RUN_E/run_cctm_CMAQv54_108NHEMI_2019_stage_IIT_brick_kiln.txt <br>
 <br>
+<pre>
+aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://cmaqv54-cb6r5m-ae7-nhemi-108km-modeling-platform-2019/2019_108NHEMI/scripts
+2025-04-13 11:30:24   43.5 KiB 2019_108NHEMI/scripts/run_cctm_CMAQv54_108NHEMI_2018_stage_IIT_brick_kiln.csh
+2025-04-12 15:08:46   43.7 KiB 2019_108NHEMI/scripts/run_cctm_CMAQv54_108NHEMI_2019_stage_IIT_brick_kiln.txt
+
+Total Objects: 2
+   Total Size: 87.2 KiB
+</pre>
 
 <br>
 Please send an email with any questions or difficulties to Liz Adams lizadams@email.unc.edu
