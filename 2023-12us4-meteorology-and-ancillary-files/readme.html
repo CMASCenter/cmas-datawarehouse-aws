@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+This readme refers to the data within the following dataset on AWS, uploaded for Havala Pye by the CMAS Center
+<br>
+last updated April 15, 2025<br>
+<br>
+Author: US EPA<br>
+Affiliation: ORD<br>
+Point of Contact: Havala Pye, US EPA, Pye.Havala@epa.gov <br>
+
+<br>
+<a href="https://2023-12us4-meteorology-and-ancillary-files.s3.amazonaws.com/index.html"><2023 12US4 meteorology and ancillary files/a>
+
+<h1>Downloading data from S3 Bucket</h1>
+
+This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
+
+
+Instructions for downloading the aws command line.<br>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+
+Once you have it installed, you can use it without credentials.<br>
+
+Example commands:<br>
+
+To query how much data is in a bucket: <br>
+<br>
+
+
+<pre>
+aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://2023-12us4-meteorology-and-ancillary-files/
+</pre>
+
+Tail of Output: <br>
+
+<pre>
+2025-04-14 18:01:22   54.5 MiB 2023_12US4/surface/epic2cmaq_2023r1.nc4
+2025-04-14 18:01:22    6.0 MiB 2023_12US4/surface/epic2cmaq_2023r1_total.nc4
+2025-04-14 18:01:22    1.3 MiB 2023_12US4/surface/ocean_file_12US4_ne_10m.ncf
+2025-04-14 16:27:31   30.9 KiB index.html
+2025-04-14 16:27:30    2.4 KiB readme.html
+
+Total Objects: 3387
+   Total Size: 3.1 TiB
+
+</pre>
+
+Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
+
+<pre>
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://2023-12us4-meteorology-and-ancillary-files/ /your_local_path/
+</pre>
+
+Metadata<br>
+
+<br>
+Description: 2023 12US4 meteorology and ancillary files<br>
+<br>
+This bucket does not contain the Model-ready emissions files:<br>
+
+    # Grid Description for 12US4 
+    /work/MOD3DATA/2023_12US4/GRIDDESC
+<pre>
+aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://2023-12us4-meteorology-and-ancillary-files
+
+</pre>
+
+<br>
+
+    # initial and boundary conditions (I mapped ic from the CMAQ standard profile and mapped bc from GEOS-CF) (162 GB)
+
+/work/MOD3DATA/2023_12US4/icbc/
+
+    # EPIC and other surface files (12G)
+
+/work/MOD3DATA/2023_12US4/surface
+
+    # CMAQ-ready met files and subdirectory with lightning data (5.9T)
+
+/work/MOD3DATA/2023_12US4/met
+
+/work/MOD3DATA/2023_12US4/met/lightning
+
+    # optional: Rob Gilliam’s evaluation of the met as html files (142M)
+
+/work/MOD3DATA/2023_12US4/meteval
+
+
+<br>
+Please send an email with any questions or difficulties to Liz Adams lizadams@email.unc.edu
+
+</body>
+</html>
+
