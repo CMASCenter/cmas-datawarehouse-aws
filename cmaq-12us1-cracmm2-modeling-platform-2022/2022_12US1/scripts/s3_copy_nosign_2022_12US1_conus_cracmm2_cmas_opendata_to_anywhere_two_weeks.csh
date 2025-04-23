@@ -28,8 +28,8 @@ aws --no-sign-request s3 cp --recursive --exclude "*" --include "*GRIDDESC*" s3:
 #aws --no-sign-request s3 cp --recursive --exclude "*" --include "*20221208*" --include "*20221222*" s3://cmas-cmaq-modeling-platform-2018/2018_12US1/emis/WR705_2018gc2_cracmmv1/ /$DISK/data/CMAQ_Modeling_Platform_2018/2018_12US1/emis/WR705_2018gc2_cracmmv1/
 #aws --no-sign-request s3 cp --recursive --exclude "*" --include "*2017*" --include "*201812*" --include "*20180101*" --include "*20180102*" s3://cmas-cmaq-modeling-platform-2018/2018_12US1/emis/WR705_2018gc2_cracmmv1/ /$DISK/data/CMAQ_Modeling_Platform_2018/2018_12US1/emis/WR705_2018gc2_cracmmv1/
 aws --no-sign-request s3 cp --recursive --exclude "*" --include "*2021*" --include "*202212*" --include "*202201*" s3://cmaq-12us1-cracmm2-modeling-platform-2022/2022_12US1/wwllns/ /$DISK/data/CMAQ_Modeling_Platform_2022/2022_12US1/wwllns/
-aws --no-sign-request s3 cp s3://cmaq-12us1-cracmm2-modeling-platform-2022/2022_12US1/epic/beld4_12US1_2011.nc4 /$DISK/data/CMAQ_Modeling_Platform_2022/2022_12US1/epic/
-aws --no-sign-request s3 cp s3://cmaq-12us1-cracmm2-modeling-platform-2022/2022_12US1/epic/2021r1_EPIC0509_12US1_soil.nc4 /$DISK/data/CMAQ_Modeling_Platform_2022/2022_12US1/epic/
+aws --no-sign-request s3 cp s3://cmaq-12us1-cracmm2-modeling-platform-2022/2022_12US1/epic/beld4_12US1_2011.nc /$DISK/data/CMAQ_Modeling_Platform_2022/2022_12US1/epic/
+aws --no-sign-request s3 cp s3://cmaq-12us1-cracmm2-modeling-platform-2022/2022_12US1/epic/2021r1_EPIC0509_12US1_soil.nc /$DISK/data/CMAQ_Modeling_Platform_2022/2022_12US1/epic/
 aws --no-sign-request s3 cp s3://cmaq-12us1-cracmm2-modeling-platform-2022/2022_12US1/wwllns/LTNG_AllParms_12US1.ncf  /$DISK/data/CMAQ_Modeling_Platform_2022/2022_12US1/wwllns/
 
 20221206
