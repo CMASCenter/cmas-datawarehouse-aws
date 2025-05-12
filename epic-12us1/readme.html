@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h1>Data transfer for Jon Pleim</h1>
+<a href="https://epic-12us1.s3.amazonaws.com/index.html"< epic-12us1 s3 bucket</a>
+
+
+<h2>Instructions for downloading the aws command line.</h2>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+
+Once you have it installed, you can use it without credentials.<br>
+
+Example commands:<br>
+
+
+<h2>To query how much data is in the full bucket:</h2> <br>
+
+<pre>
+aws s3 ls --no-sign-request --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://epic-12us1/
+</pre>
+
+Tail of Output: <br>
+
+<pre>
+
+
+</pre>
+
+<h2>To copy or download all of this data to your local directory , use the following command:</h2>
+
+<pre>
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://epic-12us1/ /your/local/directory/
+</pre>
+
+
+<h2>Please submit any questions to Liz Adams lizadams@email.unc.edu .</h2><br>
+
+Location of files on atmos
+
+<pre>
+/work/MOD3DEV/pleim/epic/12US1_LISTOS/output4CMAQ/app/toCMAQ
+</pre>
+
+</body>
+</html>
