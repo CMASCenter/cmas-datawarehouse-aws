@@ -72,6 +72,20 @@ ln -s ./cmv_c3_12    cmv_c3_12_grouped <br>
 ln -s ../premerged/rwc    rwc<br>
 ```<br>
 
+Instructions to obtain MCIP files for CMAQ from the OAQPS 2022V1 AWS bucket.<br>
+
+List files in the 12US1 MCIP directory:<br>
+
+```
+aws s3 ls --no-sign-request s3://epa-2022-modeling-platform/MCIP/12US1/
+```
+
+Recursively copy files for the first 10 days: <br> - note, the command includes the --dryrun option which will need to be removed. 
+
+```
+ aws s3 cp --dryrun --recursive --exclude "*" --include "*21122*" s3://epa-2022-modeling-platform/MCIP/12US1/ .
+```
+
 <br>
 Please send an email with any questions or difficulties to Liz Adams lizadams@email.unc.edu
 
@@ -103,6 +117,8 @@ Files to copy <br>
 
 <br>
 With these files and the 2022 met from the OAQPS 2022V1 AWS bucket, users should be able to run the 2022 CRACMM2 script we have in our 6.0b1 branch: https://github.com/kmfoley/CMAQ_CMAS/blob/6.0b1/CCTM/scripts/run_cctm_2022v1_12US1_CRACMM2.csh <br>
+
+
 
 
 
