@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+This readme refers to the data within the following dataset on AWS, uploaded for Havala Pye by the CMAS Center
+last updated Feb. 28, 2025<br>
+<a href="https://cmaq-12us4-cracmm3-modeling-platform-2023.s3.amazonaws.com/index.html">CMAQ 2023 12US4 CRACMM2 Inputs and Meteorology Modeling Platform</a><br>
+
+“Documentation, including metadata, is available at: US EPA, 2025, "CMAQ 2023 12US4 CRACMM2 Inputs and Meteorology", https://doi.org/10.15139/S3/GL41QC, UNC Dataverse, V1. Please refer to this reference for how to cite and document use of these inputs.”<br>
+
+<h1>Downloading data from S3 Bucket</h1>
+
+This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
+
+
+Instructions for downloading the aws command line.<br>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+
+Once you have it installed, you can use it without credentials.<br>
+
+Example commands:<br>
+
+To query how much data is in a bucket: <br>
+<br>
+<br>
+
+
+<pre>
+aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://cmaq-12us4-cracmm3-modeling-platform-2023/
+</pre>
+
+Tail of Output: <br>
+
+<pre>
+2025-02-25 18:48:03    9.6 GiB 2023_12US4/emis/cmaq_cracmmv2/point_sectors/ptnonipm/inln_mole_ptnonipm_20231209_12US4_cmaq_cracmmv2_P218_2023hc_CRACMM2.ncf
+2025-02-25 18:50:53    9.6 GiB 2023_12US4/emis/cmaq_cracmmv2/point_sectors/ptnonipm/inln_mole_ptnonipm_20231210_12US4_cmaq_cracmmv2_P218_2023hc_CRACMM2.ncf
+2025-02-25 18:51:36    9.6 GiB 2023_12US4/emis/cmaq_cracmmv2/point_sectors/ptnonipm/inln_mole_ptnonipm_20231224_12US4_cmaq_cracmmv2_P218_2023hc_CRACMM2.ncf
+2025-02-25 18:58:08    9.6 GiB 2023_12US4/emis/cmaq_cracmmv2/point_sectors/ptnonipm/inln_mole_ptnonipm_20231225_12US4_cmaq_cracmmv2_P218_2023hc_CRACMM2.ncf
+2025-02-25 19:03:39    9.6 GiB 2023_12US4/emis/cmaq_cracmmv2/point_sectors/ptnonipm/inln_mole_ptnonipm_20231226_12US4_cmaq_cracmmv2_P218_2023hc_CRACMM2.ncf
+2025-02-25 19:04:30   31.5 MiB 2023_12US4/emis/cmaq_cracmmv2/point_sectors/ptnonipm/stack_groups_ptnonipm_12US4_P218_2023hc_CRACMM2.ncf
+2025-02-24 14:54:02   25.6 KiB 2023_12US4/emis/cmaq_cracmmv2/ptfire_wild/stack_groups_ptfire-wild_20230501_12US4_P218_2023hc_CRACMM2.ncf
+2025-02-25 17:32:26   30.9 KiB index.html
+
+Total Objects: 7777
+   Total Size: 15.6 TiB
+</pre>
+
+Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
+
+<pre>
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmaq-12us4-cracmm3-modeling-platform-2023/ /your_local_path/
+</pre>
+
+
+<br>
+<br>
+Please send an email with any questions or difficulties to Liz Adams lizadams@email.unc.edu
+
+</body>
+</html>
+
