@@ -2,6 +2,12 @@
 <html>
 <body>
 
+This readme refers to the data within the following dataset on AWS, uploaded for Huy Tran of the CMAS Center 
+last updated August 8, 2025<br>
+<br>
+<a href="https://cmas-smoke-testcase.s3.amazonaws.com/index.html">SMOKE Example Case</a><br>
+<br>
+
 <h1>Downloading data from S3 Bucket</h1>
 
 This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
@@ -18,69 +24,45 @@ Example commands:<br>
 
 To query how much data is in a bucket: <br>
 
-This hourly MCIP data for July 1-31, 2017 was provided for the SMOKE Testcase <a href="https://github.com/CEMPD/SMOKE-TestCase/">SMOKE Test Case</a><br>
+This data was provided for the SMOKE Example Case <a href="https://github.com/CEMPD/SMOKE-TestCase/">SMOKE Test Case</a><br>
 
 
 
 <pre>
-aws s3 ls --summarize --no-sign-request --region=us-east-1 --human-readable --recursive is3://cmas-smoke-testcase/2017
+aws s3 ls --summarize --no-sign-request --region=us-east-1 --human-readable --recursive s3://cmas-smoke-testcase/
 </pre>
 
-Output: <br>
+Tail of the Output: <br>
 
 <pre>
-2023-09-26 13:48:42  301.3 KiB 2017/07/GRIDBDY2D_12US1.35L.20170701.nc3
-2023-09-26 13:48:42  301.3 KiB 2017/07/GRIDBDY2D_12US1.35L.20170702.nc3
-2023-09-26 13:48:42  301.3 KiB 2017/07/GRIDBDY2D_12US1.35L.20170703.nc3
-2023-09-26 13:48:42  301.3 KiB 2017/07/GRIDBDY2D_12US1.35L.20170704.nc3
-2023-09-26 13:48:42  301.3 KiB 2017/07/GRIDBDY2D_12US1.35L.20170705.nc3
-...
-...
-2023-09-26 13:48:43   24.6 MiB 2017/07/GRIDCRO2D_12US1.35L.20170701.nc3
-2023-09-26 13:48:43   24.6 MiB 2017/07/GRIDCRO2D_12US1.35L.20170702.nc3
-2023-09-26 13:48:43   24.6 MiB 2017/07/GRIDCRO2D_12US1.35L.20170703.nc3
-2023-09-26 13:48:43   24.6 MiB 2017/07/GRIDCRO2D_12US1.35L.20170704.nc3
-2023-09-26 13:48:43   24.6 MiB 2017/07/GRIDCRO2D_12US1.35L.20170705.nc3
+2025-08-08 13:27:04    1.1 MiB smoke_example_case/met/METCRO3D_180810
+2025-08-08 13:27:04    1.1 MiB smoke_example_case/met/METCRO3D_180811
+2025-08-08 13:27:04    1.1 MiB smoke_example_case/met/METCRO3D_180812
+2025-08-08 13:27:04    1.1 MiB smoke_example_case/met/METCRO3D_180813
+2025-08-08 13:27:04    1.1 MiB smoke_example_case/met/METCRO3D_180814
+2025-08-08 13:27:04    1.1 MiB smoke_example_case/met/METCRO3D_180815
+2025-08-08 13:27:04    1.1 MiB smoke_example_case/met/METCRO3D_180816
+2025-08-08 13:27:04    1.1 MiB smoke_example_case/met/METCRO3D_180817
+2025-08-08 13:27:04    1.1 MiB smoke_example_case/met/METCRO3D_180818
+2025-08-08 13:27:05    1.1 MiB smoke_example_case/met/METCRO3D_180819
+2025-08-08 13:27:05    1.1 MiB smoke_example_case/met/METCRO3D_180820
+2025-08-08 13:27:05    1.1 MiB smoke_example_case/met/METCRO3D_180821
+2025-08-08 13:27:18    1.1 MiB smoke_example_case/met/METCRO3D_180822
+2025-08-08 13:27:18    1.1 MiB smoke_example_case/met/METCRO3D_180823
+2025-08-08 13:27:18    1.1 MiB smoke_example_case/met/METCRO3D_180824
+2025-08-08 13:27:18    1.1 MiB smoke_example_case/met/METCRO3D_180825
+2025-08-08 13:27:18    1.1 MiB smoke_example_case/met/METCRO3D_180826
+2025-08-08 13:27:18    1.1 MiB smoke_example_case/met/METCRO3D_180827
+2025-08-08 13:27:18    1.1 MiB smoke_example_case/met/METCRO3D_180828
+2025-08-08 13:27:18    1.1 MiB smoke_example_case/met/METCRO3D_180829
+2025-08-08 13:27:18    1.1 MiB smoke_example_case/met/METCRO3D_180830
+2025-08-08 13:27:18    1.1 MiB smoke_example_case/met/METCRO3D_180831
+2025-08-08 13:27:18   13.6 MiB smoke_example_case/met/METDOT3D.12US1.m3wndw.12LISTOS.180807
+2025-08-08 13:27:18   13.6 MiB smoke_example_case/met/METDOT3D_180807
 
-...
-2023-09-26 13:48:43   24.6 MiB 2017/07/GRIDCRO2D_12US1.35L.20170701.nc3
-2023-09-26 13:48:43   24.6 MiB 2017/07/GRIDCRO2D_12US1.35L.20170702.nc3
-2023-09-26 13:48:43   24.6 MiB 2017/07/GRIDCRO2D_12US1.35L.20170703.nc3
-2023-09-26 13:48:43   24.6 MiB 2017/07/GRIDCRO2D_12US1.35L.20170704.nc3
-2023-09-26 13:48:43   24.6 MiB 2017/07/GRIDCRO2D_12US1.35L.20170705.nc3
-...
+Total Objects: 847
+   Total Size: 14.0 GiB
 
-2023-09-26 13:48:49   86.3 MiB 2017/07/METBDY3D_12US1.35L.20170701.nc3
-2023-09-26 13:48:49   86.3 MiB 2017/07/METBDY3D_12US1.35L.20170702.nc3
-2023-09-26 13:48:49   86.3 MiB 2017/07/METBDY3D_12US1.35L.20170703.nc3
-2023-09-26 13:48:49   86.3 MiB 2017/07/METBDY3D_12US1.35L.20170704.nc3
-2023-09-26 13:48:49   86.3 MiB 2017/07/METBDY3D_12US1.35L.20170705.nc3
-```
-
-2023-09-26 13:49:01  445.0 MiB 2017/07/METCRO2D_12US1.35L.20170701.nc3
-2023-09-26 13:49:01  445.0 MiB 2017/07/METCRO2D_12US1.35L.20170702.nc3
-2023-09-26 13:49:01  445.0 MiB 2017/07/METCRO2D_12US1.35L.20170703.nc3
-2023-09-26 13:49:01  445.0 MiB 2017/07/METCRO2D_12US1.35L.20170704.nc3
-2023-09-26 13:49:03  445.0 MiB 2017/07/METCRO2D_12US1.35L.20170705.nc3
-```
-
-2023-09-26 13:49:59    7.6 GiB 2017/07/METCRO3D_12US1.35L.20170701.nc3
-2023-09-26 13:49:59    7.6 GiB 2017/07/METCRO3D_12US1.35L.20170702.nc3
-2023-09-26 13:50:00    7.6 GiB 2017/07/METCRO3D_12US1.35L.20170703.nc3
-2023-09-26 13:50:02    7.6 GiB 2017/07/METCRO3D_12US1.35L.20170704.nc3
-2023-09-26 13:50:08    7.6 GiB 2017/07/METCRO3D_12US1.35L.20170705.nc3
-```
-
-
-2023-09-26 14:08:53    2.7 GiB 2017/07/METDOT3D_12US1.35L.20170701.nc3
-2023-09-26 14:08:57    2.7 GiB 2017/07/METDOT3D_12US1.35L.20170702.nc3
-2023-09-26 14:08:57    2.7 GiB 2017/07/METDOT3D_12US1.35L.20170703.nc3
-2023-09-26 14:09:03    2.7 GiB 2017/07/METDOT3D_12US1.35L.20170704.nc3
-2023-09-26 14:09:55    2.7 GiB 2017/07/METDOT3D_12US1.35L.20170705.nc3
-```
-
-Total Objects: 217
-   Total Size: 336.4 GiB
 
 
 </pre>
@@ -88,7 +70,7 @@ Total Objects: 217
 Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
 
 <pre>
-aws s3 --dryrun --no-sign-request --region=us-east-1 cp --recursive s3://s3://cmas-smoke-testcase /your_local_path/cmas-smoke-testcase
+aws s3 --dryrun --no-sign-request --region=us-east-1 cp --recursive s3://s3://cmas-smoke-testcase/smoke_example_case/ /your_local_path/smoke_example_case/
 </pre>
 
 If the above commmand is successful, then remove the --dryrun and run the command again.
