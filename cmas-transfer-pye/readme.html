@@ -2,6 +2,10 @@
 <html>
 <body>
 
+This readme refers to the data within the following dataset on AWS, uploaded for Huy Tran of the CMAS Center
+last updated Aug. 8, 2025 
+<a href="https://cmas-transfer-pye.s3.amazonaws.com/index.html">2023 CRACMMv2 Emissions dataset</a>
+
 <h1>Downloading data from S3 Bucket</h1>
 
 This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
@@ -25,15 +29,27 @@ To query how much data is in a bucket: <br>
 aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://cmas-transfer-pye/
 </pre>
 
-Output: <br>
+Tail of Output: <br>
 
 <pre>
+2025-08-08 15:14:47    7.8 MiB 2022platform/2022hc_cb6_22m/premerged/fertilizer/emis_mole_fertilizer_20221222_12US1_cmaq_cb6ae7_2022hc_cb6_22m.ncf.gz
+2025-08-08 15:14:49    7.8 MiB 2022platform/2022hc_cb6_22m/premerged/fertilizer/emis_mole_fertilizer_20221223_12US1_cmaq_cb6ae7_2022hc_cb6_22m.ncf.gz
+2025-08-08 15:14:49   26.2 MiB 2022platform/2022hc_cb6_22m/premerged/fertilizer/emis_mole_fertilizer_20221224_12US1_cmaq_cb6ae7_2022hc_cb6_22m.ncf
+2025-08-08 15:14:49    7.8 MiB 2022platform/2022hc_cb6_22m/premerged/fertilizer/emis_mole_fertilizer_20221225_12US1_cmaq_cb6ae7_2022hc_cb6_22m.ncf.gz
+2025-08-08 15:14:49    7.8 MiB 2022platform/2022hc_cb6_22m/premerged/fertilizer/emis_mole_fertilizer_20221226_12US1_cmaq_cb6ae7_2022hc_cb6_22m.ncf.gz
+2025-08-08 15:14:50    7.8 MiB 2022platform/2022hc_cb6_22m/premerged/fertilizer/emis_mole_fertilizer_20221227_12US1_cmaq_cb6ae7_2022hc_cb6_22m.ncf.gz
+2025-08-08 15:14:50    7.8 MiB 2022platform/2022hc_cb6_22m/premerged/fertilizer/emis_mole_fertilizer_20221228_12US1_cmaq_cb6ae7_2022hc_cb6_22m.ncf.gz
+2025-08-08 15:14:50    7.8 MiB 2022platform/2022hc_cb6_22m/premerged/fertilizer/emis_mole_fertilizer_20221229_12US1_cmaq_cb6ae7_2022hc_cb6_22m.ncf.gz
+2025-08-08 15:14:50    7.8 MiB 2022platform/2022hc_cb6_22m/premerged/fertilizer/emis_mole_fertilizer_20221230_12US1_cmaq_cb6ae7_2022hc_cb6_22m.ncf.gz
+2025-08-08 15:14:50    7.8 MiB 2022platform/2022hc_cb6_22m/premerged/fertilizer/emis_mole_fertilizer_20221231_12US1_cmaq_cb6ae7_2022hc_cb6_22m.ncf.gz
+2025-08-08 15:15:41   30.9 KiB index.html
 
-
+Total Objects: 366
+   Total Size: 2.8 GiB
 
 </pre>
 
-Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
+Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli and place it under the path that you specify for /your_local_path.
 
 <pre>
 aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmaq-transfer-pye/ /your_local_path/
