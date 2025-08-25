@@ -9,6 +9,34 @@ The link for the AWS Open Dataset that this readme describes is <a href="https:/
 
 This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
 
+The data directories are structured as follows:<br>
+
+<pre>
+AMET
+	2000_2023_NAmerican_AQ_Obs_Data
+	AMET_Release_Observation_Files_Readme_3_26_2024.txt
+	obs_overlay
+	testing
+		aqExample_2016
+	v1.5_example
+		MET
+			metExample_mcip
+			metExample_mpas
+			metExample_wrf
+		AQ
+			aqExample
+				COMBINE_ACONC_aqExample_201607.nc
+				COMBINE_DEP_aqExample_201607.nc
+	v1.6_example
+		note - the MET has not changed for the AMETv1.6 release, please use the MET files available in v1.5_example above
+		AQ
+			aqExample
+				COMBINE_ACONC_aqExample_201807.nc
+				COMBINE_DEP_aqExample_201807.nc
+				output
+</pre>
+
+
 
 Instructions for downloading the aws command line.<br>
 <br>
@@ -29,15 +57,7 @@ aws s3 ls --summarize --region=us-east-1 --human-readable --recursive s3://cmas-
 Tail of Output: <br>
 
 <pre>
-2023-07-20 08:58:36    3.9 GiB AMET/v1.5_example/MET/metExample_wrf/wrfout_subset_2016-07-28_00:00:00
-2023-07-20 08:59:05    3.9 GiB AMET/v1.5_example/MET/metExample_wrf/wrfout_subset_2016-07-29_00:00:00
-2023-07-20 08:59:08    3.9 GiB AMET/v1.5_example/MET/metExample_wrf/wrfout_subset_2016-07-30_00:00:00
-2023-07-20 08:59:27    3.9 GiB AMET/v1.5_example/MET/metExample_wrf/wrfout_subset_2016-07-31_00:00:00
-2022-05-12 10:53:20   30.9 KiB index.html
-2023-07-19 17:10:57  944 Bytes readme.html
 
-Total Objects: 139
-   Total Size: 834.6 GiB
 
 </pre>
 
