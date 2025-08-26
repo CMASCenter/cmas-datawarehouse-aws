@@ -3,12 +3,20 @@
 <body>
 
 This readme refers to the data within the following dataset on AWS, uploaded for Havala Pye by the CMAS Center
-last updated July 23, 2025<br>
+last updated August 7, 2025<br>
 <br>
 <a href="https://cmaq-12us4-cracmm3-modeling-platform-2023.s3.amazonaws.com/index.html">CMAQ 2023 12US4 CRACMM2 Inputs and Meteorology Modeling Platform</a><br>
 <br>
-Documentation, including metadata, is available at: US EPA, 2025, "CMAQ 2023 12US4 CRACMM2 Inputs and Meteorology", <a href="https://doi.org/10.15139/S3/GL41QC">https://doi.org/10.15139/S3/GL41QC</a>, UNC Dataverse, V1. <br>
-Please refer to this reference for how to cite and document use of these inputs.<br>
+Documentation, including metadata, is available at: US EPA, 2025, "CMAQ 2023 12US4 CRACMM2 Inputs and Meteorology", <a href=https://doi.org/10.15139/S3/GL41QC>https://doi.org/10.15139/S3/GL41QC</a>, UNC Dataverse, V1.<br>
+
+
+For use of this data, please cite both the dataset for traceability and the manuscript for method documentation:<br>
+<br>
+US EPA, 2025, "CMAQ 2023 12US4 CRACMM2 Inputs and Meteorology", <a href=https://doi.org/10.15139/S3/GL41QC>https://doi.org/10.15139/S3/GL41QC</a>, UNC Dataverse, V1.
+
+H. O. T. Pye, W. T. Hutzell, N. L. Fann, T. N. Skipper, M. Pye, J. Beidler, C. Allen, B. N. Murphy, E. L. D’Ambro, S. Lin, K. Talgo, L. Reynolds, D. Kang, J. Bash, K. M. Seltzer, S. L. Farrell, K. W. Appel, K. Brehme, R. C. Gilliam, B. H. Henderson, and A. W. H. Chan: The risks to human health of air toxics, PM2.5, and ozone from the 2023 Canadian wildfires, ChemRxiv, <a href=https://doi.org/10.26434/chemrxiv-2025-fx8f1>https://doi.org/10.26434/chemrxiv-2025-fx8f1</a>, 2025. This content is a preprint and has not been peer-reviewed. Please update to the final journal article when available.
+
+
 
 <h1>Downloading data from S3 Bucket</h1>
 
@@ -36,6 +44,12 @@ aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --re
 Tail of Output: <br>
 
 <pre>
+2025-07-23 13:02:26   28.7 MiB 2023_12US4/surface/2023r1_EPIC0509_12US4_time20231219.nc4
+2025-07-23 13:02:26   28.7 MiB 2023_12US4/surface/2023r1_EPIC0509_12US4_time20231220.nc4
+2025-07-23 13:02:26   28.8 MiB 2023_12US4/surface/2023r1_EPIC0509_12US4_time20231221.nc4
+2025-07-23 13:02:27   28.8 MiB 2023_12US4/surface/2023r1_EPIC0509_12US4_time20231222.nc4
+2025-07-23 13:02:28   28.9 MiB 2023_12US4/surface/2023r1_EPIC0509_12US4_time20231223.nc4
+2025-07-23 13:02:29   28.9 MiB 2023_12US4/surface/2023r1_EPIC0509_12US4_time20231224.nc4
 2025-07-23 13:02:29   28.8 MiB 2023_12US4/surface/2023r1_EPIC0509_12US4_time20231225.nc4
 2025-07-23 13:02:29   28.8 MiB 2023_12US4/surface/2023r1_EPIC0509_12US4_time20231226.nc4
 2025-07-23 13:02:31   28.7 MiB 2023_12US4/surface/2023r1_EPIC0509_12US4_time20231227.nc4
@@ -49,11 +63,10 @@ Tail of Output: <br>
 2025-07-23 13:02:38    6.0 MiB 2023_12US4/surface/epic2cmaq_2023r1_total.nc4
 2025-07-23 13:02:38    1.3 MiB 2023_12US4/surface/ocean_file_12US4_ne_10m.ncf
 2025-07-23 14:15:19   30.9 KiB index.html
-2025-07-23 14:32:21    2.9 KiB readme.html
+2025-07-25 15:58:34    2.9 KiB readme.html
 
-Total Objects: 11736
+Total Objects: 11737
    Total Size: 20.4 TiB
-
 </pre>
 
 Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
