@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+This readme refers to the data within the following dataset on AWS
+last updated Oct. 8, 2025
+<br>
+<a href="https://equates-site-compare.s3.amazonaws.com/index.html">EQUATES site-compare files - all sites</a>
+
+For use of this data, please cite both the dataset for traceability and the manuscript for method documentation:
+
+US EPA, 2025, "EQUATES Evaluation Data -- 01/01/2002 - 12/31/2019 12km CONUS", https://doi.org/10.15139/S3/YJTJ1F, UNC Dataverse, V1.
+
+Publication on EQUATES US emissions: https://doi.org/10.1016/j.dib.2023.109022 
+
+<h1>Downloading data from S3 Bucket</h1>
+
+This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
+
+
+Instructions for downloading the aws command line.<br>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+
+Once you have it installed, you can use it without credentials.<br>
+<br>
+Example commands:<br>
+<br>
+To query how much data is in a bucket: <br>
+<br>
+<br>
+
+<pre>
+aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://cmas-equates/equates-site-compare
+</pre>
+
+Tail of Output: <br>
+
+<pre>
+2025-10-08 11:38:00    7.7 MiB equates-site-compare/2019/10/AQS_Daily_O3_CMAQv532_12US1_2019.csv
+2025-10-08 11:38:00    1.0 GiB equates-site-compare/2019/10/AQS_Hourly_CMAQv532_12US1_2019.csv
+2025-10-08 11:38:02  521.5 KiB equates-site-compare/2019/10/CASTNET_Daily_CMAQv532_12US1_2019.csv
+2025-10-08 11:38:03  599.1 KiB equates-site-compare/2019/10/NADP_CMAQv532_12US1_2019.csv
+2025-10-08 11:38:04   53.6 MiB equates-site-compare/2019/10/NAPS_CMAQv532_12US1_2019.csv
+2025-10-08 11:38:04    1.3 MiB equates-site-compare/2019/10/NAPS_Daily_O3_CMAQv532_12US1_2019.csv
+2025-10-08 11:38:06   53.2 MiB equates-site-compare/2019/11/AQS_Daily_CMAQv532_12US1_2019.csv
+2025-10-08 11:38:07    5.1 MiB equates-site-compare/2019/11/AQS_Daily_O3_CMAQv532_12US1_2019.csv
+2025-10-08 11:38:09  911.2 MiB equates-site-compare/2019/11/AQS_Hourly_CMAQv532_12US1_2019.csv
+2025-10-08 11:38:09  514.9 KiB equates-site-compare/2019/11/CASTNET_Daily_CMAQv532_12US1_2019.csv
+2025-10-08 11:38:11  484.7 KiB equates-site-compare/2019/11/NADP_CMAQv532_12US1_2019.csv
+2025-10-08 11:38:12   51.8 MiB equates-site-compare/2019/11/NAPS_CMAQv532_12US1_2019.csv
+2025-10-08 11:38:12    1.2 MiB equates-site-compare/2019/11/NAPS_Daily_O3_CMAQv532_12US1_2019.csv
+2025-10-08 11:38:14   52.9 MiB equates-site-compare/2019/12/AQS_Daily_CMAQv532_12US1_2019.csv
+2025-10-08 11:38:14    5.0 MiB equates-site-compare/2019/12/AQS_Daily_O3_CMAQv532_12US1_2019.csv
+2025-10-08 11:38:16  936.5 MiB equates-site-compare/2019/12/AQS_Hourly_CMAQv532_12US1_2019.csv
+2025-10-08 11:38:16  534.3 KiB equates-site-compare/2019/12/CASTNET_Daily_CMAQv532_12US1_2019.csv
+2025-10-08 11:38:17  466.3 KiB equates-site-compare/2019/12/NADP_CMAQv532_12US1_2019.csv
+2025-10-08 11:38:18   53.6 MiB equates-site-compare/2019/12/NAPS_CMAQv532_12US1_2019.csv
+2025-10-08 11:38:18    1.3 MiB equates-site-compare/2019/12/NAPS_Daily_O3_CMAQv532_12US1_2019.csv
+2025-10-08 11:52:00    5.5 KiB equates-site-compare/readme.html
+
+Total Objects: 1514
+   Total Size: 199.7 GiB
+
+List of subdirectories<br>
+
+<pre>
+aws s3 ls --recursive s3://cmas-equates/equates-site-compare | awk '{ sub( /\/.[^\/]*$/,"/",$4 ); print $4}' | sort -u
+</pre>
+
+Output:
+
+<pre>
+equates-site-compare/2002
+equates-site-compare/2003
+equates-site-compare/2004
+...
+equates-site-compare/2019
+</pre>
+
+Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
+
+<pre>
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmas-equates/equates-site-compare/ /your_local_path/
+</pre>
+
+
+<br>
+Please submit any questions or difficulties as a new issue on the CMAS User Forum.<br>
+<a href="https://forum.cmascenter.org/">CMAS User Forum</a><br>
+
+
+<h3>Additional Metadata</h3>
+
+POC: Kristen Foley, Christian Hogrefe
+
+<pre>
+Size: 199.7 GB
+
+    / work/MOD3EVAL/aq_obs/equates/{YEAR}/{MONTH}
+    </pre>
+
+</body>
+</html>
+

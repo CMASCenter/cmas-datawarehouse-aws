@@ -164,6 +164,7 @@ Units: Units for each variable are included in the meteorology, emissions, and C
 
 
 	    Footnotes: <br>
+	    (2) Only 7 years of MCIP data are being shared due to storage space limitations/cost on the Google Drive. <br>
 	    (3) Two-digit month <br>
 	    (4) <a href="https://www.cmascenter.org/ioapi/documentation/all_versions/html/BDY.jpg">https://www.cmascenter.org/ioapi/documentation/all_versions/html/BDY.jpg</a><br>
 	    (5) Initial condition (restart) file type: CGRID, MEDIA_CONC, SOILOUT <br> 
@@ -231,6 +232,13 @@ Figure 3: EQUATES 12US1 modeling domain is shown as the bold rectangle. The grey
 	   (10) Total anthropogenic NH3 emissions including emissions from fertilizer<br>
 
 
+	   <h3>EQUATES Surface Layer Model Output for CONUS (12US1 domain)</h3>
+	   Purpose: For users who want to use WRF meteorology and/or CMAQ air quality estimates for regulatory or research applications (e.g., epidemiological studies, critical loads analysis), or model evaluation and development applications (e.g., diagnostic evaluation, reference data for sensitivity studies).  CMAQ 3D and vertical column air quality data can be used to evaluate the modeling system, create model-observed ¿fused¿ surfaces, and to analyze spatial and temporal changes in air quality in the upper atmosphere, e.g., <a href="https://doi.org/10.1016/j.envint.2019.104909">https://doi.org/10.1016/j.envint.2019.104909</a>; <a href="https://doi.org/10.5194/acp-17-12449-2017">https://doi.org/10.5194/acp-17-12449-2017</a>; <a href="https://doi.org/10.1029/2006JD008085">https://doi.org/10.1029/2006JD008085</a>; <a href="https://doi.org/10.5194/acp-15-9997-2015">https://doi.org/10.5194/acp-15-9997-2015</a>.<br>
+	   Data are available on the CMAS Google Drive and the EPA AWS Open Data Storage, as indicated in the table.<br>
+	   Meta Data (including units):  See Tables 6-11.  See also meta data on AWS.
+	   CMAQ Source Code: The EQUATES 12US1 air quality modeling is based on CMAQv5.3.2.1 (CMAQv5.3.2 with some bugfixes later released in v5.3.3).  The build directory for the 12US1 CMAQ simulations is available from the EQUATES Dataverse DOI: <a href="https://doi.org/10.15139/S3/F2KJSK">https://doi.org/10.15139/S3/F2KJSK</a> <br>
+
+
 
 	   <h3>EQUATES Model Output for CONUS (12US1 domain)</h3>
 	   Purpose: For users who want to use WRF meteorology and/or CMAQ air quality estimates for regulatory or research applications (e.g., epidemiological studies, critical loads analysis), or model evaluation and development applications (e.g., diagnostic evaluation, reference data for sensitivity studies). CMAQ 3D and vertical column air quality data can be used to evaluate the modeling system, create model-observed fused surfaces, and to analyze spatial and temporal changes in air quality in the upper atmosphere, e.g., <a href="https://doi.org/10.1016/j.envint.2019.104909">https://doi.org/10.1016/j.envint.2019.104909</a>; <a href="https://doi.org/10.5194/acp-17-12449-2017">https://doi.org/10.5194/acp-17-12449-2017</a> ; <a href="https://doi.org/10.1029/2006JD008085">https://doi.org/10.1029/2006JD008085</a>; <a href="https://doi.org/10.5194/acp-15-9997-2015">https://doi.org/10.5194/acp-15-9997-2015</a>.<br>
@@ -239,7 +247,7 @@ CMAQ Source Code: The EQUATES 12US1 air quality modeling is based on CMAQv5.3.2.
 bugfixes later released in v5.3.3). The build directory for the 12US1 CMAQ simulations is available from the EQUATES Dataverse DOI</span><span class="ft0">: <A href="https://doi.org/10.15139/S3/F2KJSK">https://doi.org/10.15139/S3/F2KJSK</a><br>
 
 <br>
-        <h4>Table 4</h4>
+        <h4>Table 4a</h4>
         <table width="100%" border="1">
               <tr>
                 <th>Data description</th>
@@ -282,9 +290,35 @@ bugfixes later released in v5.3.3). The build directory for the 12US1 CMAQ simul
 		     <td>netCDF (32.4 GB) </td>
 		     <td>CMAQ_12US1/OUTPUT/COLUMN/COMBINE_COLUMN_v532_cb6r3_ae7_aq_WR413_MYR_STAGE_2019_12US1_2019<month>.nc</td>
 	     </tr>
+	     <tr>
+		     <td>matched CMAQ output with surface air quality observations for multiple variables (Table 13) for 2002-2019 </td>
+		     <td><a href="https://cmas-equates.s3.amazonaws.com/index.html#equates-site-compare/">CMAS AWS S3 Bucket</a></td>
+		     <td>ASCII (188.9 GB)</td>
+		     <td>EQUATES/aq_obs/<year>/<month>/ <network_metric>_CMAQv532_12US1_<year>.csv</td>
+	     </tr>
 
             </table>
 
+	    <h3> EQUATES 3D Model Output for CONUS (12US1 domain)</h3>
+            Purpose: For users who want to use access 3D hourly CMAQ output.  Data are available on EPA¿s Remote Sensing Information Gateway (RSIG). The RSIG3D interface can be used to subset EQUATES data to a smaller spatial bounding box and select hours/days of interest and save the data in various formats.  Meta Data (including units):  Metadata are provided within the RSID3D interface.
+	    CMAQ Source Code: The EQUATES 12US1 air quality modeling is based on CMAQv5.3.2.1 (CMAQv5.3.2 with some bugfixes later released in v5.3.3).  The build directory for the 12US1 CMAQ simulations is available from the EQUATES Dataverse DOI: <a href="https://doi.org/10.15139/S3/F2KJSK">https://doi.org/10.15139/S3/F2KJSK</a><br>
+
+<br>
+        <h4>Table 4b</h4>
+        <table width="100%" border="1">
+              <tr>
+                <th>Data description</th>
+                <th>Data location</th>
+                <th>File type (File size for all years)</th>
+                <th>Location on CMAS Data Warehouse (File paths relative to this top level folder</th>
+              </tr>
+              <tr>
+                <td>CMAQ hourly 3D concentrations for 44 layers for all model output species for 2002-2019</td>
+                <td><a href="https://www.epa.gov/hesc/remote-sensing-information-gateway">EPA RSIG</a></td>
+                <td>EQUATES data can be saved in various formats</td>
+		<td><a href="https://www.epa.gov/cmaq/data-download-step-2#equates_datasets_rsig">Directions for accessing EQUATES data on RSIG</a> </tr>
+	</table>
+	
 
 	    <h3>EQUATES Model Output for Northern Hemisphere (108NHemi domain)</h3>
 	    Purpose: Daily average 3D data for all species is suitable for users who want to examine continental-scale air quality trends or who want to create boundary conditions for any subset domain in the Northern Hemisphere.  Hourly CMAQ 3D and vertical column air quality data for a subset of species can be used to evaluate the modeling system, create model-observed fused surfaces, and to analyze spatial and temporal changes in air quality in the upper atmosphere, e.g., <a href="https://doi.org/10.1016/j.envint.2019.104909">https://doi.org/10.1016/j.envint.2019.104909</a>; <a href=https://doi.org/10.5194/acp-17-12449-2017">https://doi.org/10.5194/acp-17-12449-2017</a>; <a href="https://doi.org/10.1029/2006JD008085">https://doi.org/10.1029/2006JD008085</a>; <a href="https://doi.org/10.5194/acp-15-9997-2015">https://doi.org/10.5194/acp-15-9997-2015</a>.   
@@ -1125,9 +1159,799 @@ Table 12: Hourly 3D concentrations for 22 model variables for 108NHEMI domain
 
 
 
+	      <h3>List of Column Names and Descriptions in 12US1 Paired Model/Obs Evaluation Files</h3>
+	      Surface air quality and deposition estimates (hourly/daily/weekly) for 12US1 from CMAQv5.3.2 paired in space and time to measurement data for 01/01/2002 - 12/31/2019.  The paired model and observation data are saved as monthly files for seven different network/metric combinations. <br> 
 
-		
+	      Table 13a: Files names, approximate size per file, and brief description.<br>
 
+	                    <table width="100%" border="1">
+         <tr>
+                 <th> File name (Abbreviated file name)</th>
+                 <th> Size</th>
+                 <th> Description</th>
+         </tr>
+         <tr>
+                 <td> AQS_Daily_CMAQv532_12US1_{YEAR}.csv (AQS_Daily) </td>
+                 <td> ~30-50 MB</td>
+                 <td> daily average PM2.5 and constituents from EPA¿s AQS (including data from CSN and IMPROVE networks ) </td>
+         </tr>
+	 <tr>
+		 <td>AQS_Daily_O3_CMAQv532_12US1_{YEAR}.csv (AQS_Daily_O3)</td>
+		 <td>~3-5 MB</td>
+		 <td>MDA8 O3 and other daily ozone metrics from EPA¿s AQS (including data from CASTNET)</td>
+	 </tr>
+	 <tr>
+		 <td>AQS_Hourly_CMAQv532_12US1_{YEAR}.csv (AQS_Hourly)</td>
+		 <td>~500-900 MB</td>
+		 <td>hourly PM2.5, ozone, NOX, other gaseous pollutants, and meteorological variables from EPA¿s AQS (including data from CASTNET)</td>
+	 </tr>
+	 <tr>
+	         <td>CASTNET_Daily_CMAQv532_12US1_{YEAR}.csv (CASTNET_Daily)</td>
+		 <td>~400-500 KB</td>
+		 <td>MDA8 O3 and other daily ozone metrics from CASTNET</td>
+	 </tr>
+	 <tr>
+		 <td>NADP_CMAQv532_12US1_{YEAR}.csv (NADP)</td>
+		 <td>~450-550 KB</td>
+		 <td>weekly   total precipitation, wet deposition, and wet concentration from NADP/NTN</td>
+	 </tr>
+	 <tr>
+		 <td>NAPS_CMAQv532_12US1_{YEAR}.csv (NAPS)</td>
+		 <td>~40-50 MB</td>
+		 <td>hourly PM2.5, ozone, NOX, other gaseous pollutant from NAPS (Canadian sites)</td>
+	 </tr>
+	 <tr>
+		 <td>NAPS_Daily_CMAQv532_12US1_{YEAR}.csv (NAPS_Daily)</td>
+		 <td>~ 1 MB or less</td>
+		 <td>MDA8 O3 and other daily ozone metrics from NAPS (Canadian sites)</td>
+	 </tr>
+			    </table>
+			    <br>
+			    Table 13b: This table provides a list of variables across all of the files, what files include the variable, a brief description, and units. Each of the .csv files includes 17 or 21 columns with information on spatial location and timestamp (in local time) of the model and observed data. The remaining columns are the paired observational data (columns ending with '_ob') and model estimates (columns ending with '_mod').  The '_mod' and '_ob' have been removed from the variable names in this table for simplicity. Note that the AQS_Hourly files have several '_mod' columns and no corresponding '_ob' columns.  These are to provide modeled meteorological variables to inform model evaluation.<br>
+			    The species definition of the model variables are available in the CMAQ GitHub repository: <a href="https://github.com/USEPA/CMAQ/blob/5.3.2/CCTM/src/MECHS/cb6r3_ae7_aq/SpecDef_cb6r3_ae7_aq.txt>SpecDef_cb6r3_ae7_aq.txt</a> and <a href="https://github.com/USEPA/CMAQ/blob/5.3.2/CCTM/src/MECHS/cb6r3_ae7_aq/SpecDef_Dep_cb6r3_ae7_aq.txt">SpecDef_Def_cb6r3_ae7_aq.txt</a>.
+	The Measurement Sampling Method codes for the observational data are defined on the EPA¿s AQS site: https://aqs.epa.gov/aqsweb/documents/codetables/methods_all.html
+	Important information on how model species are paired with observed data is available in the <a href="https://cmas-amet.s3.amazonaws.com/AMET/2000_2023_NAmerican_AQ_Obs_Data/AMET_Release_Observation_Files_Readme.txt">AMET_Release_Observation_Files_Readme.txt</a> available on the CMAS AWS S3 bucket for AMET.
+	The mapping of measurement data to observations is available in the AMET GitHub repository: <a href="https://github.com/USEPA/AMET/blob/1.5/scripts_db/input_files/AQ_species_list.input">AQ_species_list.input</a>.
+	<br>
+	There are multiple versions of modeled PM2.5 and component species included in the AQS_Daily and AQS_Hourly files for transparency and research purposes.  For model evaluation we recommend using: PM25_TOT, PM25_SO4, PM25_NO3, PM25_NH4, PM25_OC, PM25_EC, PM25_TC. <br> 
+	The 'PM25_*_mod' columns for these variables are the model estimates based on a sharp cutoff of 2.5 micrometers computed using the modeled size distribution. <br> 
+	'PM25_*_ob' columns for these variables use the best available sampling method at the time.  This is described further in the <a href="https://cmas-amet.s3.amazonaws.com/AMET/2000_2023_NAmerican_AQ_Obs_Data/AMET_Release_Observation_Files_Readme.txt">AMET_Release_Observation_Files_Readme.txt</a>.<br>
+	<br>
+
+                            <table width="100%" border="1">
+         <tr>
+                 <th> Variable Name</th>
+                 <th> Files Containing Variable</th>
+                 <th> Description</th>
+		 <th> Units</th>
+         </tr>
+         <tr>
+                 <td> SiteId </td>
+                 <td> All</td>
+		 <td>  9 digit site identifier for AQS_Hourly, AQS_Daily, AQS_Daily_O3: <a href="https://www.epa.gov/aqs/site-id-format">https://www.epa.gov/aqs/site-id-format</a> CASNET site ids: <a href="https://www.epa.gov/castnet/castnet-site-locations">https://www.epa.gov/castnet/castnet-site-locations</a> NADP NTN site ids: <a href="https://nadp.slh.wisc.edu/ntn-site-list/">https://nadp.slh.wisc.edu/ntn-site-list/</a> </td>
+		 <td></td>
+         </tr>
+	 <tr>
+		 <td>POCode</td>
+		 <td>All</td>
+		 <td>Numerical Parameter Occurrence Code used to distinguish between multiple instruments measuring the same pollutant at the same measurement site for AQS_Hourly, AQS_Daily, AQS_Daily_O3.  For all other networks, POCode is set to 1 for all sites.</td>
+		 <td></td>
+	 </tr>
+	 <tr>
+		 <td>State</td>
+		 <td>All</td>
+		 <td>State name (Province name for NAPS sites)</td>
+		 <td></td>
+	 </tr>
+	 <tr>
+		 <td>County</td>
+		 <td>All</td>
+		 <td>County name (N/A for NAPS sites)</td>
+		 <td></td>
+	 </tr>
+	 <tr>
+		 <td>Elevation</td>
+		 <td>All</td>
+		 <td>Elevation of measurement site </td>
+		 <td>Meters</td>
+	 </tr>
+	 <tr>
+		 <td>Latitude</td>
+		 <td>All</td>
+		 <td>Latitude of measurement site</td>
+		 <td>decimal degrees</td>
+	 </tr>
+	 <tr>
+		 <td>Longitude</td>
+		 <td>All</td>
+		 <td>Longitude of measurement site</td>
+		 <td>decimal degrees</td>
+	 </tr>
+	 <tr>
+		 <td>Column</td>
+		 <td>All</td>
+		 <td>Number between 1 and 459 indicating the column number (moving West to East) of CMAQ grid cell containing the measurement site (based on the CMAQ 12US1 modeling domain which is a uniform 12km x 12km grid in Lambert conformal projected space)	</td>
+		 <td></td>
+	 </tr>
+	 <tr>
+		 <td>Row</td>
+		 <td>All</td>
+		 <td>Number between 1 and 299 indicating the row number (moving South to North) of CMAQ grid cell containing the measurement site (based on the CMAQ 12US1 modeling domain which is a uniform 12km x 12km grid in Lambert conformal projected space)	</td>
+		 <td></td>
+	 </tr>
+	 <tr>
+		 <td>Time On</td>
+		 <td>All</td>
+		 <td>Character sting with format MM/DD/YYYY HH:MM indicating the start time of the measurement in Local Standard Time (LST)</td>
+		 <td></td>
+	 </tr>
+	 <tr>
+		 <td>Time Off</td>
+		 <td>All</td>
+		 <td>Character sting with format MM/DD/YYYY HH:MM indicating the end time of the measurement in LST</td>
+		 <td></td>
+	 </tr>
+	 <tr>
+		 <td>SMM</td>
+		 <td>All</td>
+		 <td>Two digit starting month of the measurement, e.g., 01 for January</td>
+		 <td></td>
+	 </tr>
+	 <tr>
+		 <td>SDD</td>
+		 <td>All</td>
+		 <td>Two digit starting day of the measurement, e.g., 01 for the first day of the month</td>
+		 <td></td>
+	 </tr>
+	 <tr>
+		 <td>SYYYY</td>
+		 <td>All</td>
+		 <td>Four digit starting year of the measurement, e.g., 2002</td>
+		 <td></td>
+	 </tr>
+	 <tr>
+		 <td>Shh</td>
+		 <td>AQS_DAILY, AQS_Hourly, NADP, NAPS</td>
+		 <td>Two digit starting hour of the measurement, e.g. 08 for 8am local time </td>
+		 <td></td>
+	 </tr>
+	 <tr>
+		 <td>Smm</td>
+		 <td>AQS_DAILY, AQS_Hourly, NADP, NAPS</td>
+		 <td>Two digit starting minute of the measurement, e.g. 15 for 15 minutes past the hour</td>
+		 <td></td>
+	 </tr>
+	 <tr>
+		 <td>EMM</td>
+		 <td>All</td>
+		 <td>Two digit ending month of the measurement</td>
+		 <td></td>
+	 </tr>
+	 <tr>
+		 <td>EDD</td>
+		 <td>All</td>
+		 <td>Two digit ending day of the measurement</td>
+		 <td></td>
+	 </tr>
+	 <tr>
+		 <td>EYYYY</td>
+		 <td>All</td>
+		 <td>Four digit ending year of the measurement</td>
+		 <td></td>
+	 </tr>
+	 <tr>
+		 <td>Ehh</td>
+		 <td>AQS_DAILY, AQS_Hourly, NADP, NAPS</td>
+		 <td>Two digit ending hour of the measurement</td>
+		 <td></td>
+	 </tr>
+	 <tr>
+		 <td>Emm</td>
+		 <td>AQS_DAILY, AQS_Hourly, NADP, NAPS</td>
+		 <td>Two digit ending minute of the measurement</td>
+		 <td></td>
+	 </tr>
+	 <tr>
+		 <td>PM25_TOT</td>
+		 <td>AQS_DAILY, AQS_Hourly, NAPS</td>
+		 <td>Total PM2.5 mass (sharp cutoff for model values computed using modeled size distribution)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>PM25_SO4</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM2.5 Sulfate (sharp cutoff for model values computed using modeled size distribution)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>PM25_NO3</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM2.5 Nitrate (sharp cutoff for model values computed using modeled size distribution)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>PM25_NH4</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM2.5 Ammonium (sharp cutoff for model values computed using modeled size distribution)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>PM25_OC</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM2.5 Organic Carbon (sharp cutoff for model values computed using modeled size distribution)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>PM25_EC</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM2.5 Elemental Carbon (sharp cutoff for model values computed using modeled size distribution)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>PM25_TC</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM2.5 Total Carbon (sharp cutoff for model values computed using modeled size distribution)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>PM10</td>
+		 <td>AQS_DAILY, AQS_Hourly, NAPS</td>
+		 <td>Total PM10 mass (sharp cutoff for model values computed using modeled size distribution)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>Acetaldehyde</td>
+		 <td>AQS_DAILY</td>
+		 <td>Acetaldehyde (VOC)</td>
+		 <td>ppb</td>
+	 </tr>
+	 <tr>
+		 <td>Formaldehyde</td>
+		 <td>AQS_DAILY</td>
+		 <td>Formaldehyde (VOC)</td>
+		 <td>ppb</td>
+	 </tr>
+	 <tr>
+		 <td>Benzene</td>
+		 <td>AQS_DAILY</td>
+		 <td>Benzene (VOC)</td>
+		 <td>ppb</td>
+	 </tr>
+	 <tr>
+		 <td>Isoprene</td>
+		 <td>AQS_DAILY, AQS_Hourly</td>
+		 <td>Isoprene (VOC)</td>
+		 <td>ppb</td>
+	 </tr>
+	 <tr>
+		 <td>Ethylene</td>
+		 <td>AQS_DAILY, AQS_Hourly</td>
+		 <td>Ethylene (VOC)</td>
+		 <td>ppb</td>
+	 </tr>
+	 <tr>
+		 <td>Ethane</td>
+		 <td>AQS_DAILY, AQS_Hourly</td>
+		 <td>Ethane (VOC)</td>
+		 <td>ppb</td>
+	 </tr>
+	 <tr>
+		 <td>Toluene</td>
+		 <td>AQS_DAILY, AQS_Hourly</td>
+		 <td>Toluene (VOC)</td>
+		 <td>ppb</td>
+	 </tr>
+	 <tr>
+		 <td>Na</td>
+		 <td>AQS_DAILY</td>
+		 <td>Sodium</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>Cl</td>
+		 <td>AQS_DAILY</td>
+		 <td>Chloride</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>NaCl</td>
+		 <td>AQS_DAILY</td>
+		 <td>Sodium Chloride</td>
+                 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>Fe</td>
+		 <td>AQS_DAILY</td>
+		 <td>Iron</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>Al</td>
+		 <td>AQS_DAILY</td>
+		 <td>Aluminum</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>Si</td>
+		 <td>AQS_DAILY</td>
+		 <td>Silicon</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>Ti</td>
+		 <td>AQS_DAILY</td>
+		 <td>Titanium</td>
+		 <td>µg/m3</td>
+         </tr>   
+         <tr>   
+		 <td>Ca</td>
+		 <td>AQS_DAILY</td>
+		 <td>Calcium</td>
+		 <td>µg/m3</td>
+         </tr>
+         <tr>
+		 <td>Mg</td>'
+		 <td>AQS_DAILY</td>
+		 <td>Magnesium</td>
+		 <td>>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>K</td>
+		 <td>AQS_DAILY</td>
+		 <td>Potassium</td>
+		 <td>>µg/m3</td>
+         </tr>
+         <tr>
+		 <td>Mn</td>
+		 <td>AQS_DAILY</td>
+		 <td>Maganese</td>
+		 <td>>µg/m3</td>
+         </tr>
+         <tr>
+		 <td>PM25_OC_88305</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM2.5 organic carbon (sharp cutoff for model values computed using modeled size distribution; measurement sampling method 88305)</td>
+		 <td>µg/m3</td>
+         </tr>
+         <tr>
+		 <td>PM25_EC_88307</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM2.5 elemental carbon (sharp cutoff for model values computed using modeled size distribution; measurement sampling method 88307)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>PM25_TC_88305</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM2.5 total carbon (sharp cutoff for model values computed using modeled size distribution; measurement sampling method 88305)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>PM25_OC_88370</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM2.5 organic carbon (sharp cutoff for model values computed using modeled size distribution; measurement sampling method 88370)</td>
+		 <td>µg/m3</td>
+         </tr>
+         <tr>
+		 <td>PM25_EC_88380</td>
+		 <td>AQS_DAILY</td>
+                 <td>PM2.5 elemental carbon (sharp cutoff for model values computed using modeled size distribution; measurement sampling method 88380)</td>
+		 <td>µg/m3</td>
+         </tr>
+         <tr>
+		 <td>PM25_TC_88370</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM2.5 total carbon (sharp cutoff for model values computed using modeled size distribution; measurement sampling method 88370)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>PM25_OC_88320</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM2.5 organic carbon (sharp cutoff for model values computed using modeled size distribution; measurement sampling method 88320)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>PM25_EC_88320</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM2.5 elemental carbon (sharp cutoff for model values computed using modeled size distribution; measurement sampling method 88320)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>PM25_TC_88320</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM2.5 total carbon (sharp cutoff for model values computed using modeled size distribution; measurement sampling method 88320)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>PM_TOT_88101</td>
+		 <td>AQS_DAILY</td>
+		 <td>Total PM2.5 (modeled values represent Aitken and accumulation modes; measurement sampling method 88101)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>PM_TOT_88502</td>
+		 <td>AQS_DAILY</td>
+		 <td>Total PM2.5 (modeled values represent Aitken and accumulation modes; measurement sampling method 88502)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>PM_TOT</td>
+		 <td>AQS_DAILY, AQS_Hourly, NAPS</td>
+		 <td>Total PM2.5 mass (modeled values represent Aitken and accumulation modes)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>SO4</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM2.5 Sulfate (modeled values represent Aitken and accumulation modes)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>NO3</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM2.5 Nitrate (modeled values represent Aitken and accumulation modes)</td>
+		 <td>µg/m3</td>
+         </tr>   
+         <tr>
+		 <td>NH4</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM2.5 Ammonium (modeled values represent Aitken and accumulation modes)</td>
+		 <td>µg/m3</td>
+         </tr>
+         <tr>
+		 <td>OC</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM2.5 Organic Carbon (modeled values represent Aitken and accumulation modes)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>EC</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM2.5 Elemental Carbon (modeled values represent Aitken and accumulation modes)</td>
+		 <td>µg/m3</td>
+         </tr>
+         <tr>
+		 <td>TC</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM2.5 Total Carbon (modeled values represent Aitken and accumulation modes)</td>
+		 <td>µg/m3</td>
+         </tr>
+         <tr>
+		 <td>OC_88305</td>
+		 <td>AQS_DAILY</td>
+		 <td>Organic carbon (modeled Aitken and accumulation modes; measurement sampling method 88305)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>EC_88307</td>
+		 <td>AQS_DAILY</td>
+		 <td>Elemental carbon (modeled Aitken and accumulation modes; measurement sampling method 88307)</td>
+		 <td>µg/m3</td>
+         </tr>   
+         <tr>
+		 <td>TC_88305</td>
+		 <td>AQS_DAILY</td>
+		 <td>Total carbon (modeled Aitken and accumulation modes; measurement sampling method 88305)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>OC_88370</td>
+		 <td>AQS_DAILY</td>
+		 <td>Organic carbon (modeled Aitken and accumulation modes; measurement sampling method 88370)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>EC_88380</td>
+		 <td>AQS_DAILY</td>
+		 <td>Elemental carbon (modeled Aitken and accumulation modes; measurement sampling method 88380)</td>
+		 <td>µg/m3</td>
+         </tr>   
+         <tr>
+		 <td>TC_88370</td>
+		 <td>AQS_DAILY</td>
+		 <td>Total carbon (modeled Aitken and accumulation modes; measurement sampling method 88370)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>OC_88320</td>
+		 <td>AQS_DAILY</td>
+		 <td>Organic carbon (modeled Aitken and accumulation modes; measurement sampling method 88320)</td>
+		 <td>µg/m3</td>
+         </tr>   
+         <tr>
+		 <td>EC_88320</td>
+		 <td>AQS_DAILY</td>
+		 <td>Elemental carbon (modeled Aitken and accumulation modes; measurement sampling method 88320)</td>
+		 <td>µg/m3</td>
+         </tr>   
+         <tr>
+		 <td>TC_88320</td>
+		 <td>AQS_DAILY</td>
+		 <td>Total carbon (modeled Aitken and accumulation modes; measurement sampling method 88320)</td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>PM10_IJK</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM10 (modeled values represent Aitken, accumulation and coarse modes)</td>
+		 <td>µg/m3</td>
+         </tr>   
+         <tr>
+		 <td>soil</td>
+		 <td>AQS_DAILY</td>
+		 <td><a href="https://www.epa.gov/system/files/documents/2022-08/PM_2021.pdf">Soil (accumulation mode) =  2.20*AL+2.49*SI+1.63*CA+2.42*FE+1.94*TI</a></td>
+		 <td>>µg/m3</td>
+         </tr>
+         <tr>
+		 <td>OTHER</td>
+		 <td>AQS_DAILY</td>
+		 <td>Difference between PM2.5 total and PM component species: PM25_TOT-(PM25_CL+PM25_EC+PM25_NA+PM25_NH4+ PM25_NO3+PM25_OC+PM25_SOIL+PM25_SO4) (see species definition in <a href="https://github.com/USEPA/AMET/blob/develop/scripts_db/input_files/AQ_species_list.input">AQ_species_list.input</a>)</td>
+		 <td>µg/m3</td>
+         </tr>
+         <tr>
+		 <td>NCOM</td>
+		 <td>AQS_DAILY</td>
+		 <td>Non-combustion organic matter see species definition in <a href="https://github.com/USEPA/AMET/blob/develop/scripts_db/input_files/AQ_species_list.input">AQ_species_list.input</a></td>
+		 <td>µg/m3</td>
+	 </tr>
+	 <tr>
+		 <td>OTHER_REM</td>
+		 <td>AQS_DAILY</td>
+		 <td>PM Other without NCOM: OTHER - NCOM (see species definition in <a href="https://github.com/USEPA/AMET/blob/develop/scripts_db/input_files/AQ_species_list.input">AQ_species_list.input</a></td>
+		 <td>µg/m3</td>
+         </tr>
+         <tr>
+		 <td>PM_FRM</td>
+		 <td>AQS_DAILY, AQS_Hourly</td>
+		 <td>PM2.5 measured by Federal Reference Method (modeled values represent Aitken, accumulation and coarse modes; see species definition in <a href="https://github.com/USEPA/CMAQ/blob/5.3.2/CCTM/src/MECHS/cb6r3_ae7_aq/SpecDef_cb6r3_ae7_aq.txt">SpecDef_cb6r3_ae7_aq.txt)</a></td>
+		 <td>µg/m3</td>
+         </tr>
+         <tr>
+		 <td>PM25_FRM</td>
+		 <td>AQS_DAILY, AQS_Hourly</td>
+		 <td>PM2.5 measured by Federal Reference Method (sharp cutoff for model values computed using modeled size distribution; see species definition in <a href="https://github.com/USEPA/CMAQ/blob/5.3.2/CCTM/src/MECHS/cb6r3_ae7_aq/SpecDef_cb6r3_ae7_aq.txt">SpecDef_cb6r3_ae7_aq.txt</a></td>
+		 <td>µg/m3</td> 
+         </tr>
+         <tr>
+		 <td>O3_1hrmax</td>
+		 <td>AQS_Daily_O3, CASTNET_Daily, NAPS_Daily_O3</td>
+		 <td>1-hour maximum ozone concentration</td>
+		 <td>ppb</td>
+	 </tr>
+	 <tr>
+		 <td>O3_1hrmax_9cell</td>
+		 <td>AQS_Daily_O3, CASTNET_Daily, NAPS_Daily_O3</td>
+		 <td>1-hour max ozone, 9-cell average</td>
+		 <td>ppb</td>
+	 </tr>
+	 <tr>
+		 <td>O3_1hrmax_time</td>
+		 <td>AQS_Daily_O3, CASTNET_Daily, NAPS_Daily_O3</td>
+		 <td>Hour of 1-hour max ozone (e.g., 14 for 2pm LST)</td>
+		 <td></td>
+	 </tr>
+	 <tr>
+		 <td>O3_8hrmax</td>
+		 <td>AQS_Daily_O3, CASTNET_Daily, NAPS_Daily_O3</td>
+		 <td>Maximum daily 8-hour average ozone </td>
+		 <td>ppb</td>
+	 </tr>
+	 <tr>
+		 <td>O3_8hrmax_9cell</td>
+		 <td>AQS_Daily_O3, CASTNET_Daily, NAPS_Daily_O3</td>
+		 <td>Maximum daily 8-hour average (MDA8) ozone averaged over 9 grid cells surrounding the monitoring site</td>
+		 <td>ppb</td>
+	 </tr>
+	 <tr>
+		 <td>O3_8hrmax_time</td>
+		 <td>AQS_Daily_O3, CASTNET_Daily, NAPS_Daily_O3</td>
+		 <td>Start hour of MDA8 ozone (e.g., 9 for 9am LST)</td>
+		 <td></td>
+	 </tr>
+	 <tr>
+		 <td>W126</td>
+		 <td>AQS_Daily_O3, CASTNET_Daily, NAPS_Daily_O3</td>
+		 <td>Ozone exposure index (W126) (See the <a href="https://www.epa.gov/air-quality-analysis/ozone-w126-index">EPAs webpage on the Ozone W126 metric)</a></td>
+		 <td>ppm-hours</td>
+	 </tr>
+	 <tr>
+		 <td>SUM06</td>
+		 <td>AQS_Daily_O3, CASTNET_Daily, NAPS_Daily_O3</td>
+		 <td>Ozone exposure index (SUM06) (See the <href="https://www.epa.gov/sites/default/files/2013-08/documents/2007_01_environmental_tsd.pdf">.pdf of EPAs 2007 Technical Report on Ozone Exposure, Risk, and Impact Assessments for Vegetation section 1)</a></td>
+		 <td> ppm-hours</td>
+	 </tr>
+	 <tr>
+		 <td>SFC_TMP</td>
+		 <td>AQS_Hourly</td>
+		 <td>Surface temperature (at 10 meters for measurement data)</td>
+		 <td>C</td>
+	 </tr>
+	 <tr>
+		 <td>RH</td>
+		 <td>AQS_Hourly</td>
+		 <td>Relative humidity (at 10 meters for measurement data)</td>
+		 <td>%</td>
+	 </tr>
+	 <tr>
+		 <td>WSPD10</td>
+		 <td>AQS_Hourly</td>
+		 <td>Wind speed (at 10 meters for measurement data)</td>
+		 <td>m/s</td>
+	 </tr>
+	 <tr>
+		 <td>PBLH</td>
+		 <td>AQS_Hourly</td>
+		 <td>Planetary boundary layer height (model value only)</td>
+		 <td>m</td>
+	 </tr>
+	 <tr>
+		 <td>Solar_Rad</td>
+		 <td>AQS_Hourly</td>
+		 <td>Solar radiation</td>
+		 <td>watts/m2</td>
+	 </tr>
+	 <tr>
+		 <td>precip</td>
+		 <td>AQS_Hourly</td>
+		 <td>Precipitation</td>
+		 <td>mm/hour</td>
+	 </tr>
+	 <tr>
+		 <td>NOY</td>
+		 <td>AQS_Hourly</td>
+		 <td>All oxides of nitrogen in which the oxidation state of the N atom is +2 or greater, i.e., the sum of all reactive nitrogen oxides including NOX (NO + NO2) and other nitrogen oxides referred to as NOZ.</td>
+		 <td>ppb</td>
+	 </tr>
+	 <tr>
+		 <td>O3</td>
+		 <td>AQS_Hourly, NAPS</td>
+		 <td>Ozone</td>
+		 <td>ppb</td>
+	 </tr>
+	 <tr>
+		 <td>NO</td>
+		 <td>AQS_Hourly, NAPS</td>
+		 <td>Nitric oxide </td>
+		 <td>ppb</td>
+         </tr>
+         <tr>
+		 <td>NO2</td>
+		 <td>AQS_Hourly, NAPS</td>
+		 <td>Nitrogen dioxide</td>
+		 <td>ppb</td>
+         </tr>
+         <tr>
+		 <td>NOX</td>
+		 <td>AQS_Hourly, NAPS</td>
+		 <td>Nitrogen oxides (NO + NO2)</td>
+		 <td>ppb</td>
+	 </tr>
+	 <tr>
+		 <td>CO</td>
+		 <td>AQS_Hourly, NAPS</td>
+		 <td>Carbon monoxide</td>
+		 <td>ppb</td>
+         </tr>
+         <tr>
+		 <td>SO2</td>
+		 <td>AQS_Hourly, NAPS</td>
+		 <td>Sulfur dioxide</td>
+		 <td>ppb</td>
+         </tr>
+         <tr>
+		 <td>Valcode</td>
+		 <td>NADP</td>
+		 <td>Validation code</td>
+		 <td></td>
+	 </tr>
+	 <tr>
+		 <td>Invalcode</td>
+		 <td>NADP</td>
+		 <td>Invalid code</td>
+		 <td></td>
+         </tr>
+         <tr>
+		 <td>NH4_dep</td>
+		 <td>NADP</td>
+		 <td>Ammonium wet deposition</td>
+		 <td>kg/ha</td>
+	 </tr>
+	 <tr>
+		 <td>NO3_dep</td>
+		 <td>NADP</td>
+		 <td>Nitrate wet deposition</td>
+		 <td>kg/ha</td>
+         </tr>
+         <tr>
+		 <td>SO4_dep</td>
+		 <td>NADP</td>
+		 <td>Sulfate wet deposition</td>
+		 td>kg/ha</td>
+         </tr>
+         <tr>
+		 <td>Cl_dep</td>
+		 <td>NADP</td>
+		 <td>Chloride wet deposition</td>
+		 <td>kg/ha</td>
+         </tr>
+         <tr>
+		 <td>Na_dep</td>
+		 <td>NADP</td>
+		 <td>Sodium wet deposition</td>
+		 <td>kg/ha</td>
+         </tr>
+         <tr>
+		 <td>CA_dep</td>
+		 <td>NADP</td>
+		 <td>Calcium wet deposition</td>
+		 <td>kg/ha</td>
+         </tr>
+         <tr>
+		 <td>MG_dep</td>
+		 <td>NADP</td>
+		 <td>Magnesium wet deposition</td>
+		 <td>kg/ha</td>
+         </tr>
+         <tr>
+		 <td>K_dep</td>
+		 <td>NADP</td>
+		 <td>Potassium wet deposition</td>
+		 <td>kg/ha</td>
+         </tr>
+         <tr>
+		 <td>NH4_conc</td>
+		 <td>NADP</td>
+		 <td>Ammonium wet concentration</td>
+		 <td>mg/l</td>
+	 </tr>
+	 <tr>
+		 <td>NO3_conc</td>
+		 <td>NADP</td>
+                 <td>Nitrate wet concentration</td>
+                 <td>mg/l</td>
+         </tr>   
+         <tr>
+                 <td>SO4_conc</td>
+                 <td>NADP</td>
+                 <td>Sulfate wet concentration</td>
+                 <td>mg/l</td>
+         </tr>
+         <tr>
+		 <td>Cl_conc</td>
+		 <td>NADP</td>
+                 <td>Chloride wet concentration</td>
+                 <td>mg/l</td>
+         </tr>
+         <tr>
+                 <td>Na_conc</td>
+                 <td>NADP</td>
+                 <td>Sodium wet concentration</td>
+                 <td>mg/l</td>
+         </tr>
+         <tr>
+                 <td>CA_conc</td>
+                 <td>NADP</td>
+                 <td>Calcium wet concentration</td>
+                 <td>mg/l</td>
+         </tr>
+         <tr>
+		 <td>MG_conc</td>
+		 <td>NADP</td>
+                 <td>Magnesium wet concentration</td>
+                 <td>mg/l</td>
+         </tr>
+         <tr>
+		 <td>K_conc</td>
+		 <td>NADP</td>
+		 <td>Potassium wet concentration</td>
+		 <td>mg/l</td>
+         </tr>
+         <tr>
+		 <td>Precip</td>
+		 <td>NADP</td>
+		 <td>Precipitation</td>
+		 <td>mm</td>
+	 </tr>
+			    </table>
 
 
 <A name="outline"></a><h1>Document Outline</h1>
