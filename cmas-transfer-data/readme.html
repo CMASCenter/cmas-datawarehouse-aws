@@ -23,19 +23,9 @@ Example commands:<br>
 aws s3 ls --no-sign-request --summarize --region=us-east-1 --human-readable --region=us-east-1 --recursive s3://cmas-transfer-data
 </pre>
 
-Tail of Output: <br>
 
-<pre>
-2025-09-08 10:07:22    2.9 MiB for_MADEP/Suffolk/OnNetwork/RD999197_ALL.have.PLT.gz
-2025-09-08 10:07:22    3.3 MiB for_MADEP/Suffolk/OnNetwork_sourceid-geoid_Suffolk.csv
-2025-09-08 10:07:22  737 Bytes for_MADEP/tree_with_size_timestamp.sh
-2024-12-16 15:04:25   30.9 KiB index.html
-2025-09-08 08:46:31 1018 Bytes readme.html
+The above command will take some time, as there are approximately 2.37 TB of data on the bucket.
 
-Total Objects: 38997
-   Total Size: 386.6 GiB
-
-</pre>
 
 <h2>To copy or download all of this data to your local directory , use the following command:</h2>
 
@@ -44,8 +34,7 @@ aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmas-data-transf
 </pre>
 
 
-<h2>Please submit any questions or difficulties as a new issue on the CMAS User Forum.</h2><br>
-<a href="https://forum.cmascenter.org/">CMAS User Forum</a><br>
+<h2>Please submit any questions or difficulties to Liz Adams or Gavendra Pandey.</h2><br>
 
 
 </body>
