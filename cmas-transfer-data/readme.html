@@ -24,7 +24,26 @@ aws s3 ls --no-sign-request --summarize --region=us-east-1 --human-readable --re
 </pre>
 
 
-The above command will take some time, as there are approximately 2.37 TB of data on the bucket.
+Tail of output:
+
+<pre>
+2025-11-14 10:48:51    1.4 KiB Optimize_v4/Worcester/CST1647/AREAVERTS.DAT
+2025-11-14 10:48:51   55 Bytes Optimize_v4/Worcester/CST1647/LOCATIONS.DAT
+2025-11-14 10:48:51  719.8 KiB Optimize_v4/Worcester/CST1647/RECEPTORS.DAT
+2025-11-14 10:48:51   35 Bytes Optimize_v4/Worcester/CST1647/SRCPARAMS.DAT
+2025-11-14 10:48:51    1.6 KiB Optimize_v4/Worcester/CST1647/aermod.inp
+2025-11-14 10:48:51   25.3 MiB Optimize_v4/Worcester/CST1647/census_tracts_have.PLT.gz
+2025-11-17 10:50:27    9.3 KiB README_MADEP.txt
+2024-12-16 15:04:25   30.9 KiB index.html
+2025-11-18 09:32:29 1012 Bytes readme.html
+
+Total Objects: 7372554
+   Total Size: 3.4 TiB
+</pre>
+
+
+
+The above command will take some time, due to the large amount of data on the bucket.
 
 
 <h2>To copy or download all of this data to your local directory , use the following command:</h2>

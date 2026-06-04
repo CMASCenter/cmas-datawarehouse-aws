@@ -31,5 +31,3 @@ aws --no-sign-request s3 cp --recursive --exclude "*" --include "*2021*" --inclu
 aws --no-sign-request s3 cp s3://cmaq-12us1-cracmm2-modeling-platform-2022/2022_12US1/epic/beld4_12US1_2011.nc /$DISK/data/CMAQ_Modeling_Platform_2022/2022_12US1/epic/
 aws --no-sign-request s3 cp s3://cmaq-12us1-cracmm2-modeling-platform-2022/2022_12US1/epic/2021r1_EPIC0509_12US1_soil.nc /$DISK/data/CMAQ_Modeling_Platform_2022/2022_12US1/epic/
 aws --no-sign-request s3 cp s3://cmaq-12us1-cracmm2-modeling-platform-2022/2022_12US1/wwllns/LTNG_AllParms_12US1.ncf  /$DISK/data/CMAQ_Modeling_Platform_2022/2022_12US1/wwllns/
-
-20221206
