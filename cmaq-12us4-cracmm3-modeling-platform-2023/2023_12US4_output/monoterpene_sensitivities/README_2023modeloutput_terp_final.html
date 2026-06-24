@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+This readme refers to the 2023_12US4_output/monoterpene_sensitivities data within the following dataset on AWS, uploaded for Havala Pye by the CMAS Center
+last updated June 24, 2026<br>
+
+<br>
+<a href="https://cmaq-12us4-cracmm3-modeling-platform-2023.s3.amazonaws.com/index.html">CMAQ 2023 12US4 CRACMM2 Modeling Platform</a><br>
+<br>
+
+CITATION <br>
+Pye, H.O.T., 2026, "CMAQ v5.5+ CRACMM2 Gridded Output for Summer 2023 and Monoterpene Sensitivities over the U.S. and Canada", https://doi.org/xxxx, UNC Dataverse, V1.<br>
+<br>
+CONTACT<br>
+Havala Pye 0000-0002-2014-2140 <br>
+<br>
+DESCRIPTION<br>
+This dataset includes CMAQ version 5.5+ output for June-August 2023 across the U.S. and Canada for a base simulation and 5 emissions sensitivity simulations examining monoterpenes. <br>
+<br>
+CMAQ INPUTS<br>
+The CMAQ inputs, including meteorology, emissions, boundary conditions, initial conditions, and additional required inputs (US EPA, 2025) used in creating this 2023 output are from the work of Pye et al. (2026) and are available at  https://doi.org/10.15139/S3/GL41QC. CMAQ code is available from US EPA (2024) and https://github.com/USEPA/CMAQ. <br>
+<br>
+BASE SIMULATION<br>
+These outputs are from a CMAQ version 5.5+ simulation for summer 2023 across the U.S. and Canada. The May 2-31, 2023 was discarded as spinup of the initialization period, and data from June, July, and August 2023 were retained in the monthly files. The base simulation largely follows the platform used by Pye et al. (2026) and scripts available from Pye (2025) except this work uses CMAQv5.5+ (US EPA 2024) with the CRACMM2 description of atmospheric chemistry (Skipper et al., 2024), includes lightning NOx emissions, and turns off windblown dust emissions. The species in the netcdf “combine” files provided here are defined by SpecDef_Conc_cracmm2_CSUcustom.txt as a combination of base CRACMM2 species (described at https://github.com/USEPA/CMAQ and https://github.com/USEPA/CRACMM). These files contain hourly values of pollutants. The user is encouraged to check for large values during fire events that may influence their analysis.<br>
+<br>
+
+SENSITIVITY SIMULATIONS<br>
+Five sensitivity simulations with emission adjustments at CMAQ runtime were performed using DESID (Murphy et al., 2021). In v55cracmm2_nofire, all fire emissions (agricultural, outside U.S., prescribed, and U.S. wildland fires) were turned off. In v55cracmm2_nofire_mixterp, all fire emissions were turned off and monoterpene (CRACMM species API+LIM) emissions from non-EGU point sources (ptnonipm sector) and gridded volatile chemical product (VCP) sources were set to 50% limonene (LIM), 30% alpha-pinene (API), and the rest discarded as low reactivity/low aerosol formation potential monoterpenes. In v55cracmm2_nofire_novcp, all fire emissions were turned off and gridded VCP emissions were turned off (ptnonipm was included). In v55cracmm2_nofire_novcpterp, all fire emissions were turned off and monoterpenes (API+LIM) from ptnonipm and gridded VCP sources were turned off. In v55cracmm2_nofire_nomobile, all fire and organic emissions from mobile (gasoline and diesel vehicle) sources were turned off. v55cracmm2_nofire_nomobile included inorganic emissions from vehicles such as nitrogen oxides and carbon monoxide.<br>
+<br>
+FILE FORMAT<br>
+Netcdf output files are named: COMBINE_ACONC_2023_12US4_${simulation}_CSU_2023${MM}.nc where ${simulation} is one of 6 values (v55cracmm2_base, v55cracmm2_nofire, v55cracmm2_nofire_mixterp, v55cracmm2_nofire_novcp, v55cracmm2_nofire_novcpterp, v55cracmm2_nofire_nomobile) and ${MM} is one of three values for each month in June, July, and August (06, 07, 08). <br>
+<br>
+The 2023 model outputs are stored as uncompressed netcdf formatted files using I/O API data structures. Information on the model projection and grid structure as well as variable names and units are contained in the header information of the netcdf files. The netcdf files can be opened and manipulated using I/O API utilities (e.g. M3XTRACT, M3WNDW) or other software programs that can read and write netcdf formatted files (e.g. Fortran, R, Python). The Species Definition file is a plain text file.<br>
+<br>
+RECOMMENDED CITATIONS/RELATED PUBLICATIONS<br>
+For traceability, please cite use of these inputs with the dataset doi of https://doi.org/xxxxxxxxxxxx. <br>
+For method documentation, please cite Pye et al. (2026) and Skipper et al. (2024).<br> 
+<br>
+RELATED PUBLICATIONS<br>
+<br>
+Murphy, B. N.; Nolte, C. G.; Sidi, F.; Bash, J. O.; Appel, K. W.; Jang, C.; Kang, D.; Kelly, J.; Mathur, R.; Napelenok, S.; Pouliot, G.; and Pye, H. O. T., The Detailed Emissions Scaling, Isolation, and Diagnostic (DESID) module in the Community Multiscale Air Quality (CMAQ) Modeling System version 5.3.2, Geosci Model Dev 2021, 14, 3407-3420. https://doi.org/10.5194/gmd-14-3407-2021.<br>
+<br>
+Pye, H. O. T., Hutzell, W. T., Fann, N. L., Skipper, T. N., Pye, M., Beidler, J., Allen, C., Murphy, B. N., D’Ambro, E. L., Lin, S., Talgo, K., Reynolds, L., Kang, D., Bash, J., Seltzer, K. M., Farrell, S. L., Appel, K. W., Brehme, K., Gilliam, R. C., Henderson, B. H. and Chan, A. W. H.: The risks to human health of air toxics, PM2.5, and ozone from the 2023 Canadian wildfires, Environ. Sci. Technolo. Lett., 2026. https://doi.org/10.1021/acs.estlett.5c01181.<br>
+<br>
+Pye, H. O. T. (2025). Code and data from: The risks to human health of air toxics, PM2.5, and ozone from the 2023 Canadian wildfires [Data set]. Zenodo. https://doi.org/10.5281/zenodo.16099069.<br>
+<br>
+Skipper, T. N., D'Ambro, E. L., Wiser, F. C., McNeill, V. F., Schwantes, R. H., Henderson, B. H., Piletic, I. R., Baublitz, C. B., Bash, J. O., Whitehill, A. R., Valin, L. C., Mouat, A. P., Kaiser, J., Wolfe, G. M., St. Clair, J. M., Hanisco, T. F., Fried, A., Place, B. K., and Pye, H. O. T.: Role of chemical production and depositional losses on formaldehyde in the Community Regional Atmospheric Chemistry Multiphase Mechanism (CRACMM), Atmos. Chem. Phys., 24, 12903–12924, 2024. https://doi.org/10.5194/acp-24-12903-2024.<br>
+<br>
+US EPA Office of Research and Development. (2024). CMAQ (5.5). Zenodo. https://doi.org/10.5281/zenodo.13883210.<br>
+<br>
+US EPA, 2025, "CMAQ Model Versions 5.5 CRACMM2 Input Data -- 12/01/2022 - 12/31/2023 12km CONUS + Canada",  UNC Dataverse, V1. https://doi.org/10.15139/S3/GL41QC.<br>
+<br>
+
+DISCLAIMER: This data product has been reviewed in accordance with U.S. Environmental Protection Agency policy and approved for public release. At the time of release, the data had not yet been published in peer-reviewed literature. The data is provided for research and the user should verify the data is suitable for their intended use.<br>
+
+<h1>Downloading data from S3 Bucket</h1>
+
+This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
+
+
+Instructions for downloading the aws command line.<br>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+<br>
+Once you have it installed, you can use it without credentials.<br>
+<br>
+Example commands:<br>
+<br>
+To query how much data is in a bucket: <br>
+<br>
+<br>
+
+
+<pre>
+aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://cmaq-12us4-cracmm3-modeling-platform-2023/2023_12US4_output/monoterpene_sensitivities/
+</pre>
+
+Tail of Output: <br>
+
+<pre>
+2026-06-23 16:20:47    0 Bytes 2023_12US4_output/monoterpene_sensitivities/
+2026-06-23 16:22:20    0 Bytes 2023_12US4_output/monoterpene_sensitivities/fire/
+2026-06-23 17:20:53   70.2 GiB 2023_12US4_output/monoterpene_sensitivities/fire/COMBINE_ACONC_2023_12US4_202306.nc
+2026-06-23 17:44:56   72.5 GiB 2023_12US4_output/monoterpene_sensitivities/fire/COMBINE_ACONC_2023_12US4_202307.nc
+2026-06-23 18:09:47   72.5 GiB 2023_12US4_output/monoterpene_sensitivities/fire/COMBINE_ACONC_2023_12US4_202308.nc
+2026-06-23 19:48:17    6.4 KiB 2023_12US4_output/monoterpene_sensitivities/fire/SpecDef_Conc_cracmm2_CSUcustom.txt
+2026-06-23 16:22:46    0 Bytes 2023_12US4_output/monoterpene_sensitivities/nofire/
+2026-06-23 18:34:38   13.9 GiB 2023_12US4_output/monoterpene_sensitivities/nofire/COMBINE_ACONC_2023_12US4_20250909v55cracmm2_nofire_CSU_202306.nc
+2026-06-23 18:39:26   14.4 GiB 2023_12US4_output/monoterpene_sensitivities/nofire/COMBINE_ACONC_2023_12US4_20250909v55cracmm2_nofire_CSU_202307.nc
+2026-06-23 18:44:24   14.4 GiB 2023_12US4_output/monoterpene_sensitivities/nofire/COMBINE_ACONC_2023_12US4_20250909v55cracmm2_nofire_CSU_202308.nc
+2026-06-23 18:49:22   13.9 GiB 2023_12US4_output/monoterpene_sensitivities/nofire/COMBINE_ACONC_2023_12US4_20250926v55cracmm2_nofire_mixterp_CSU_202306.nc
+2026-06-23 18:54:10   14.4 GiB 2023_12US4_output/monoterpene_sensitivities/nofire/COMBINE_ACONC_2023_12US4_20250926v55cracmm2_nofire_mixterp_CSU_202307.nc
+2026-06-23 18:59:07   14.4 GiB 2023_12US4_output/monoterpene_sensitivities/nofire/COMBINE_ACONC_2023_12US4_20250926v55cracmm2_nofire_mixterp_CSU_202308.nc
+2026-06-23 19:33:33   13.9 GiB 2023_12US4_output/monoterpene_sensitivities/nofire/COMBINE_ACONC_2023_12US4_20250926v55cracmm2_nofire_nomobile_woPOA_CSU_202306.nc
+2026-06-23 19:38:22   14.4 GiB 2023_12US4_output/monoterpene_sensitivities/nofire/COMBINE_ACONC_2023_12US4_20250926v55cracmm2_nofire_nomobile_woPOA_CSU_202307.nc
+2026-06-23 19:43:20   14.4 GiB 2023_12US4_output/monoterpene_sensitivities/nofire/COMBINE_ACONC_2023_12US4_20250926v55cracmm2_nofire_nomobile_woPOA_CSU_202308.nc
+2026-06-23 19:04:05   13.9 GiB 2023_12US4_output/monoterpene_sensitivities/nofire/COMBINE_ACONC_2023_12US4_20250926v55cracmm2_nofire_novcp_CSU_202306.nc
+2026-06-23 19:08:54   14.4 GiB 2023_12US4_output/monoterpene_sensitivities/nofire/COMBINE_ACONC_2023_12US4_20250926v55cracmm2_nofire_novcp_CSU_202307.nc
+2026-06-23 19:13:52   14.4 GiB 2023_12US4_output/monoterpene_sensitivities/nofire/COMBINE_ACONC_2023_12US4_20250926v55cracmm2_nofire_novcp_CSU_202308.nc
+2026-06-23 19:18:49   13.9 GiB 2023_12US4_output/monoterpene_sensitivities/nofire/COMBINE_ACONC_2023_12US4_20250926v55cracmm2_nofire_novcpterp_CSU_202306.nc
+2026-06-23 19:23:37   14.4 GiB 2023_12US4_output/monoterpene_sensitivities/nofire/COMBINE_ACONC_2023_12US4_20250926v55cracmm2_nofire_novcpterp_CSU_202307.nc
+2026-06-23 19:28:35   14.4 GiB 2023_12US4_output/monoterpene_sensitivities/nofire/COMBINE_ACONC_2023_12US4_20250926v55cracmm2_nofire_novcpterp_CSU_202308.nc
+
+Total Objects: 22
+   Total Size: 429.0 GiB
+</pre>
+
+Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
+
+<pre>
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmaq-12us4-cracmm3-modeling-platform-2023/2023_12US4_output/monoterpene_sensitivities/ /your_local_path/
+</pre>
+
+
+<br>
+<br>
+Please submit any questions or difficulties as a new issue on the CMAS User Forum.<br>
+<a href="https://forum.cmascenter.org/">CMAS User Forum</a><br>
+
+</body>
+</html>

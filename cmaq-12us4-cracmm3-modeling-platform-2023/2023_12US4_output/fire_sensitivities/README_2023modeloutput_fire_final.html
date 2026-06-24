@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<body>
+README<br>
+<br>
+This readme refers to the 2023_12US4_output/fire_sensitivities data within the following dataset on AWS, uploaded for Havala Pye by the CMAS Center
+last updated June 24, 2026<br>
+
+<br>
+<a href="https://cmaq-12us4-cracmm3-modeling-platform-2023.s3.amazonaws.com/index.html">CMAQ 2023 12US4 CRACMM2 Modeling Platform</a><br>
+<br>
+
+<br>
+CITATION<br>
+Pye, H.O.T., 2026, "CMAQ CRACMM Output for Summer 2023 with and without fires over the U.S. and Canada", https://doi.org/xxxx, UNC Dataverse, V1.<br>
+<br>
+RECOMMENDED CITATIONS/RELATED PUBLICATIONS<br>
+For traceability, please cite use of these inputs with the dataset doi of https://doi.org/xxxxxxxxxxxx. <br>
+<br>
+For method documentation, please cite Pye et al. (2026) for the CMAQ model platform. <br>
+<br>
+CONTACT <br>
+Havala Pye 0000-0002-2014-2140 <br>
+<br>
+DESCRIPTION <br>
+This dataset includes CMAQ CRACMM output for Summer 2023 across the U.S. and Canada for a base simulation and simulation without fires.<br>
+<br>
+CMAQ INPUTS<br>
+The CMAQ inputs, including meteorology, emissions, boundary conditions, initial conditions, and additional required inputs (US EPA, 2025) used in creating these 2023 output data are available at  https://doi.org/10.15139/S3/GL41QC. A CMAQ run script for these inputs is available from Pye (2025). CMAQ is available from the US EPA Office of Research and Development (2024) and at https://github.com/USEPA/CMAQ. CRACMM is available from the US EPA Office of Research and Development (2025) and at https://github.com/USEPA/CRACMM.<br>
+<br>
+CMAQ SIMULATIONS<br>
+These output data are from CMAQ simulations for 2023 across the U.S. and Canada. Data in the base simulation output was extracted from a full 2023 annual simulation. The base simulation largely followed the platform used by Pye et al. (2026) and scripts available from Pye (2025) except this work uses CMAQv5.5 with additional updates including standard CRACMM version 3 (US EPA Office of Research and Development, 2025). The base simulation has a paired “nofire” simulation in which all fire emissions (agricultural, outside U.S., prescribed, and U.S. wildland fires) were turned off. The nofire simulation started April 2, 2023, and April data was discarded as initialization spinup. These files contain hourly or daily values of pollutants. The user is encouraged to check for large values during fire events that may influence their analysis.<br>
+<br>
+CMAQ HOURLY GRIDDED SURFACE DATA FOR JUNE 2023<br>
+The two netcdf COMBINE*202306.nc files (for base and nofire) contain hourly average, surface level predictions for the month of June 2023 with horizontal dimensions of 354 rows and 459 columns. The species in these files are defined by SpecDef_Conc_cracmm3.txt as a combination of base CRACMM species (see work of US EPA Office of Research and Development, 2025 and https://github.com/USEPA/CRACMM for species metadata). All time steps in these files are in GMT.<br>
+<br>
+CMAQ HOURLY GRIDDED 3D DATA FOR JUNE 2023<br>
+The 60 daily netcdf files CCTM_CONC*202306*.nc have a vertical resolution of 35 layers for 354 rows and 459 columns and contain instantaneous, hourly model predictions for a select number of species: carbon monoxide (CO), ozone (O3), nitric oxide (NO), nitrogen dioxide (NO2), acetaldehyde (ACD), formaldehyde (HCHO), peroxyacetyl nitrate and similar species (PAN), benzene (BEN), toluene (TOL), nitric acid (HNO3), dinitrogen pentoxide (N2O5), lumped anthropogenic organic nitrates (ONIT), Aitken mode nitrate aerosol (ANO3I), accumulation mode aerosol nitrate (ANO3J), coarse mode aerosol nitrate (ANO3K), vertical velocity component (W_VEL), air temperature (TA), and pressure (PRES). These files are provided for base and nofire simulations for all days in June. All time steps in these files are in GMT.<br>
+<br>
+CMAQ DAILY AVERAGE GRIDDED SURFACE DATA FOR MAY – SEPTEMBER 2023<br>
+The two HR2DAY*.nc files are surface level model predictions (354 rows by 459 columns) for maximum daily 8-hr average ozone (O3_M3A8), daily average ozone (O3_DAILYAV), 1 hour daily maximum ozone (O3_MAX), daily average fine particulate matter of 2.5 micrometers in diameter or less (PM25_TOT_AVG), daily average sulfate in fine particulate matter (PM25_SO4_AVG), daily average nitrate in fine particulate matter (PM25_NO3_AVG), daily average ammonium in fine particulate matter (PM25_NH4_AVG), daily average organic carbon in fine particulate matter (PM25_OC_AVG), and daily average elemental carbon in fine particulate matter (PM25_EC_AVG). These files contain information for May 1 to September 30, 2023 and all daily metrics were calculated using the 24 hours of hourly average model output corresponding to hours 0 – 23 of local standard time at a given grid cell. These files are provided for base and nofire simulations for days in June.<br>
+<br>
+CMAQ HOURLY VERTICAL PROFILES AT SELECT LOCATIONS<br>
+The daily EXTRACT*csv files (within tar files) contain vertical profiles of hourly values of CMAQ full layer height above ground level (ZF), CMAQ layer pressure (PRES), O3, PAN, ACD, and CO for select locations in Wisconsin, Connecticut, New Jersey, and/or Indiana (locations indicated in files). The Jupyter notebook (ipynb file) used to generate these files is also provided. These files are for the base simulation only. All times in these files are in GMT.<br>
+<br>
+FILE FORMAT<br>
+The 2023 model outputs in .nc files are stored as uncompressed netcdf formatted files using I/O API data structures. Information on the model projection and grid structure as well as variable names and units are contained in the header information of the netcdf files. The netcdf files can be opened and manipulated using I/O API utilities (e.g. M3XTRACT, M3WNDW) or other software programs that can read and write netcdf formatted files (e.g. Fortran, R, Python). The Species Definition file is a plain text file. The vertical profiles at select locations are comma separated (csv) files. An example of how to read the csv files is provided in the ipynb jupyter notebooks.<br>
+<br>
+RELATED PUBLICATIONS<br>
+<br>
+Pye, H. O. T., Hutzell, W. T., Fann, N. L., Skipper, T. N., Pye, M., Beidler, J., Allen, C., Murphy, B. N., D’Ambro, E. L., Lin, S., Talgo, K., Reynolds, L., Kang, D., Bash, J., Seltzer, K. M., Farrell, S. L., Appel, K. W., Brehme, K., Gilliam, R. C., Henderson, B. H. and Chan, A. W. H.: The risks to human health of air toxics, PM2.5, and ozone from the 2023 Canadian wildfires, Environ. Sci. Technolo. Lett., 2026. https://doi.org/10.1021/acs.estlett.5c01181.<br>
+<br>
+Pye, H. O. T. (2025). Code and data from: The risks to human health of air toxics, PM2.5, and ozone from the 2023 Canadian wildfires [Data set]. Zenodo. https://doi.org/10.5281/zenodo.16099069.<br>
+<br>
+Skipper, T. N., D'Ambro, E. L., Wiser, F. C., McNeill, V. F., Schwantes, R. H., Henderson, B. H., Piletic, I. R., Baublitz, C. B., Bash, J. O., Whitehill, A. R., Valin, L. C., Mouat, A. P., Kaiser, J., Wolfe, G. M., St. Clair, J. M., Hanisco, T. F., Fried, A., Place, B. K., and Pye, H. O. T.: Role of chemical production and depositional losses on formaldehyde in the Community Regional Atmospheric Chemistry Multiphase Mechanism (CRACMM), Atmos. Chem. Phys., 24, 12903–12924, 2024. https://doi.org/10.5194/acp-24-12903-2024.<br>
+<br>
+US EPA Office of Research and Development. (2024). CMAQ. Zenodo. https://doi.org/10.5281/zenodo.1079878.<br>
+<br>
+US EPA Office of Research and Development. (2025). CRACMM Github Repo Update 2025 (October 2025). Data.gov. https://doi.org/10.23719/d-tdzv.<br>
+<br>
+US EPA, 2025, "CMAQ Model Versions 5.5 CRACMM2 Input Data -- 12/01/2022 - 12/31/2023 12km CONUS + Canada",  UNC Dataverse, V1. https://doi.org/10.15139/S3/GL41QC.<br>
+<br>
+Disclaimer: This data product has been reviewed in accordance with U.S. Environmental Protection Agency policy and approved for public release. At the time of release, the data had not yet been published in peer-reviewed literature. The data is provided for research and the user should verify the data is suitable for their intended use.<br>
+<br>
+
+
+<h1>Downloading data from S3 Bucket</h1>
+
+This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
+
+
+Instructions for downloading the aws command line.<br>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+<br>
+Once you have it installed, you can use it without credentials.<br>
+<br>
+Example commands:<br>
+<br>
+To query how much data is in a bucket: <br>
+<br>
+<br>
+
+
+<pre>
+aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://cmaq-12us4-cracmm3-modeling-platform-2023/2023_12US4_output/fire_sensitivities/
+</pre>
+
+Tail of Output: <br>
+
+<pre>
+2026-06-23 16:21:04    0 Bytes 2023_12US4_output/fire_sensitivities/
+2026-06-24 11:01:45    9.3 KiB 2023_12US4_output/fire_sensitivities/README_2023modeloutput_fire_final.html
+2026-06-24 09:13:22   22.8 KiB 2023_12US4_output/fire_sensitivities/SpecDef_Conc_cracmm3.txt
+2026-06-24 09:37:53    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230601.nc
+2026-06-24 09:39:03    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230602.nc
+2026-06-24 09:39:54    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230603.nc
+2026-06-24 09:40:59    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230604.nc
+2026-06-24 09:38:00    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230605.nc
+2026-06-24 09:50:46    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230606.nc
+2026-06-24 09:51:02    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230607.nc
+2026-06-24 09:53:28    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230608.nc
+2026-06-24 09:58:47    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230609.nc
+2026-06-24 10:02:09    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230610.nc
+2026-06-24 10:03:26    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230611.nc
+2026-06-24 10:09:13    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230612.nc
+2026-06-24 10:10:58    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230613.nc
+2026-06-24 10:15:40    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230614.nc
+2026-06-24 10:24:22    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230615.nc
+2026-06-24 10:20:51    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230616.nc
+2026-06-24 10:23:10    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230617.nc
+2026-06-24 10:26:57    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230618.nc
+2026-06-24 10:31:56    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230619.nc
+2026-06-24 10:32:43    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230620.nc
+2026-06-24 10:36:21    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230621.nc
+2026-06-24 10:37:49    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230622.nc
+2026-06-24 10:43:58    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230623.nc
+2026-06-24 10:48:16    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230624.nc
+2026-06-24 10:48:54    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230625.nc
+2026-06-24 10:52:39    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230626.nc
+2026-06-24 10:54:05    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230627.nc
+2026-06-24 11:00:23    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230628.nc
+2026-06-24 11:04:35    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230629.nc
+2026-06-24 11:05:08    9.5 GiB 2023_12US4_output/fire_sensitivities/base/CCTM_CONC_v6a1_intel23.2_2023_12US4_20230630.nc
+2026-06-24 09:13:23   71.5 GiB 2023_12US4_output/fire_sensitivities/base/COMBINE_ACONC_cracmm3_base_2023_12US4_202306.nc
+2026-06-24 13:03:46  853.5 MiB 2023_12US4_output/fire_sensitivities/base/HR2DAY_LST_20250905cmaq6acracmm3_base_ACONC_2023_12US4_2023.nc
+2026-06-24 11:16:06   71.5 GiB 2023_12US4_output/fire_sensitivities/nofire/COMBINE_ACONC_cracmm3_nofire_2023_12US4_202306.nc
+2026-06-24 11:40:36  853.5 MiB 2023_12US4_output/fire_sensitivities/nofire/HR2DAY_LST_20250905cmaq6acracmm3_nofire_ACONC_2023_12US4_2023.nc
+2026-06-24 11:16:04    2.3 MiB 2023_12US4_output/fire_sensitivities/vertical_profiles/20251203verticalcracmm3.tar
+2026-06-24 11:16:05    2.0 MiB 2023_12US4_output/fire_sensitivities/vertical_profiles/20260219verticalcracmm3_batch2.tar
+2026-06-24 11:16:04   45.7 KiB 2023_12US4_output/fire_sensitivities/vertical_profiles/Pythonwritesite-MeiyunLin.ipynb
+2026-06-24 11:16:05   30.9 KiB 2023_12US4_output/fire_sensitivities/vertical_profiles/Pythonwritesite-MeiyunLinv2_260219.ipynb
+
+Total Objects: 41
+   Total Size: 430.6 GiB
+
+</pre>
+<br>
+
+Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.<br>
+<br>
+<pre>
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmaq-12us4-cracmm3-modeling-platform-2023/2023_12US4_output/fire_sensitivities/ /your_local_path/
+</pre>
+
+<br>
+<br>
+Please submit any questions or difficulties as a new issue on the CMAS User Forum.<br>
+<a href="https://forum.cmascenter.org/">CMAS User Forum</a><br>
+
+</body>
+</html>
+
+
