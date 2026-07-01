@@ -12,11 +12,52 @@ Documentation, including metadata, is available at: US EPA, 2025, "CMAQ CRACMM2 
 <br>
 For use of this data, please cite the dataset for traceability:<br>
 <h2>CITATION</h2>
-US EPA, 2026, " CMAQ Model Version 5.5 CRACMM2 CAP-HAP Input Data 12/01/2024 - 12/31/2025 12km CONUS ", https://doi.org/10.15139/S3/JYXFZY, UNC Dataverse, V1.<br>
+US EPA, 2026, " CMAQ Model Version 5.5 CRACMM2 CAP-HAP Input Data 12/01/2024 - 12/31/2025 12km CONUS ", <a href=https://doi.org/10.15139/S3/JYXFZY>href=https://doi.org/10.15139/S3/JYXFZY</a>, UNC Dataverse, V1.<br>
 <br>
 <h2>CONTACT</h2>
 Havala Pye 0000-0002-2014-2140 <br>
 <br>
+
+<h1>Downloading data from S3 Bucket</h1>
+
+This dataset is available as part of the AWS Open Data Program, therefore egress fees are not charged to either the host or the person downloading the data.<br>
+
+
+Instructions for downloading the aws command line.<br>
+<br>
+
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Instructions to Download AWS Command Line</a> <br>
+
+Once you have it installed, you can use it without credentials.<br>
+
+Example commands:<br>
+
+To query how much data is in a bucket: <br>
+<br>
+<br>
+
+
+<pre>
+aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://cmaq-12us1-cracmm2-cap-hap-modeling-platform-2025/
+</pre>
+
+Tail of Output: <br>
+
+<pre>
+</pre>
+
+Command to copy files from the bucket to your local filesystem (the system where you are running the aws cli) and place it under the path that you specify for /your_local_path.
+
+<pre>
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmaq-12us1-cracmm2-cap-hap-modeling-platform-2025/ /your_local_path/
+</pre>
+
+
+<br>
+Please submit any questions or difficulties as a new issue on the CMAS User Forum.
+<a href="https://forum.cmascenter.org/c/cmas-data-warehouse/96">CMAS User Forum under the Cmas Data Warehouse category</a>
+<br>
+
 <h2>DESCRIPTION</h2>
 CMAQ input data for the CRACMM2 chemical mechanism for a 12/01/2024 - 12/31/2025 simulation over the Continental US. The files are consistent with CMAQv5.5 CRACMM2, but data can be used in CMAQv5.4 and later and all versions of CRACMM with appropriate adjustments.<br>
 <br>
@@ -62,7 +103,7 @@ CMAQ-ready emissions include two model-ready gridded sectors (N_EMIS_GR 2) and 1
 <h2> BOUNDARY AND INITIAL CONDITIONS INPUTS</h2>
  This dataset includes initial conditions (ICON) which are needed for a CMAQ-CRACMM simulation. For initial conditions, a profile in CB6 species was used in the ICON utility. Combine (with Species Definition files from the CMAQ code repository) was then used to map the CB6-based profile ICON to CRACMM species. One full month of model inputs for December 2024 is provided for spinup and can be used to remove the effect of the profile conditions. <br>
  <br>
- Boundary conditions are also needed for a CMAQ-CRACMM simulation and are not provided in this dataset. For boundary conditions, AQMBC (https://github.com/barronh/aqmbc), provides utilities to map publicly available GEOS-CF chemical data to CRACMM species and create CMAQ-ready boundary condition files. A BCON utility that can create profile boundary conditions is also provided with as part of the CMAQ model code (https://github.com/USEPA/CMAQ). <br>
+ Boundary conditions are also needed for a CMAQ-CRACMM simulation and are not provided in this dataset. For boundary conditions, AQMBC (<a href=https://github.com/barronh/aqmbc>https://github.com/barronh/aqmbc</a>), provides utilities to map publicly available GEOS-CF chemical data to CRACMM species and create CMAQ-ready boundary condition files. A BCON utility that can create profile boundary conditions is also provided with as part of the CMAQ model code (<a href=https://github.com/USEPA/CMAQ>https://github.com/USEPA/CMAQ</a>). <br>
  <br>
  <h2> ADDITIONAL REQUIRED INPUTS FOR CMAQ </h2>
  Users will also need certain other input files to perform a 2025 12US1 simulation of CMAQ using CRACMM. The following mechanism and time independent files are included with this 2025 data repository: <br>
@@ -74,12 +115,12 @@ CMAQ-ready emissions include two model-ready gridded sectors (N_EMIS_GR 2) and 1
  - Lightning data from WWLLN for in-line lightning NOx emissions <br>
  <br>
  <h2> SCRIPTS AND CONTROL FILES </h2>
- The user will need to configure a run script and CMAQ Control DESID file for running CMAQ with these 2025 input files. CMAQv5.5 with CRACMM2 is the latest public code that would use these inputs. A good starting point is the 2022 CMAQv5.5 CRACMM2 scripts and DESID file at https://doi.org/10.15139/S3/BDLBTW. For a HAP configuration, see the 2023 CMAQ CRACMM scripts at https://doi.org/10.5281/zenodo.16099069. A processor log file should be checked to confirm emissions mapping which should indicate 1:1 mappings between species on the emissions files and what is used in the simulation. VOC_INV, UNR, CO2_INV, N2O_INV, NMOG, and TOM_INV species are not used in CMAQ-CRACMM simulations. T_{species} are not required for an ozone or PM2.5 simulation. Note that bidi ammonia will need to be off for the spinup period (see 2023 scripts for a template).  <br>
+ The user will need to configure a run script and CMAQ Control DESID file for running CMAQ with these 2025 input files. CMAQv5.5 with CRACMM2 is the latest public code that would use these inputs. A good starting point is the 2022 CMAQv5.5 CRACMM2 scripts and DESID file at <a href=https://doi.org/10.15139/S3/BDLBTW>https://doi.org/10.15139/S3/BDLBTW</a>. For a HAP configuration, see the 2023 CMAQ CRACMM scripts at <a href=https://doi.org/10.5281/zenodo.16099069>https://doi.org/10.5281/zenodo.16099069</a>. A processor log file should be checked to confirm emissions mapping which should indicate 1:1 mappings between species on the emissions files and what is used in the simulation. VOC_INV, UNR, CO2_INV, N2O_INV, NMOG, and TOM_INV species are not used in CMAQ-CRACMM simulations. T_{species} are not required for an ozone or PM2.5 simulation. Note that bidi ammonia will need to be off for the spinup period (see 2023 scripts for a template).  <br>
  <br>
  <h2>RESOURCES FOR SETTING UP A CMAQ SIMULATION</h2>
-CMAQ benchmark tutorial for CRACMM2 (https://github.com/USEPA/CMAQ/blob/main/DOCS/Users_Guide/Tutorials/CMAQ_UG_tutorial_benchmark_cracmm2_stage.md): describes how to prepare your Linux system for installing and running CMAQ.
+ CMAQ benchmark tutorial for CRACMM2 (<a href=https://github.com/USEPA/CMAQ/blob/main/DOCS/Users_Guide/Tutorials/CMAQ_UG_tutorial_benchmark_cracmm2_stage.md>https://github.com/USEPA/CMAQ/blob/main/DOCS/Users_Guide/Tutorials/CMAQ_UG_tutorial_benchmark_cracmm2_stage.md</a>): describes how to prepare your Linux system for installing and running CMAQ.
 
-For information on CRACMM emission version compatibility, see this guidance: https://usepa.github.io/CRACMM/emissions/README.html.
+ For information on CRACMM emission version compatibility, see this guidance: <a href=https://usepa.github.io/CRACMM/emissions/README.html>https://usepa.github.io/CRACMM/emissions/README.html</a>.
 
 <h2>FILE FORMAT</h2>
 The 2025 model inputs are stored as uncompressed netcdf formatted files using I/O API data structures. Information on the model projection and grid structure is contained in the header information of the netcdf files. The netcdf files can be opened and manipulated using I/O API utilities (e.g. M3XTRACT, M3WNDW) or other software programs that can read and write netcdf formatted files (e.g. Fortran, R, Python).
