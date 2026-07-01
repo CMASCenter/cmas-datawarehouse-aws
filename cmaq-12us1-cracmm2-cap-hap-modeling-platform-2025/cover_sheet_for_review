@@ -1,0 +1,49 @@
+Cover sheet for review
+
+Dataset title: “CMAQ Model Version 5.5 CRACMM2 CAP-HAP Input Data – 12/01/2024 - 12/31/2025 12km CONUS”
+
+Contact: Havala Pye 0000-0002-2014-2140 (OASES/ASEM)
+
+Contributor (metadata section):
+Project Leader: Havala Pye
+Project Member: Christine Allen
+Project Member: Lara Reynolds
+Project Member: Daiwen Kang
+
+Data:
+2025 specific files:
+•	emis: /asm/MOD3DATA/2025_12US1/emis/cracmmv2_20260430/cmaq_ready
+•	smk_dates_2025: /work/EMIS/em_v6.3/ge_dat/smk_dates/2025/
+•	met: 
+o	/asm/MOD3DEV/met/MCIP/WRFv4.6.0_12US1_2025_35aL/v5.5/*12US1*
+o	namelist.input_2025_12US
+•	epic: 
+o	/work/MOD3DEV/rspencer/AQM/festc/scenarios/US12KM_NLCD2019_FERT2016_SIMYEAR2025_AQM/output4CMAQ/app/2025/toCMAQ/US12KM*.nc
+o	/work/MOD3DEV/rspencer/AQM/festc/scenarios/US12KM_NLCD2019_FERT2016_SIMYEAR2025_AQM/output4CMAQ/app/toCMAQ/beld4_12US1_2011.nc
+•	lightning: 
+o	/work/MOD3EVAL/dkj/LTNG/WWLLNs_12US/2025/*.ioapi 
+o	/work/MOD3EVAL/dkj/LTNG/WWLLNs_12US/2025/LTNG_AllParms_12US1.ncf
+•	ICON
+o	/work/MOD3EVAL/bkx/cmaq/wr502/taska/icon/ICON_v55_12US1_profile_cb_to_cracmm_20241201
+•	BCON
+o	BCON will not be included. GEOS-CF has been used in the past for boundary conditions when a larger CMAQ domain is not available. Data transfer times to obtain GEOS-CF did not allow for that path to be complete at this time. Users can create profile boundary conditions using utilities distributed with CMAQ.
+•	Run script and configuration file
+o	The user will need to customize these based on public templates distributed with CMAQ and similar datasets. The user is pointed to two existing datasets that include run scripts compatible with CMAQv5.5 and CRACMM2.
+
+Year and mechanism independent files (specific to 12US1 domain):
+•	surface:
+o	/work/MOD3DATA/2022_12US1/surface/OCEAN*12US1.nc
+o	/work/MOD3DATA/2022_12US1/surface/pv_avg.dat
+o	/work/MOD3DATA/2022_12US1/surface/npv_avg.dat
+o	/work/MOD3DATA/2022_12US1/surface/BEIS4_SEGA_beld6_norm_emis_12US1.ncf
+o	/work/MOD3DATA/2022_12US1/misc/beis4_beld6_norm_emis.12US1.ncf
+•	GRIDDESC: /work/MOD3DATA/2022_12US1/GRIDDESC
+
+Notes: brown veg  (pv_avg.dat, npv_avg.dat) and SEGA files are for features in CMAQv6.0 (not yet available), but included anyway. Relocate the beis4_beld6*ncf file (currently in misc) to the surface folder.
+
+Approx size: 4-5 TB
+
+
+
+ 
+
