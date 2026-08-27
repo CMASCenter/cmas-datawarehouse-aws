@@ -3,7 +3,11 @@
 <body>
 
 
-<h1>Data transfer for Gavendra Pandey</h1>
+
+<h1>Data transfer for Catherine Seppanen</h1>
+
+ Bucket is <a href="https://cmas-transfer-data.s3.amazonaws.com/index.html">https://cmaq-transfer.s3.amazonaws.com/index.html</a>
+        <br>
 
 
 
@@ -27,18 +31,38 @@ aws s3 ls --no-sign-request --summarize --region=us-east-1 --human-readable --re
 Tail of output:
 
 <pre>
-2025-11-14 10:48:51    1.4 KiB Optimize_v4/Worcester/CST1647/AREAVERTS.DAT
-2025-11-14 10:48:51   55 Bytes Optimize_v4/Worcester/CST1647/LOCATIONS.DAT
-2025-11-14 10:48:51  719.8 KiB Optimize_v4/Worcester/CST1647/RECEPTORS.DAT
-2025-11-14 10:48:51   35 Bytes Optimize_v4/Worcester/CST1647/SRCPARAMS.DAT
-2025-11-14 10:48:51    1.6 KiB Optimize_v4/Worcester/CST1647/aermod.inp
-2025-11-14 10:48:51   25.3 MiB Optimize_v4/Worcester/CST1647/census_tracts_have.PLT.gz
-2025-11-17 10:50:27    9.3 KiB README_MADEP.txt
-2024-12-16 15:04:25   30.9 KiB index.html
-2025-11-18 09:32:29 1012 Bytes readme.html
+2026-08-26 19:08:41   69.7 MiB conc/82_90/25027/tract/996/tract_conc_996_sum_all
+2026-08-26 19:08:47   68.4 MiB conc/82_90/25027/tract/997/tract_conc_997_sum_all
+2026-08-26 19:08:47   66.3 MiB conc/82_90/25027/tract/998/tract_conc_998_sum_all
+2026-08-26 19:08:52   63.4 MiB conc/82_90/25027/tract/999/tract_conc_999_sum_all
+2026-08-26 05:58:11    3.4 KiB conc/README
+2026-08-26 19:09:13   58.7 KiB conc/helper_files/KBAF_offnetwork_emis_met_hour_unique.csv
+2026-08-26 19:09:13   94.7 KiB conc/helper_files/KBAF_offnetwork_orig_hour_list.csv
+2026-08-26 19:09:13   83.2 KiB conc/helper_files/KBAF_onnetwork_emis_met_hour_unique.csv
+2026-08-26 19:09:13  100.8 KiB conc/helper_files/KBAF_onnetwork_orig_hour_list.csv
+2026-08-26 19:09:13   56.4 KiB conc/helper_files/KBOS_offnetwork_emis_met_hour_unique.csv
+2026-08-26 19:09:13   99.0 KiB conc/helper_files/KBOS_offnetwork_orig_hour_list.csv
+2026-08-26 19:09:13   82.7 KiB conc/helper_files/KBOS_onnetwork_emis_met_hour_unique.csv
+2026-08-26 19:09:13  105.0 KiB conc/helper_files/KBOS_onnetwork_orig_hour_list.csv
+2026-08-26 19:09:13   59.4 KiB conc/helper_files/KEWB_offnetwork_emis_met_hour_unique.csv
+2026-08-26 19:09:13   95.4 KiB conc/helper_files/KEWB_offnetwork_orig_hour_list.csv
+2026-08-26 19:09:13   84.3 KiB conc/helper_files/KEWB_onnetwork_emis_met_hour_unique.csv
+2026-08-26 19:09:13  101.4 KiB conc/helper_files/KEWB_onnetwork_orig_hour_list.csv
+2026-08-26 19:09:13   58.6 KiB conc/helper_files/KORH_offnetwork_emis_met_hour_unique.csv
+2026-08-26 19:09:13   99.0 KiB conc/helper_files/KORH_offnetwork_orig_hour_list.csv
+2026-08-26 19:09:13   85.5 KiB conc/helper_files/KORH_onnetwork_emis_met_hour_unique.csv
+2026-08-26 19:09:13  105.2 KiB conc/helper_files/KORH_onnetwork_orig_hour_list.csv
+2026-08-26 19:09:13   58.7 KiB conc/helper_files/KPSF_offnetwork_emis_met_hour_unique.csv
+2026-08-26 19:09:13   95.1 KiB conc/helper_files/KPSF_offnetwork_orig_hour_list.csv
+2026-08-26 19:09:13   84.2 KiB conc/helper_files/KPSF_onnetwork_emis_met_hour_unique.csv
+2026-08-26 19:09:13  101.2 KiB conc/helper_files/KPSF_onnetwork_orig_hour_list.csv
+2026-08-26 19:09:14  176 Bytes conc/helper_files/county_met_stations.csv
+2026-08-26 19:09:13  186.8 MiB conc/helper_files/receptors_w_county.csv
+2026-08-25 17:32:47   30.9 KiB index.html
+2026-08-25 17:33:28    1.2 KiB readme.html
 
-Total Objects: 7372554
-   Total Size: 3.4 TiB
+Total Objects: 620005
+   Total Size: 17.1 TiB
 </pre>
 
 
@@ -49,11 +73,11 @@ The above command will take some time, due to the large amount of data on the bu
 <h2>To copy or download all of this data to your local directory , use the following command:</h2>
 
 <pre>
-aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmas-data-transfer /your/local/directory/
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmas-transfer-data/conc/ /your/local/directory/conc/
 </pre>
 
 
-<h2>Please submit any questions or difficulties to Liz Adams or Gavendra Pandey.</h2><br>
+<h2>Please submit any questions or difficulties to Liz Adams or Catherine Seppanen.</h2><br>
 
 
 </body>
