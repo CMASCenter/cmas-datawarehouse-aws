@@ -18,10 +18,33 @@ Example commands:<br>
 
 To query how much data is in a bucket: <br>
 <br>
-There are five sets of benchmark data available.<br>
+There are seven sets of benchmark data available.<br>
 <br>
 
-1. CMAQv5.4_2018_12US1_Benchmark_2Day_Input<br>
+1. CMAQv6.0_2022_12SE1_Benchmark_2day<br>
+
+<pre>
+aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://cmas-cmaq/CMAQv6.0_2022_12SE1_Benchmark_2day
+</pre>
+
+<pre>
+Total Objects: 1015
+   Total Size: 46.3 GiB
+</pre>
+
+
+2. CMAQv6.0_2022_12US1_Benchmark_2month <br>
+
+<pre>
+aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://cmas-cmaq/CMAQv6.0_2022_12US1_Benchmark_2month
+</pre>
+
+<pre>
+Total Objects: 6199
+   Total Size: 2.7 TiB
+</pre>
+
+3. CMAQv5.4_2018_12US1_Benchmark_2Day_Input<br>
 
 <pre>
 aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://cmas-cmaq/CMAQv5.4_2018_12US1_Benchmark_2Day_Input
@@ -106,7 +129,7 @@ Command to copy files from the bucket to your local filesystem (the system where
 aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmas-cmaq/CMAQv5.4_2018_12US1_Benchmark_2Day_Input /your_local_path/
 </pre>
 
-2.     CMAQv5.4_2018_12US1_Benchmark_2Day_Input_uncompressed
+4.     CMAQv5.4_2018_12US1_Benchmark_2Day_Input_uncompressed
 
 </pre>
 
@@ -121,7 +144,7 @@ Total Objects: 153
    Total Size: 65.3 GiB
 </pre>
 
-3. CMAQv5.4_2018_12LISTOS_Benchmark_3Day_Input
+5. CMAQv5.4_2018_12LISTOS_Benchmark_3Day_Input
 
 
 <pre>
@@ -137,7 +160,7 @@ Total Objects: 134
 </pre>
 
 
-4. CMAQv5.4_2018_12NE3_Benchmark_2Day_Input/2018_12NE3
+6. CMAQv5.4_2018_12NE3_Benchmark_2Day_Input/2018_12NE3
 
 <pre>
 aws s3 ls --summarize --region=us-east-1 --human-readable --recursive s3://cmas-cmaq/CMAQv5.4_2018_12NE3_Benchmark_2Day_Input/
@@ -152,7 +175,7 @@ Total Objects: 95
    Total Size: 55.4 GiB
 </pre>
 
-5. CMAQv5.5_2018_12NE3 Cracmm2 Stage 2Day Input Benchmark
+7. CMAQv5.5_2018_12NE3 Cracmm2 Stage 2Day Input Benchmark
 
 <pre>
 aws s3 ls --summarize --region=us-east-1 --human-readable --recursive s3://cmas-cmaq/CMAQv5.5_2018_12NE3_Benchmark_cracmm2_stage_2Day_Input
