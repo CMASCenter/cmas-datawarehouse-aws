@@ -27,11 +27,11 @@ Example commands:<br>
 To query how much data is in a bucket: <br>
 <br>
 
-
 <pre>
 aws s3 --no-sign-request ls --summarize --region=us-east-1 --human-readable --recursive s3://cmaq-v6-2022-data
 </pre>
-
+<br>
+output:<br>
 <pre>
 Total Objects: 12004
    Total Size: 7.2 TiB
@@ -44,11 +44,11 @@ aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmaq-v6-2022-dat
 </pre>
 
 
-Recursively copy files for the first 10 days: <br> - note, the command includes the --dryrun option which will need to be removed, to the subdirectory that is used in the run script: [need to add] 
-
+Recursively copy files for the first 10 days: <br> - note, the command includes the --dryrun option which will need to be removed, to the subdirectory that is used in the run script: <br>
+<br>
 <pre>
 cd <your_local_path>/data/CMAQv6/2022_12US1
- aws s3 cp --dryrun --recursive --exclude "*" --include "*21122*" s3://cmaq-v6-2022-data/CMAQv6/2022_12US1/inputs ./inputs
+ aws s3 cp --dryrun --recursive --exclude "*" --include "*21122*" s3://cmaq-v6-2022-data/CMAQv6/2022_12US1/inputs/ ./2022_12US1/
 </pre>
 
 Due to the need for representative emission days, several s3 download scripts are available, one for 2 days, and another for 2 months.<br>
